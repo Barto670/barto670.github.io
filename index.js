@@ -272,8 +272,8 @@ function initialiseProjects(){
 
 
         div1.innerHTML = `
-                            <div status="`+status+`" class="projectEntry" class="alignCenter" style="margin-top: 25px;">
-                                <div style="background-color:  #2B2D31; height: 410px; width: 650px; border-radius: 20px;">
+                            <div status="`+status+`" class="projectEntry" class="alignCenter" style="margin-top: 25px; padding-top:8px; padding-bottom:8px">
+                                <div style="background-color:  #2B2D31; height: 410px; width: 650px; border-radius: 20px; ">
                                     <div style="height: 80px; width: 100%; background-color: #2B2D31;flex-wrap: wrap; display: flex; border-top-right-radius: 20px; border-top-left-radius: 20px;">
                                         <div class="alignCenter" style="height: 80px; width: 80px; background-color: #303234; border-top-left-radius: 20px;">
                                             <img src="`+projects[i].smallImagesrc+`" style="height: 80px; width: auto; border-top-left-radius: 20px;" alt="">
