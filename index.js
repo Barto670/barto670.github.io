@@ -1,3 +1,9 @@
+// Todo
+// On education, projects, photography add side navigation
+// Add project popup
+// Make website bit smaller to fit on phones (add scaling variable to css)
+// Finish top bar
+
 skills = [
                 { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572235' ,     imageLink:'./images/skills/html.png'},
                 { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F835',      imageLink:'./images/skills/css.png'},
