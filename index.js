@@ -23,7 +23,7 @@ projects = [
                 { name:'GLI Academy',                     statusColor:'orange' ,      bigImagesrc:'./images/projects/gliAcademyBig.jpeg',            smallImagesrc: './images/projects/gliAcademySmall.png' ,            status:'Concept' ,       tag1:'HTML',            tag2:'Angular',         tag3:'TypeScript' ,  redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project made for final year of my Bachelors. Website allows users to learn about the meaning and implementation of various Globalisation, Localisation and Internationalisation concepts.'},
                 { name:'yt-dlp User Interface',           statusColor:'orange' ,      bigImagesrc:'./images/projects/ytdlpBig.jpg',                  smallImagesrc: './images/projects/ytdlpSmall.png' ,                 status:'Concept' ,       tag1:'Batchfile',       tag2:'Extention',       tag3:'JavaScript' ,  redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project introducing a user interface for yt-dlp. Allows to use yt-dlp in as a windows program and also as a browser extention.'},
 ]
-
+ 
 
 photos = [
     { name:'EVENING DROPLETS',          imagesrc:'./images/photography/photo1.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53274008392',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/meike60mm.png',           camera:'Fujifilm XT-5',     lens:'Meike 60mm f2.8 RF Macro',        aperature : 'f/2.8',    focalLenght:'60.0 mm',    iso:'125' },
