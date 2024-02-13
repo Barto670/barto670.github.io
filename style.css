@@ -508,8 +508,8 @@ body{
       }
       .projectHeadingDiv{
         height: 100%; 
-        width: 390px; 
-        margin-left: 10px; 
+        width: 394px; 
+        margin-left: 6px; 
         background-color: #303234;
         .projectHeading{
           font-size: 1.6rem;
@@ -562,9 +562,9 @@ body{
 
 
     .projectBottom{
-      height: 275px; 
+      height: 280px; 
       width: 100%; 
-      margin-top: 10px; 
+      margin-top: 6px; 
       flex-wrap: wrap; 
       display: flex;
       .projectBigImage{
@@ -577,8 +577,8 @@ body{
         }
       }
       .projectDescriptionDiv{
-        margin-left: 5px; 
-        width: 269px; 
+        margin-left: 6px; 
+        width: 263px; 
         height: 100%; 
         background-color: #303234; 
         flex-wrap: wrap; 
