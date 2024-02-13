@@ -11,7 +11,7 @@ skills = [
                 { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F835',      imageLink:'./images/skills/ts.png'},
                 { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F35',      imageLink:'./images/skills/python.png'},
                 { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F35',      imageLink:'./images/skills/angular.png'},
-                { name:'Bootstrap',      dateStarted: '2021-01-01',      color:'#7C11F835',      imageLink:'./images/skills/bootstrap.png'},
+                // { name:'Bootstrap',      dateStarted: '2021-01-01',      color:'#7C11F835',      imageLink:'./images/skills/bootstrap.png'},
                 { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA335',      imageLink:'./images/skills/java.png'},
                 { name:'SQL',            dateStarted: '2021-01-01',      color:'#00BCF235',      imageLink:'./images/skills/sql.png'},
                 { name:'C#',             dateStarted: '2022-01-01',      color:'#39009135',      imageLink:'./images/skills/csharp.png'},
