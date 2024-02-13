@@ -5,20 +5,20 @@
 // Finish top bar
 
 skills = [
-                { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572235' ,     imageLink:'./images/skills/html.png'},
-                { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F835',      imageLink:'./images/skills/css.png'},
-                { name:'JavaScript',     dateStarted: '2019-01-01',      color:'#D3B62A35',      imageLink:'./images/skills/js.png'},
-                { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F835',      imageLink:'./images/skills/ts.png'},
-                { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F35',      imageLink:'./images/skills/python.png'},
-                { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F35',      imageLink:'./images/skills/angular.png'},
-                // { name:'Bootstrap',      dateStarted: '2021-01-01',      color:'#7C11F835',      imageLink:'./images/skills/bootstrap.png'},
-                { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA335',      imageLink:'./images/skills/java.png'},
-                { name:'SQL',            dateStarted: '2021-01-01',      color:'#00BCF235',      imageLink:'./images/skills/sql.png'},
-                { name:'C#',             dateStarted: '2022-01-01',      color:'#39009135',      imageLink:'./images/skills/csharp.png'},
-                { name:'C++',            dateStarted: '2022-01-01',      color:'#00599C35',      imageLink:'./images/skills/c++.png'},
-                { name:'Arduino',        dateStarted: '2022-01-01',      color:'#2D929635',      imageLink:'./images/skills/arduino.png'},
-                { name:'Android',        dateStarted: '2023-01-01',      color:'#98C42535',      imageLink:'./images/skills/android.png'},
-                { name:'C',              dateStarted: '2023-01-01',      color:'#00599C35',      imageLink:'./images/skills/c.png'},
+                { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572220' ,     imageLink:'./images/skills/html.png'},
+                { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F820',      imageLink:'./images/skills/css.png'},
+                { name:'JavaScript',     dateStarted: '2019-01-01',      color:'#D3B62A20',      imageLink:'./images/skills/js.png'},
+                { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F820',      imageLink:'./images/skills/ts.png'},
+                { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F20',      imageLink:'./images/skills/python.png'},
+                { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F20',      imageLink:'./images/skills/angular.png'},
+                // { name:'Bootstrap',      dateStarted: '2021-01-01',      color:'#7C11F820',      imageLink:'./images/skills/bootstrap.png'},
+                { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA320',      imageLink:'./images/skills/java.png'},
+                { name:'SQL',            dateStarted: '2021-01-01',      color:'#00BCF220',      imageLink:'./images/skills/sql.png'},
+                { name:'C#',             dateStarted: '2022-01-01',      color:'#39009120',      imageLink:'./images/skills/csharp.png'},
+                { name:'C++',            dateStarted: '2022-01-01',      color:'#00599C20',      imageLink:'./images/skills/c++.png'},
+                { name:'Arduino',        dateStarted: '2022-01-01',      color:'#2D929620',      imageLink:'./images/skills/arduino.png'},
+                { name:'Android',        dateStarted: '2023-01-01',      color:'#98C42520',      imageLink:'./images/skills/android.png'},
+                { name:'C',              dateStarted: '2023-01-01',      color:'#00599C20',      imageLink:'./images/skills/c.png'},
         ]
 
 projects = [
