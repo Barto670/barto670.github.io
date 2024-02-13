@@ -97,6 +97,7 @@ h1,h2,h3,h4,h5,h6,p{
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    cursor: default;
   }
   .iconBox{
     width: 10%;
@@ -236,6 +237,7 @@ body{
     letter-spacing: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: default;
   }
 }
 
@@ -372,6 +374,7 @@ body{
           font-family: Itim;
           animation-name: skillLoadingTextLeft;
           animation-duration: 1s;
+          cursor:default;
         }
         .skillText2{
           font-size: 21px; 
@@ -382,6 +385,7 @@ body{
           font-family: Itim;
           animation-name: skillLoadingTextRight;
           animation-duration: 2.3s;
+          cursor:default;
         }
       }
     }
@@ -511,6 +515,7 @@ body{
         width: 394px; 
         margin-left: 6px; 
         background-color: #303234;
+        cursor:default;
         .projectHeading{
           font-size: 1.6rem;
           color: #656565; 
@@ -620,6 +625,7 @@ body{
           padding-right: 15px; 
           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
           font-family: Itim;
+          cursor:default;
         }
         .projectTagListDiv{
           height: 22px; 
@@ -640,6 +646,7 @@ body{
               padding-right: 12px; 
               text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
               font-family: Itim;
+              cursor:default;
             }
           }
         }
@@ -882,6 +889,18 @@ body{
   margin-top: 50px;
   flex-wrap: wrap; 
   display: flex;
+  .footerText{
+    color: #65656590; 
+    font-size: 18px; 
+    letter-spacing: 3px; 
+    width: 100%; 
+    height: 20px; 
+    display: flex; 
+    margin-bottom: 40px; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+    font-family: Signika;
+    cursor:default;
+  }
 }
 
 
