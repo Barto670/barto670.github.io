@@ -562,7 +562,7 @@ body{
 
 
     .projectBottom{
-      height: 280px; 
+      height: 279px; 
       width: 100%; 
       margin-top: 6px; 
       flex-wrap: wrap; 
@@ -578,7 +578,7 @@ body{
       }
       .projectDescriptionDiv{
         margin-left: 6px; 
-        width: 263px; 
+        width: 264px; 
         height: 100%; 
         background-color: #303234; 
         flex-wrap: wrap; 
@@ -589,11 +589,11 @@ body{
           width: 100%;
           .projectStatusDiv{
             background-color: #2B2D31; 
-            width: 90px; 
-            height: 28px; 
+            width: 95px; 
+            height: 26px; 
             border-bottom-left-radius: 15px; 
             border-bottom-right-radius: 15px; 
-            margin-left:165px;
+            margin-left:160px;
             .projectStatusCircle{
               height: 12px; 
               width: 12px; 
@@ -611,7 +611,7 @@ body{
         }
         .projectTextDescriptionDiv{
           margin-top:26px;
-          height:196px; 
+          height:200px; 
           width:100%; 
           font-weight: 100; 
           color: #656565; 
