@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function displaySkills(){
     let min = calculateYears(new Date(skills[0].dateStarted))
     let max = calculateYears(new Date(skills[0].dateStarted))
-    let boxWidth = 700;
+    let boxWidth = 550;
     let maxSkillWidth = boxWidth/2;
 
 
@@ -278,45 +278,45 @@ function initialiseProjects(){
 
 
         div1.innerHTML = `
-                            <div status="`+status+`" class="projectEntry" class="alignCenter" style="margin-top: 25px; padding-top:8px; padding-bottom:8px">
-                                <div style="background-color:  #2B2D31; height: 410px; width: 650px; border-radius: 20px; ">
-                                    <div style="height: 80px; width: 100%; background-color: #2B2D31;flex-wrap: wrap; display: flex; border-top-right-radius: 20px; border-top-left-radius: 20px;">
-                                        <div class="alignCenter" style="height: 80px; width: 80px; background-color: #303234; border-top-left-radius: 20px;">
-                                            <img src="`+projects[i].smallImagesrc+`" style="height: 80px; width: auto; border-top-left-radius: 20px;" alt="">
+                            <div status="`+status+`" class="projectEntry" class="alignCenter">
+                                <div class="projectDiv">
+                                    <div class="projectTop">
+                                        <div class="alignCenter projectSmallImageDiv">
+                                            <img class="projectSmallImage" src="`+projects[i].smallImagesrc+`">
                                         </div>
-                                        <div class="alignCenter" style="height: 80px; width: 470px; margin-left:10px; background-color: #303234;">
-                                            <h1 style="font-size: 34px; color: #656565; font-weight: 100; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);font-family: Itim;">`+projects[i].name+`</h1>
+                                        <div class="alignCenter projectHeadingDiv">
+                                            <h1 class="projectHeading">`+projects[i].name+`</h1>
                                         </div>
 
-                                        <div class="alignCenter" style="height: 80px; width: 90px; background-color: #303234; border-top-right-radius: 20px;">
-                                            <a style="display:'none'"><img id="projectInfo" src="./images/info.png" style="height: 24px; width: 24px; margin-left: 8px; margin-right: 8px; display:none" alt=""></a>
+                                        <div class="alignCenter projectIconDiv">
+                                            <a style="display:'none'"><img id="projectInfo" src="./images/info.png" class="projectIcon" style="display:none"></a>
                                             <a class="linkAnimation" style="display:`+projects[i].redirectionURLStyle+`" href="`+projects[i].redirectionURL+`"><img src="./images/link.png" style="display:`+projects[i].redirectionURLStyle+`" alt=""></a>
                                         </div>
                                     </div>
 
-                                    <div style="height: 320px; width: 100%; margin-top: 10px; flex-wrap: wrap; display: flex;">
-                                        <div style="height: 320px; width: 320px;">
-                                            <img src="`+projects[i].bigImagesrc+`" style="height: 320px; width: 320px; border-bottom-left-radius: 20px;" alt="">
+                                    <div class="projectBottom">
+                                        <div class="projectBigImage">
+                                            <img src="`+projects[i].bigImagesrc+`">
                                         </div>
-                                        <div style="margin-left: 10px; width: 320px; height: 320px; background-color: #303234; flex-wrap: wrap; display: flex; border-bottom-right-radius: 20px;">
-                                            <div style="height: 30px; width: 100%;">
-                                                <div class="alignCenter" style="background-color: #2B2D31; width: 110px; height: 30px; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; margin-left:200px;">
-                                                    <div style="height: 12px; width: 12px; border-radius: 20px; background-color: `+projects[i].statusColor+`; margin-right: 8px;"></div>
-                                                    <h1 style="font-size: 20px; font-weight: 100; color: #656565; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); font-family: Itim;">`+projects[i].status+`</h1>
+                                        <div class="projectDescriptionDiv">
+                                            <div class="projectStatusParent">
+                                                <div class="alignCenter projectStatusDiv">
+                                                    <div class="projectStatusCircle" style="background-color: `+projects[i].statusColor+`;"></div>
+                                                    <h1 class="projectStatusText">`+projects[i].status+`</h1>
                                                 </div>
                                             </div>
-                                            <div style="margin-top:26px;height:240px;width:100%; font-weight: 100; color: #656565; font-size: 22px; padding-left: 15px; padding-right: 15px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); font-family: Itim;">
+                                            <div class="projectTextDescriptionDiv">
                                                 `+projects[i].description+`
                                             </div>
-                                            <div class="alignCenter" style="height: 24px; width: 100%;">
-                                                <div class="alignCenter" style="background-color: #2B2D31; width: fit-content; height: 24px; border-top-left-radius: 15px; border-top-right-radius: 15px; margin-right: 4px; margin-left: 4px;">
-                                                    <h1 style="font-size: 16px; font-weight: 100; color: #656565; padding-left:12px; padding-right: 12px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); font-family: Itim;">`+projects[i].tag1+`</h1>
+                                            <div class="projectTagListDiv alignCenter">
+                                                <div class="alignCenter projectTagDiv">
+                                                    <h1 class="projectTagText">`+projects[i].tag1+`</h1>
                                                 </div>
-                                                <div class="alignCenter" style="background-color: #2B2D31; width: fit-content; height: 24px; border-top-left-radius: 15px; border-top-right-radius: 15px; margin-right: 4px; margin-left: 4px;">
-                                                    <h1 style="font-size: 16px; font-weight: 100; color: #656565; padding-left:12px; padding-right: 12px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); font-family: Itim;">`+projects[i].tag2+`</h1>
+                                                <div class="alignCenter projectTagDiv">
+                                                    <h1 class="projectTagText">`+projects[i].tag2+`</h1>
                                                 </div>
-                                                <div class="alignCenter" style="background-color: #2B2D31; width: fit-content; height: 24px; border-top-left-radius: 15px; border-top-right-radius: 15px; margin-right: 4px; margin-left: 4px;">
-                                                    <h1 style="font-size: 16px; font-weight: 100; color: #656565; padding-left:12px; padding-right: 12px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); font-family: Itim;">`+projects[i].tag3+`</h1>
+                                                <div class="alignCenter projectTagDiv">
+                                                    <h1 class="projectTagText">`+projects[i].tag3+`</h1>
                                                 </div>
                                             </div>
                                         </div>

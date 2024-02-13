@@ -96,6 +96,7 @@ h1,h2,h3,h4,h5,h6,p{
     font-weight: 100;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
   }
   .iconBox{
     width: 10%;
@@ -130,15 +131,15 @@ h1,h2,h3,h4,h5,h6,p{
     justify-content: center;
     .skill{
       padding: 4px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 14px;
+      padding-right: 14px;
       margin: 9px;
-      margin-left: 12px;
-      margin-right: 12px;
+      margin-left: 9px;
+      margin-right: 9px;
       border-radius: 20px;
       background-color: #d9d9d913;
       border-radius: 20px;
-      font-size: 18px;
+      font-size: 0.9rem;
       color: #C2C2C2;
       align-items: center;
       justify-content: center;
@@ -213,26 +214,31 @@ body{
   transition:0.15s;
   .boxTitle{
     color: #f8f8f8;
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 100;
     text-align: left; 
     margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 10px;
   }
 }
 
-
-.boxMainFont{
-  color: #f8f8f8;
-  font-size: 24px;
-  text-align: left; 
-  font-weight: 100;
-  margin-top: 15px;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  letter-spacing: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
+.profileDescriptionDiv{
+  height: 100%; 
+  width: 100%;
+  .boxMainFont{
+    color: #f8f8f8;
+    font-size: 1.2rem;
+    text-align: left; 
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+
 
 
 .flex-container {
@@ -248,10 +254,10 @@ body{
   flex: 50%;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1500px) {
   .flex-item {
-    flex: 0%;
-    /* flex: 100%; */
+    /* flex: 0%; */
+    flex: 100%;
   }
 }
 
@@ -323,13 +329,13 @@ body{
   flex-wrap: wrap; 
   margin-top: 10px; 
   margin-left: 20px; 
-  width: 700px;
+  width: 550px;
   animation-name: skillLoading;
   animation-duration: 2s;
   .skill{
     background-color: #d9d9d918;
     border-radius: 25px;
-    height: 45px;
+    height: 38px;
     color: #FFFFFF;
     text-align: left;
     font-size: 24px;
@@ -338,13 +344,13 @@ body{
     margin-bottom: 5px; 
     position: relative;
     .skillImageDiv{
-      height: 45px; 
-      width: 45px; 
+      height: 38px; 
+      width: 38px; 
       border-bottom-left-radius: 25px; 
       border-top-left-radius: 25px; 
       margin-right: 20px;
       .skillImage{
-        height: 30px; 
+        height: 22px; 
         width: auto; 
         margin-left: 3px;
       }
@@ -358,7 +364,7 @@ body{
         height: 100%; 
         display: flex;
         .skillText{
-          font-size: 24px; 
+          font-size: 21px; 
           text-align: start; 
           margin-left: 15px; 
           margin-right: 25px;
@@ -368,7 +374,7 @@ body{
           animation-duration: 1s;
         }
         .skillText2{
-          font-size: 24px; 
+          font-size: 21px; 
           text-align: start; 
           margin-left: 15px; 
           margin-right: 25px;
@@ -386,7 +392,7 @@ body{
 @keyframes skillLoading {
   0% {width: 0px;}
   40% {width: 200px;}
-  100% {width: 700px;}
+  100% {width: 550px;}
 }
 
 @keyframes skillLoadingTextLeft {
@@ -472,15 +478,188 @@ body{
 }
 
 
+.projectEntry{
+  margin-top: 25px; 
+  padding-top:8px; 
+  padding-bottom:8px;
+  .projectDiv{
+    background-color:  #2B2D31; 
+    height: 355px; 
+    width: 550px; 
+    border-radius: 20px;
+    .projectTop{
+      height: 70px; 
+      width: 100%; 
+      background-color: #2B2D31;
+      flex-wrap: wrap; 
+      display: flex; 
+      border-top-right-radius: 20px; 
+      border-top-left-radius: 20px;
+      .projectSmallImageDiv{
+        height: 100%; 
+        width: 70px; 
+        background-color: #303234; 
+        border-top-left-radius: 20px;
+        .projectSmallImage{
+          height: 70px; 
+          width: auto; 
+          border-top-left-radius: 20px;
+        }
+      }
+      .projectHeadingDiv{
+        height: 100%; 
+        width: 390px; 
+        margin-left: 10px; 
+        background-color: #303234;
+        .projectHeading{
+          font-size: 1.6rem;
+          color: #656565; 
+          font-weight: 100; 
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          font-family: Itim;
+        }
+      }
+      .projectIconDiv{
+        height: 100%; 
+        width: 80px; 
+        background-color: #303234; 
+        border-top-right-radius: 20px;
+        .linkAnimation{
+          background-color: #00000000;
+          width:38px;
+          height:38px;
+          transition: 0.15s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px;
+          img{
+            height: 22px;
+            width: auto; 
+            transition: 0.1s;
+          }
+          .projectIcon{
+            height: 22px; 
+            width: 22px; 
+            margin-left: 8px; 
+            margin-right: 8px; 
+          }
+        }
+        
+        .linkAnimation:hover{
+          background-color: rgba(105, 105, 105, 0.20); 
+          img{
+            height: 26px;
+            width: auto; 
+          }
+        }
+        
+      }
+    }
+
+
+
+
+
+    .projectBottom{
+      height: 275px; 
+      width: 100%; 
+      margin-top: 10px; 
+      flex-wrap: wrap; 
+      display: flex;
+      .projectBigImage{
+        height: 100%; 
+        width: auto;
+        img{
+          height:100%; 
+          width: 100%; 
+          border-bottom-left-radius: 20px;
+        }
+      }
+      .projectDescriptionDiv{
+        margin-left: 5px; 
+        width: 269px; 
+        height: 100%; 
+        background-color: #303234; 
+        flex-wrap: wrap; 
+        display: flex; 
+        border-bottom-right-radius: 20px;
+        .projectStatusParent{
+          height: 30px; 
+          width: 100%;
+          .projectStatusDiv{
+            background-color: #2B2D31; 
+            width: 90px; 
+            height: 28px; 
+            border-bottom-left-radius: 15px; 
+            border-bottom-right-radius: 15px; 
+            margin-left:165px;
+            .projectStatusCircle{
+              height: 12px; 
+              width: 12px; 
+              border-radius: 20px; 
+              margin-right: 8px;
+            }
+            .projectStatusText{
+              font-size: 0.95rem; 
+              font-weight: 100; 
+              color: #656565; 
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+              font-family: Itim;
+            }
+          }
+        }
+        .projectTextDescriptionDiv{
+          margin-top:26px;
+          height:196px; 
+          width:100%; 
+          font-weight: 100; 
+          color: #656565; 
+          font-size: 1.15rem; 
+          padding-left: 15px; 
+          padding-right: 15px; 
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+          font-family: Itim;
+        }
+        .projectTagListDiv{
+          height: 22px; 
+          width: 100%;
+          .projectTagDiv{
+            background-color: #2B2D31; 
+            width: fit-content; 
+            height: 22px; 
+            border-top-left-radius: 15px; 
+            border-top-right-radius: 15px; 
+            margin-right: 4px; 
+            margin-left: 4px;
+            .projectTagText{
+              font-size: 0.8rem; 
+              font-weight: 100; 
+              color: #656565; 
+              padding-left:12px; 
+              padding-right: 12px; 
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+              font-family: Itim;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
 .photoDiv{
-  height: 420px; 
-  width: 650px; 
+  height: 365px; 
+  width: 550px; 
   border-radius: 20px; 
   margin-top:25px;
   overflow: hidden;
   .photo{
-    height: 420px; 
-    width: 650px; 
+    height: auto; 
+    width: 550px; 
     border-radius: 20px;
     transform: scale(1);
     transition: 0.25s;
@@ -488,13 +667,13 @@ body{
   .bannerDiv{
     z-index: 1;
     position: absolute; 
-    width: 650px; 
-    height: 395px; 
+    width: 550px; 
+    height: 350px; 
     margin-top: 25px;
     .banner{
       position: absolute; 
-      width: 580px; 
-      height: 50px; 
+      width: 520px; 
+      height: 45px; 
       background-color: rgba(105, 105, 105, 0.28); 
       border-radius: 5px; 
       backdrop-filter: blur(4px); 
@@ -503,7 +682,7 @@ body{
         transition: 0.25s;
         text-shadow: 0px 4px 4px #69696900; 
         color: rgba(218, 222, 227, 0.63); 
-        font-size: 24px; 
+        font-size: 1.2rem; 
         font-weight: 100; 
         letter-spacing: 4px; 
         font-family: Signika;
@@ -515,13 +694,13 @@ body{
     z-index: 1;
     display: flex;
     position: absolute; 
-    width: 650px; 
-    height: 420px; 
+    width: 550px; 
+    height: 365px; 
     justify-content: left;
     overflow: hidden;
     .banner{
-      margin-top: 180px;
-      height: 240px;
+      margin-top: 165px;
+      height: 200px;
       width: 0px;
       background-color: rgba(66, 66, 66, 0);
       transition: 0.25s;
@@ -529,7 +708,7 @@ body{
       flex-wrap: wrap;
       .child{
         img{
-          height: 34px;
+          height: 32px;
           width: auto;
           opacity: 0;
           transition: 0.15s;
@@ -538,7 +717,7 @@ body{
           color: rgba(218, 222, 227, 0.63); 
           font-weight: 100;
           font-family: Signika;
-          font-size: 14px;
+          font-size: 0.85rem;
           white-space: wrap;
           opacity: 0;
           transition: 0.15s;
@@ -552,13 +731,13 @@ body{
     z-index: 1;
     display: flex;
     position: absolute; 
-    width: 650px; 
-    height: 420px; 
+    width: 550px; 
+    height: 380px; 
     justify-content: right;
     overflow: hidden;
     .banner{
-      margin-top: 180px;
-      height: 240px;
+      margin-top: 165px;
+      height: 200px;
       width: 0px;
       background-color: rgba(66, 66, 66, 0);
       transition: 0.25s;
@@ -566,7 +745,7 @@ body{
       flex-wrap: wrap;
       .child{
         img{
-          height: 26px;
+          height: 24px;
           width: auto;
           opacity: 0;
           transition: 0.15s;
@@ -575,7 +754,7 @@ body{
           color: rgba(218, 222, 227, 0.63); 
           font-weight: 100;
           font-family: Signika;
-          font-size: 14px;
+          font-size: 0.85rem;
           white-space: wrap;
           opacity: 0;
           transition: 0.15s;
@@ -645,29 +824,7 @@ body{
 
 /* Projects */
 
-.linkAnimation{
-  background-color: #00000000;
-  width:48px;
-  height:48px;
-  transition: 0.15s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  img{
-    height: 24px;
-    width: auto; 
-    transition: 0.1s;
-  }
-}
 
-.linkAnimation:hover{
-  background-color: rgba(105, 105, 105, 0.20); 
-  img{
-    height: 28px;
-    width: auto; 
-  }
-}
 
 
 .footerIcon{
@@ -726,3 +883,16 @@ body{
   flex-wrap: wrap; 
   display: flex;
 }
+
+
+
+.portfolioBox{
+  width: 1350px;
+  #educationPaginator{
+    margin-top:10px
+  }
+}
+
+
+
+
