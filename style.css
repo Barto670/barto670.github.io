@@ -876,7 +876,6 @@ body{
 
 .portfolioContentBox{
   display: block; 
-  width: 98vw; 
   height: auto; 
   display: flex; 
   flex-wrap: wrap;
