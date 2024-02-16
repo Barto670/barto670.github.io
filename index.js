@@ -22,12 +22,12 @@ skills = [
         ]
 
 projects = [
-                { name:'CS2 Stash Enhancer',              statusColor:'green' ,       bigImagesrc:'./images/projects/cs2stashenhancerbig.jpg',       smallImagesrc: './images/projects/cs2stashenhancersmall.png' ,      status:'Online' ,        tag1:'Extention',       tag2:'HTML',            tag3:'JavaScript' ,  redirectionURLStyle:'flex',  redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       expandURL:'' ,     description:'Browser Extension for a video game called Counter Strike 2. This extension works on the website csgostash.com and gives any user an experience with an expanded libary of useful features.'},
-                { name:'Online Shop Website',             statusColor:'orange' ,      bigImagesrc:'./images/projects/dashShopBig.jpg',               smallImagesrc: './images/projects/dashShopSmall.png' ,              status:'Prototype' ,     tag1:'HTML',            tag2:'CSS',             tag3:'JavaScript' ,  redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A sample website that was created as part of the portfolio. This website demonstrates how a shop website could function both from the staff view and the customer view.'},
-                { name:'UL Student Guide',                statusColor:'orange' ,      bigImagesrc:'./images/projects/studentguideBig.jpg',           smallImagesrc: './images/projects/studentguideSmall.png' ,          status:'Prototype' ,     tag1:'Android',         tag2:'Application',     tag3:'Java' ,        redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project made for final year of my Masters. This application is a student guide that is targetted towards new & erasmus students to get familiar with the UL Campus.'},
-                { name:'DoneDeal Discord Bot',            statusColor:'orange' ,      bigImagesrc:'./images/projects/donedealBig.jpg',               smallImagesrc: './images/projects/donedealSmall.png' ,              status:'Prototype' ,     tag1:'Bot',             tag2:'Discord',         tag3:'Python' ,      redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A bot made for a motor marketplace DoneDeal.ie made in python. Get discord notifications on cars based on the inputted filters. Messages are sent to a selected discord channel when a new car listing is created.'},
-                { name:'GLI Academy',                     statusColor:'orange' ,      bigImagesrc:'./images/projects/gliAcademyBig.jpeg',            smallImagesrc: './images/projects/gliAcademySmall.png' ,            status:'Prototype' ,     tag1:'HTML',            tag2:'Angular',         tag3:'TypeScript' ,  redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project made for final year of my Bachelors. Website allows users to learn about the meaning and implementation of various Globalisation, Localisation and Internationalisation concepts.'},
-                { name:'yt-dlp User Interface',           statusColor:'orange' ,      bigImagesrc:'./images/projects/ytdlpBig.jpg',                  smallImagesrc: './images/projects/ytdlpSmall.png' ,                 status:'Prototype' ,     tag1:'Batchfile',       tag2:'Extention',       tag3:'JavaScript' ,  redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project introducing a user interface for yt-dlp. Allows to use yt-dlp in as a windows program and also as a browser extention.'},
+                { name:'CS2 Stash Enhancer',              statusColor:'green' ,       bigImagesrc:'./images/projects/cs2stashenhancerbig.jpg',       smallImagesrc: './images/projects/cs2stashenhancersmall.png' ,      status:'Online' ,      tags:['Extension','HTML','JavaScript'],        redirectionURLStyle:'flex',   redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       expandURL:'' ,     description:'Browser Extension for a video game called Counter Strike 2. This extension works on the website csgostash.com and gives any user an experience with an expanded libary of useful features.'},
+                { name:'Online Shop Website',             statusColor:'orange' ,      bigImagesrc:'./images/projects/dashShopBig.jpg',               smallImagesrc: './images/projects/dashShopSmall.png' ,              status:'Prototype' ,   tags:['HTML','CSS','JavaScript'],              redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:"A sample website that was created as part of the portfolio. This website demonstrates how an online shop website could function both from the company's & customer's point of view."},
+                { name:'UL Student Guide',                statusColor:'orange' ,      bigImagesrc:'./images/projects/studentguideBig.jpg',           smallImagesrc: './images/projects/studentguideSmall.png' ,          status:'Prototype' ,   tags:['Android','Application','Java'],         redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project made for final year of my Masters. This application is a student guide that is targetted towards new & erasmus students to get familiar with the UL Campus.'},
+                { name:'DoneDeal Discord Bot',            statusColor:'orange' ,      bigImagesrc:'./images/projects/donedealBig.jpg',               smallImagesrc: './images/projects/donedealSmall.png' ,              status:'Prototype' ,   tags:['Bot','Discord','Python'],               redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A bot made for a motor marketplace DoneDeal.ie made in python. Get discord notifications on cars based on the inputted filters. Messages are sent to a selected discord channel when a new car listing is created.'},
+                { name:'GLI Academy',                     statusColor:'orange' ,      bigImagesrc:'./images/projects/gliAcademyBig.jpeg',            smallImagesrc: './images/projects/gliAcademySmall.png' ,            status:'Prototype' ,   tags:['HTML','Angular','TypeScript'],          redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project made for final year of my Bachelors. Website allows users to learn about the meaning and implementation of various Globalisation, Localisation and Internationalisation concepts.'},
+                { name:'yt-dlp User Interface',           statusColor:'orange' ,      bigImagesrc:'./images/projects/ytdlpBig.jpg',                  smallImagesrc: './images/projects/ytdlpSmall.png' ,                 status:'Prototype' ,   tags:['Batchfile','Extension','JavaScript'],   redirectionURLStyle:'none',   redirectionURL:'',                                                                                                         expandURL:'' ,     description:'A project introducing a user interface for yt-dlp. Allows to use yt-dlp in as a windows program and also as a browser extension.'},
 ]
  
 
@@ -47,6 +47,8 @@ photos = [
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
+
+    // document.getElementById('projectPopup').addEventListener("click", function() {closeProjectPopup(event);});
 
     displaySkills();
     initialiseProjects();
@@ -276,6 +278,7 @@ function initialiseProjects(){
 
         div1 = document.createElement('div');
 
+        div1.addEventListener("click", function() {openProjectPopup(i);});
 
         div1.innerHTML = `
                             <div status="`+status+`" class="projectEntry" class="alignCenter">
@@ -310,13 +313,13 @@ function initialiseProjects(){
                                             </div>
                                             <div class="projectTagListDiv alignCenter">
                                                 <div class="alignCenter projectTagDiv">
-                                                    <h1 class="projectTagText">`+projects[i].tag1+`</h1>
+                                                    <h1 class="projectTagText">`+projects[i].tags[0]+`</h1>
                                                 </div>
                                                 <div class="alignCenter projectTagDiv">
-                                                    <h1 class="projectTagText">`+projects[i].tag2+`</h1>
+                                                    <h1 class="projectTagText">`+projects[i].tags[1]+`</h1>
                                                 </div>
                                                 <div class="alignCenter projectTagDiv">
-                                                    <h1 class="projectTagText">`+projects[i].tag3+`</h1>
+                                                    <h1 class="projectTagText">`+projects[i].tags[2]+`</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -352,6 +355,21 @@ function initialiseProjects(){
 
 
 
+// function openProjectPopup(id){
+
+//     console.log(id)
+
+//     document.getElementById('projectPopupName').innerHTML = projects[id].name;
+//     document.getElementById('projectPopupBigImage').src = projects[id].bigImagesrc;
+
+
+//     document.getElementById('projectPopup').style.display = 'flex';
+// }
+
+// function closeProjectPopup(event){
+//     console.log( console.log(event))
+//     document.getElementById('projectPopup').style.display = 'none';
+// }
 
 function initialiseEducation(){
 
