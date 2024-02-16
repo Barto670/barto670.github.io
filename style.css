@@ -574,10 +574,11 @@ body{
       display: flex;
       .projectBigImage{
         height: 100%; 
-        width: auto;
+        width: 279px;
         img{
           height:100%; 
-          width: 100%; 
+          width: 100%;
+          object-fit: cover;
           border-bottom-left-radius: 20px;
         }
       }
