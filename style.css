@@ -590,23 +590,27 @@ body{
         display: flex; 
         border-bottom-right-radius: 20px;
         .projectStatusParent{
-          height: 30px; 
+          height: 26px; 
           width: 100%;
+          justify-content: end;
+          display: flex;
           .projectStatusDiv{
             background-color: #2B2D31; 
-            width: 95px; 
+            width: fit-content; 
+            padding-left: 10px;
+            padding-right: 10px;
             height: 26px; 
             border-bottom-left-radius: 15px; 
             border-bottom-right-radius: 15px; 
-            margin-left:160px;
+            margin-right:10px;
             .projectStatusCircle{
-              height: 12px; 
-              width: 12px; 
+              height: 10px; 
+              width: 10px; 
               border-radius: 20px; 
               margin-right: 8px;
             }
             .projectStatusText{
-              font-size: 0.95rem; 
+              font-size: 0.92rem; 
               font-weight: 100; 
               color: #656565; 
               text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
@@ -617,7 +621,7 @@ body{
         }
         .projectTextDescriptionDiv{
           margin-top:26px;
-          height:200px; 
+          height:204px; 
           width:100%; 
           font-weight: 100; 
           color: #656565; 
