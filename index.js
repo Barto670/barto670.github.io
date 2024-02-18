@@ -1,8 +1,5 @@
-// Todo
-// On education, projects, photography add side navigation
-// Add project popup
-// Make website bit smaller to fit on phones (add scaling variable to css)
-// Finish top bar
+// Copyright 2023, Bartek Skorecki, All rights reserved.
+
 
 skills = [
                 { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572220' ,     imageLink:'./images/skills/html.png'},
