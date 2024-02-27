@@ -698,11 +698,11 @@ function openProjectPopup(id){
                 </div>
             </div>
             
-            <div class="alignCenter" style="min-width: 100px; max-width: 100%; height: fit-content; background-color: #1c1e22; padding-top: 50px; padding-bottom: 50px;">
-                <div style="height: 350px; display: flex; border-radius: 15px; position: relative;">
-                    <div style="height: 350px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
-                    <img id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: 350px; width: auto; border-radius: 30px;">
-                    <div style="height: 350px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
+            <div class="alignCenter" style="min-width: 100px;max-width: 100%;height: fit-content;background-color: #1c1e22; padding-top: 35px;padding-bottom: 35px;;">
+                <div style="height: 300px; display: flex; border-radius: 15px; position: relative;">
+                    <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
+                    <img id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: 300px; width: auto; border-radius: 30px;">
+                    <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
                 </div>
             </div>
 
