@@ -237,15 +237,18 @@ body{
   width: 100%;
   .boxMainFont{
     color: #f8f8f8;
-    font-size: 1.2rem;
-    text-align: left; 
+    font-size: 1.06rem;
     font-weight: 100;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     letter-spacing: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     cursor: default;
+    transition: 0.25s;
+  }
+  .boxMainFont:hover{
+    scale: 1.1;
   }
 }
 
@@ -495,10 +498,20 @@ body{
   padding-top:8px; 
   padding-bottom:8px;
   .projectDiv{
+    transition: 0.1s;
     background-color:  #2B2D31; 
     height: 355px; 
     width: 550px; 
     border-radius: 20px;
+    .projectOverlay{
+      height: 355px; 
+      width: 550px; 
+      border-radius: 20px; 
+      background-color:  #2B2D3100; 
+      border: 2px solid rgba(128, 128, 128, 0);
+      position: absolute;
+      transition: 0.1s;
+    }
     .projectTop{
       height: 70px; 
       width: 100%; 
@@ -512,10 +525,12 @@ body{
         width: 70px; 
         background-color: #303234; 
         border-top-left-radius: 20px;
+        transition: 0.1s;
         .projectSmallImage{
           height: 70px; 
           width: auto; 
           border-top-left-radius: 20px;
+          transition: 0.1s;
         }
       }
       .projectHeadingDiv{
@@ -523,7 +538,7 @@ body{
         width: 394px; 
         margin-left: 6px; 
         background-color: #303234;
-        cursor:default;
+        transition: 0.1s;
         .projectHeading{
           font-size: 1.65rem;
           color: #656565; 
@@ -537,15 +552,17 @@ body{
         width: 80px; 
         background-color: #303234; 
         border-top-right-radius: 20px;
+        transition: 0.1s;
         .linkAnimation{
           background-color: #00000000;
           width:38px;
           height:38px;
-          transition: 0.15s;
+          transition: 0.1s;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 15px;
+          z-index: 2;
           img{
             height: 22px;
             width: auto; 
@@ -569,9 +586,7 @@ body{
         
       }
     }
-
-
-
+    
 
 
     .projectBottom{
@@ -588,6 +603,7 @@ body{
           width: 100%;
           object-fit: cover;
           border-bottom-left-radius: 20px;
+          transition: 0.1s;
         }
       }
       .projectDescriptionDiv{
@@ -595,6 +611,7 @@ body{
         width: 264px; 
         height: 100%; 
         background-color: #303234; 
+        transition: 0.15s;
         flex-wrap: wrap; 
         display: flex; 
         border-bottom-right-radius: 20px;
@@ -624,13 +641,13 @@ body{
               color: #656565; 
               text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
               font-family: Itim;
-              cursor: default;
             }
           }
         }
         .projectTextDescriptionDiv{
-          margin-top:26px;
-          height:204px; 
+          margin-top: 25px;
+          margin-bottom: 25px;
+          height: 180px;
           width:100%; 
           font-weight: 100; 
           color: #656565; 
@@ -639,7 +656,12 @@ body{
           padding-right: 15px; 
           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
           font-family: Itim;
-          cursor:default;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 8;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          font-size: 18px;
         }
         .projectTagListDiv{
           height: 22px; 
@@ -660,13 +682,50 @@ body{
               padding-right: 12px; 
               text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
               font-family: Itim;
-              cursor:default;
             }
           }
         }
       }
     }
   }
+  .projectDiv:hover{
+    cursor:pointer;
+    box-shadow: #4b4e532f 0px 0px 20px 6px;
+    .projectOverlay{
+      border: 2px solid rgba(128, 128, 128, 0.062);
+      
+    }
+  }
+  /* .projectDiv:hover{
+    cursor:pointer;
+    .projectTop{
+      .projectSmallImageDiv{
+        background-color: #282a2e; 
+        .projectSmallImage{
+          opacity: 0.5;
+        }
+      }
+      .projectHeadingDiv{
+        background-color: #282a2e; 
+      }
+      .projectIconDiv{
+        background-color: #282a2e; 
+        
+      }
+
+    }
+    .projectBottom{
+      .projectDescriptionDiv{
+        background-color: #282a2e; 
+      }
+      .projectBigImage{
+        img{
+          opacity: 0.5;
+        }
+      }
+    }
+    
+  } */
 }
 
 
@@ -924,6 +983,66 @@ body{
     margin-top:10px
   }
 }
+
+
+
+
+
+
+
+.tagPopup{
+  padding-top: 2px;
+  width: fit-content; 
+  height: 100%; 
+  padding-left:20px; 
+  padding-right: 20px; 
+  border-top-left-radius: 15px; 
+  border-top-right-radius: 15px; 
+  color: white; 
+  font-size: 14px; 
+  align-items: center; 
+  justify-content: center; 
+  display: flex; 
+  margin-left: 8px; 
+  margin-right: 8px; 
+  font-weight: 100;
+  border-radius: 25px;
+  margin-top: 24px;
+}
+
+
+.popUpInsideDiv{
+  min-width: 30%; 
+  max-width: 800px; 
+  height: 90%; 
+  border-radius: 25px;
+}
+
+.popupDescriptionEntry{
+  color:#959697; 
+  margin-top: 10px; 
+  line-height: 23px;
+}
+
+
+.popupExplenationEntry{
+  color:#959697; 
+  margin-top: 10px; 
+  line-height: 23px;
+}
+
+
+.popupFunctionalityEntry{
+  color:#959697; 
+  margin-bottom: 8px; 
+  line-height: 23px;
+}
+
+.popupAdditionalEntry{
+  color:#959697; 
+  margin-bottom: 5px;
+}
+
 
 
 
