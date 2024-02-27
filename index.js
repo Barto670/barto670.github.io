@@ -325,7 +325,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     initialisePhotos();
     initialiseEducation();
     
-    
+    websiteIcon.href = "./images/tab_icon/frame_"+16+"_delay-0.02s.jpg";
     runIcon(0);
 
 });
@@ -346,7 +346,7 @@ function runIcon(iconCount){
 
     switch (iconCount) {
         case 16: timer = 1000; break;
-        default: timer = 32; break;
+        default: timer = 50; break;
     }
 
     setTimeout(function () {
