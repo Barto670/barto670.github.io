@@ -34,7 +34,8 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        'Counter Strike 2'
+                        'Counter Strike 2',
+                        '75+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
@@ -52,7 +53,7 @@ projects = [
                     [
                         "Pattern and Float Editing: ",
                         "Multiple Phases Support: ",
-                        "!gen Code Generation: ",
+                        "Gen Code Generation: ",
                         "Inspect Code Generation: ",
                         "Rare Pattern Database: ",
                         "Customizable Settings: ",
@@ -128,7 +129,8 @@ projects = [
                         'Application',
                         'Java',
                         'UI/UX',
-                        'Geolocation'
+                        'Geolocation',
+                        'Web Scraping'
                     ],         
                     redirectionURLStyle:'none',   
                     redirectionURL:'',                                                                                                         
@@ -169,49 +171,6 @@ projects = [
                     additional:[
                         "While making this app I used Android Studio, Java, XML, Figma & Web Scraping",
                         "A Master's final project that I did individually"
-                    ]
-                },
-                { 
-                    name:'DoneDeal Discord Bot',            
-                    statusColor:'orange' ,      
-                    bigImagesrc:'donedealBig.jpg',               
-                    smallImagesrc: 'donedealSmall.png' ,              
-                    status:'Prototype' ,  
-                    tags:[
-                        'Bot',
-                        'Discord',
-                        'JavaScript',
-                        'Web Scraping',
-                        'Noje.js'
-                    ],               
-                    redirectionURLStyle:'none',   
-                    redirectionURL:'',                                                                                                         
-                    expandURL:'' ,     
-                    imageArray:['donedealLong.jpg'],
-                    description:
-                    [
-                        "A bot designed specifically for the motor marketplace DoneDeal.ie. It's programmed to send Discord notifications whenever new car listings match specified filters. Users can input their preferences, and the bot will promptly notify a designated Discord channel whenever a relevant listing is posted."
-                    ],
-                    explenation:
-                    [
-                        "Bot was hosted using Node.js. After authenticating through the Discord library, the bot responds to designated trigger messages like '!start' to activate its functions. Employing web scraping techniques, it compiles a comprehensive list of available filters and gathers necessary information from specified sources to post on the designated channel. The bot is designed to function across two multiple distinct channels, each tailored with unique sets of filters to effectively process and relay listings."
-                    ],
-                    functionalityBold:
-                    [
-                        "Precise Filters: ",
-                        "Notifications: "
-                    ],
-                    functionalityText:
-                    [
-                        "Precisely add the required filters to limit unecesarry notifications.",
-                        "Receive a notification every time a new car listing is posted."
-                    ],
-                    additional:[
-                        "I deployed this bot on a Raspberry Pi utilizing Node.js, enabling me to receive Discord notifications even when my computer was offline.",
-                        "Used JavaScript to program the bot.",
-                        "Using 'discord.io' in order to authenticate the bot.",
-                        "Web Scraping for required information."
-                        
                     ]
                 },
                 { 
@@ -258,6 +217,49 @@ projects = [
                     ], 
                     additional:[
                         "A Bachelor's final project that I did individually"
+                    ]
+                },
+                { 
+                    name:'DoneDeal Discord Bot',            
+                    statusColor:'orange' ,      
+                    bigImagesrc:'donedealBig.jpg',               
+                    smallImagesrc: 'donedealSmall.png' ,              
+                    status:'Prototype' ,  
+                    tags:[
+                        'Bot',
+                        'Discord',
+                        'JavaScript',
+                        'Web Scraping',
+                        'Noje.js'
+                    ],               
+                    redirectionURLStyle:'none',   
+                    redirectionURL:'',                                                                                                         
+                    expandURL:'' ,     
+                    imageArray:['donedealLong.jpg'],
+                    description:
+                    [
+                        "A bot designed specifically for the motor marketplace DoneDeal.ie. It's programmed to send Discord notifications whenever new car listings match specified filters. Users can input their preferences, and the bot will promptly notify a designated Discord channel whenever a relevant listing is posted."
+                    ],
+                    explenation:
+                    [
+                        "Bot was hosted using Node.js. After authenticating through the Discord library, the bot responds to designated trigger messages like '!start' to activate its functions. Employing web scraping techniques, it compiles a comprehensive list of available filters and gathers necessary information from specified sources to post on the designated channel. The bot is designed to function across two multiple distinct channels, each tailored with unique sets of filters to effectively process and relay listings."
+                    ],
+                    functionalityBold:
+                    [
+                        "Precise Filters: ",
+                        "Notifications: "
+                    ],
+                    functionalityText:
+                    [
+                        "Precisely add the required filters to limit unecesarry notifications.",
+                        "Receive a notification every time a new car listing is posted."
+                    ],
+                    additional:[
+                        "I deployed this bot on a Raspberry Pi utilizing Node.js, enabling me to receive Discord notifications even when my computer was offline.",
+                        "Used JavaScript to program the bot.",
+                        "Using 'discord.io' in order to authenticate the bot.",
+                        "Web Scraping for required information."
+                        
                     ]
                 },
                 { 
@@ -317,16 +319,41 @@ photos = [
 
 
 window.addEventListener("DOMContentLoaded", (event) => {
-// document.getElementById('projectPopup').addEventListener("click", function() {closeProjectPopup(event);});
-
-    
 
     displaySkills();
     initialiseProjects();
     initialisePhotos();
     initialiseEducation();
+    
+    
+    runIcon(0);
 
 });
+
+function iconCountSwitch(key){
+
+    websiteIcon.href = "./images/tab_icon/frame_"+key+"_delay-0.02s.jpg";
+
+    switch (key) {
+        case 40: return 0;
+        default: return key+1;
+    }
+    
+}
+
+function runIcon(iconCount){
+    let timer;
+
+    switch (iconCount) {
+        case 16: timer = 1000; break;
+        default: timer = 32; break;
+    }
+
+    setTimeout(function () {
+        runIcon(iconCountSwitch(iconCount));
+    }, timer);
+}
+
 
 
 function displaySkills(){
