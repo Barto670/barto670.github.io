@@ -535,7 +535,7 @@ body{
       }
       .projectHeadingDiv{
         height: 100%; 
-        width: 394px; 
+        width: 398px; 
         margin-left: 6px; 
         background-color: #303234;
         transition: 0.1s;
@@ -549,7 +549,7 @@ body{
       }
       .projectIconDiv{
         height: 100%; 
-        width: 80px; 
+        width: 76px; 
         background-color: #303234; 
         border-top-right-radius: 20px;
         transition: 0.1s;
@@ -662,6 +662,8 @@ body{
           -webkit-box-orient: vertical;
           display: -webkit-box;
           font-size: 18px;
+          margin-left: 12px;
+          margin-right: 12px;
         }
         .projectTagListDiv{
           height: 22px; 
@@ -696,36 +698,6 @@ body{
       
     }
   }
-  /* .projectDiv:hover{
-    cursor:pointer;
-    .projectTop{
-      .projectSmallImageDiv{
-        background-color: #282a2e; 
-        .projectSmallImage{
-          opacity: 0.5;
-        }
-      }
-      .projectHeadingDiv{
-        background-color: #282a2e; 
-      }
-      .projectIconDiv{
-        background-color: #282a2e; 
-        
-      }
-
-    }
-    .projectBottom{
-      .projectDescriptionDiv{
-        background-color: #282a2e; 
-      }
-      .projectBigImage{
-        img{
-          opacity: 0.5;
-        }
-      }
-    }
-    
-  } */
 }
 
 
@@ -737,6 +709,7 @@ body{
   border-radius: 20px; 
   margin-top:25px;
   overflow: hidden;
+  transition: 0.1s;
   .photo{
     height: auto; 
     width: 550px; 
@@ -848,6 +821,7 @@ body{
 
 .photoDiv:hover{
   cursor: pointer;
+  box-shadow: #4b4e532f 0px 0px 20px 6px;
   .photo{
     transform: scale(1.03);
     filter: blur(8px);
