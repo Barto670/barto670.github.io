@@ -346,7 +346,7 @@ function runIcon(iconCount){
 
     switch (iconCount) {
         case 16: timer = 1000; break;
-        default: timer = 50; break;
+        default: timer = 42; break;
     }
 
     setTimeout(function () {
