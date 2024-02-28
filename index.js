@@ -44,7 +44,7 @@ projects = [
                     [
                         "The Browser Extension is designed for Counter Strike 2, enhancing the user experience on the csgostash.com website by providing additional features. These features capitalize on the extensive array of cosmetic items available in the game, encompassing diverse patterns, float values, and skin conditions. In Counter Strike 2, each cosmetic skin is associated with a unique inspect code, a customized hexadecimal value with a CRC32-based checksum. This extension facilitates the generation of inspect codes tailored to users' preferences, enabling them to easily locate specific cosmetics within the game."
                     ],
-                    explenation:
+                    explanation:
                     [
                         "The extension functions by fetching the most recent version of skin data stored on my GitHub in JSON format via an API whenever a user utilizes the extension. In the extension's popup.js, users encounter a list of skins that they can select. Upon selecting a skin link, an expanded div interface emerges, enabling users to input custom pattern and float values tailored to that particular skin.",
                         "Once the user inputs the float value & pattern id, all values are saved and translated into their hexadecimal equivalents. Subsequently, this formatted hexadecimal string undergoes a CRC32 checksum calculation to ensure correctness. Upon completion, users are presented with the option to view the cosmetic skin in-game, where an inspect code and !gen code are updated on the user interface for their convenience."
@@ -95,7 +95,7 @@ projects = [
                     [
                         "An exemplary website showcased within the portfolio which demonstrates the functionality of an online shop from both the company's and customer's perspectives. It features a comprehensive dashboard allowing owners to track paid orders, site visits, searches, total sales earnings, and manage staff reminders. Customers and owners both have access to a storefront showcasing all available products and their prices. "
                     ],
-                    explenation:
+                    explanation:
                     [
                         "The website is coded using HTML and CSS, implementing modern stylistic techniques and animations to create a visually appealing and aesthetic online shop. It maintains a simplistic design while incorporating advanced features to enhance user experience. The use of subtle animations adds a touch of interactivity and elegance to the browsing experience. Overall, the website seamlessly combines minimalist aesthetics with advanced functionalities, resulting in a pleasant and visually striking online shopping platform."
                     ],
@@ -140,7 +140,7 @@ projects = [
                     [
                         "Android mobile application designed as a comprehensive tool for students to navigate and acquaint themselves with the University of Limerick campus. Tailored with simplicity in mind, this user-friendly app is specifically aimed at first-year students and Erasmus participants, offering an intuitive interface for easy exploration. Whether it's locating buildings, finding facilities, or accessing campus resources, 'UL Student Guide' serves as an indispensable companion, empowering students to navigate campus life effortlessly."
                     ],
-                    explenation:
+                    explanation:
                     [
                         "The application builds upon Google Maps Services & geolocation to provide a tailored navigation experience for users within the UL campus. It enhances the map interface with custom markers and filters, allowing users to easily identify different campus locations. By integrating user authentication and API access, the application fetches and displays the user's timetable directly within the interface, streamlining the process of managing academic schedules. This comprehensive approach ensures a seamless and efficient experience for students navigating the UL campus and accessing their timetable information."
                     ],
@@ -195,7 +195,7 @@ projects = [
                     [
                         "Developed as the culmination of my Bachelor's degree, this project aims to provide users with an interactive platform facilitating exploration and comprehension of the significance and practical applications of various concepts related to Globalization, Localization, and Internationalization, hence the name GLIacademy."
                     ],
-                    explenation:
+                    explanation:
                     [
                         "Developed on the front-end framework Angular using MySQL database to store user progress and to log users safely into the website & Spring Boot for the back-end of the website.",
                         "User ecrypted credentials, user progress, quiz questions & answers & other website content stored on the database.",
@@ -240,7 +240,7 @@ projects = [
                     [
                         "A bot designed specifically for the motor marketplace DoneDeal.ie. It's programmed to send Discord notifications whenever new car listings match specified filters. Users can input their preferences, and the bot will promptly notify a designated Discord channel whenever a relevant listing is posted."
                     ],
-                    explenation:
+                    explanation:
                     [
                         "Bot was hosted using Node.js. After authenticating through the Discord library, the bot responds to designated trigger messages like '!start' to activate its functions. Employing web scraping techniques, it compiles a comprehensive list of available filters and gathers necessary information from specified sources to post on the designated channel. The bot is designed to function across two multiple distinct channels, each tailored with unique sets of filters to effectively process and relay listings."
                     ],
@@ -282,7 +282,7 @@ projects = [
                     [
                         "This project presents a user-friendly interface for yt-dlp, enabling users to utilize yt-dlp both as a standalone Windows program and as a browser extension."
                     ],
-                    explenation:
+                    explanation:
                     [
                         "The standalone application utilizes the Windows file system to store user-entered inputs, with the execution of specific yt-dlp commands alongside these inputs.",
                         "The browser extension employs manual registry input in the Windows system to execute an application directly from the browser. This mechanism transfers essential information to the program, allowing it to operate similarly to the standalone application."
@@ -713,8 +713,8 @@ function openProjectPopup(id){
                     <div id="popupDescriptionDiv" style="height: fit-content; width: 100%; margin-bottom: 40px;">
                         <h1 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Description</h1>
                     </div>
-                    <div id="popupExplenationDiv" style="height: fit-content; width: 100%; margin-bottom: 40px;">
-                        <h1 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Explenation</h1>
+                    <div id="popupExplanationDiv" style="height: fit-content; width: 100%; margin-bottom: 40px;">
+                        <h1 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Explanation</h1>
                     </div>
                     <div style="height: fit-content; width: 100%; margin-bottom: 40px;">
                         <h1 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Functionality</h1>
@@ -762,14 +762,14 @@ function openProjectPopup(id){
         descriptionDiv.appendChild(descriptionEntry);
     }
 
-    //Adding Explenation
+    //Adding Explanation
 
-    let explenationDiv = document.getElementById('popupExplenationDiv');
-    for (let i = 0; i < projects[id].explenation.length; i++) {
-        let explenationEntry = document.createElement('p');
-        explenationEntry.classList.add("popupExplenationEntry");
-        explenationEntry.innerHTML = projects[id].explenation[i]
-        explenationDiv.appendChild(explenationEntry);
+    let explanationDiv = document.getElementById('popupExplanationDiv');
+    for (let i = 0; i < projects[id].explanation.length; i++) {
+        let explanationEntry = document.createElement('p');
+        explanationEntry.classList.add("popupExplanationEntry");
+        explanationEntry.innerHTML = projects[id].explanation[i]
+        explanationDiv.appendChild(explanationEntry);
     }
 
     //Adding Functionality
@@ -777,7 +777,7 @@ function openProjectPopup(id){
     let functionalityDiv = document.getElementById('popupFunctionalityDiv');
     for (let i = 0; i < projects[id].functionalityText.length; i++) {
         let functionalityEntry = document.createElement('li');
-        functionalityEntry.classList.add("popupExplenationEntry");
+        functionalityEntry.classList.add("popupExplanationEntry");
         functionalityEntry.innerHTML = 
         `
         <b>`+projects[id].functionalityBold[i]+`</b>`+projects[id].functionalityText[i]+`
