@@ -146,7 +146,7 @@ h1,h2,h3,h4,h5,h6,p{
       align-items: center;
       justify-content: center;
       display: flex;
-      transition: 0.125s;
+      transition: 0.1s;
       img{
         height: 16px;
         width: auto;
@@ -158,6 +158,10 @@ h1,h2,h3,h4,h5,h6,p{
         margin-right: 13px;
       }
     }
+    /* .skill:hover {
+      scale: 1.09;
+      cursor: pointer;
+    } */
     /* .skill:hover{
       transform: scale(1.09);
       cursor: pointer;
@@ -326,7 +330,7 @@ body{
       width: 200px; 
       height: 200px; 
       border-radius: 100px;
-      transition: 0.12s;
+      transition: 0.1s;
     }
   }
     
@@ -340,7 +344,7 @@ body{
 .skillBox{
   display: flex; 
   flex-wrap: wrap; 
-  margin-top: 10px; 
+  padding-top: 10px; 
   margin-left: 20px; 
   width: 550px;
   animation-name: skillLoading;
@@ -356,12 +360,14 @@ body{
     margin-top: 5px; 
     margin-bottom: 5px; 
     position: relative;
+    transition: 0.1s;
     .skillImageDiv{
       height: 38px; 
       width: 38px; 
       border-bottom-left-radius: 25px; 
       border-top-left-radius: 25px; 
       margin-right: 20px;
+      transition: 0.1s;
       .skillImage{
         height: 22px; 
         width: auto; 
@@ -385,7 +391,6 @@ body{
           font-family: Itim;
           animation-name: skillLoadingTextLeft;
           animation-duration: 1s;
-          cursor:default;
         }
         .skillText2{
           font-size: 21px; 
@@ -396,12 +401,22 @@ body{
           font-family: Itim;
           animation-name: skillLoadingTextRight;
           animation-duration: 2.3s;
-          cursor:default;
         }
       }
     }
   }
 }
+
+/* .skillBox:hover{
+  cursor: pointer;
+  .skill {
+    background-color: #5a5a5a;
+    box-shadow: #4b4e532f 0px 0px 20px 4px;
+    .skillImageDiv{
+      background-color: #5a5a5a !important;
+    }
+  }
+} */
 
 
 @keyframes skillLoading {

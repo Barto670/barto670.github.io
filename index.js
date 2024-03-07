@@ -34,8 +34,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        'Counter Strike 2',
-                        '75+ Users'
+                        '100+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
