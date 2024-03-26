@@ -251,9 +251,9 @@ body{
     cursor: default;
     transition: 0.25s;
   }
-  .boxMainFont:hover{
+  /* .boxMainFont:hover{
     scale: 1.1;
-  }
+  } */
 }
 
 
