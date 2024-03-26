@@ -325,7 +325,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     initialiseEducation();
     
     websiteIcon.href = "./images/tab_icon/frame_"+16+"_delay-0.02s.jpg";
-    runIcon(0);
+    // runIcon(0);
 
 });
 
