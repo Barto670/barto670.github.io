@@ -1,0 +1,265 @@
+.noMP{
+    margin:0px;
+    padding:0px;
+}
+
+*{
+    font-family: consolas;
+    color: #cccccc;
+    font-size: 14px;
+    letter-spacing: 0.35px; 
+}
+
+img{
+  -webkit-user-select: none !important; /* Safari */
+  -ms-user-select: none !important; /* IE 10 and IE 11 */
+  user-select: none !important; /* Standard syntax */
+}
+
+.notDragabble{
+  -webkit-user-select: none !important; /* Safari */
+  -ms-user-select: none !important; /* IE 10 and IE 11 */
+  user-select: none !important; /* Standard syntax */
+}
+
+.alignCenter{
+    align-items: center; 
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+}
+
+body{
+    background: url("./images/win10background.jpg");
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#mydiv{
+  background-color: #0c0c0c; 
+  border: 1px solid #2b2b2b;
+  position: absolute;
+}
+
+
+#mydiv.fullscreen{
+  top: 0;
+  left: 0;
+  display: fixed;
+  height: calc(100% - 40px); 
+  width: 100%; 
+}
+
+#mydiv.minimised{
+  height: 500px; 
+  width: 950px; 
+}
+
+.testFont{
+    /* font-weight: 100;  */
+    /* letter-spacing: 0px; 
+    word-spacing: -4px;  */
+    /* border-spacing: 0px; */
+    letter-spacing: 0px; 
+}
+
+.line{
+    color: #cccccc;
+    font-family: consolas;
+    font-size: 14px;
+    height: 16px;
+    letter-spacing: 0.35px; 
+}
+
+.button{
+    width: 45px; 
+    height: 100%; 
+    background-color: #2b2b2b;
+    div{
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .minimiseButton{
+        background: url("./images/win10minimise.png");
+    }
+    .fullscreenButton{
+      background: url("./images/win10fullscreen.png");
+    }
+    .closeButton{
+      background: url("./images/win10close.png");
+    }
+}
+
+.button:hover{
+    background-color: #414141;
+    .minimiseButton{
+      background: url("./images/win10minimiseHover.png");
+    }
+    .fullscreenButton{
+      background: url("./images/win10fullscreenHover.png");
+    }
+    .closeButton{
+      background: url("./images/win10closeHover.png");
+    }
+}
+
+
+.button:last-child:hover{
+    background-color: #E81123;
+}
+
+.invisibleInput{
+    background-color: #0c0c0c;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border: 0px;
+    -webkit-user-select: none !important; /* Safari */
+    -ms-user-select: none !important; /* IE 10 and IE 11 */
+    user-select: none !important; /* Standard syntax */
+    outline-width: 0;
+    color: #cccccc;
+    font-size: 14px;
+    height: 16px;
+    letter-spacing: 0.35px; 
+    caret-shape: underscore !important;
+    caret-color: #cccccc !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.programDiv, .windowsDiv{
+  background-color: #101010;
+  width: 48px; 
+  height: 100%;
+  transition: 0.05s;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.opened.programDiv::after{
+  background-color: #76B9ED;
+  height: 2px;
+  width: 40px;
+  bottom: 0px;
+  content: "";
+  position: absolute;
+}
+
+.programDiv:hover{
+  background-color: #272727;
+}
+
+.opened.programDiv:hover::after{
+  width: 48px;
+}
+
+.windowsDiv{
+  div{
+    background: url("./images/win10LogoWhite.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.windowsDiv:hover{
+  background-color: #272727;
+  div{
+    background: url("./images/win10LogoBlue.png");
+  }
+}
+
+.clockDiv{
+  width: 64px;
+  height: 100%;
+  flex-wrap: wrap;
+  /* background-color: grey; */
+  .clockBox{
+    width: 100%; 
+    height: 40%;
+    font-family: 'Segoe UI';
+    font-size: 11.5px;
+    color: white;
+    margin-bottom: 1px;
+  }
+  .clockBox:last-child{
+    height: calc(40% - 5px);
+  }
+}
+
+
+pre {
+    /* background: #000; */
+    color: #cccccc;
+    font-family: monospace;
+  }
+  
+  pre.caret-bar > span {
+    animation: blink 1s step-end infinite;
+    border-left: 2px solid #cccccc;
+  }
+  
+  pre.caret-block > span {
+    background-color: #cccccc;
+    color: #000;
+  }
+  
+  pre.caret-underscore > span {
+    animation: blink 1s step-end infinite;
+    border-bottom: 2px solid #cccccc;
+  }
+  
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #cccccc;
+    }
+  }
+
+
+
+  /* #171717 track */
+  /* #4d4d4d button */
+  
+
+
+  /* { */
+  /* width */
+#commandDiv::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+#commandDiv::-webkit-scrollbar-track {
+  background: #171717 !important;
+}
+
+/* Handle */
+#commandDiv::-webkit-scrollbar-thumb {
+  background: #4d4d4d !important;
+}
+
+/* Handle on hover */
+#commandDiv::-webkit-scrollbar-thumb:hover {
+  background: #7A7A7A !important;
+}
+/* } */
+
+
+
+/* #mydiv{
+  resize:vertical;
+  overflow: auto;
+} */
