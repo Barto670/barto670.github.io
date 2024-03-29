@@ -125,14 +125,15 @@ function terminalInfo(){
 function commandList(){
     print("---------------------- CMD COMMANDS ----------------------")
     print("");
-    printCommand("ABOUTME","Short description about me")
-    printCommand("EDUCATION","My education and what I learned")
-    printCommand("EXPERIENCE","Work experience and skills aquired")
-    printCommand("PROJECTS","Details about my personal projects")
-    printCommand("SOCIAL","My social contact")
     printCommand("CLEAR","Clear the terminal")
     printCommand("HELP","List of all the available commands")
     printCommand("EXIT","Quit the cmd window")
+    printCommand("ABOUTME","Short description about me")
+    printCommand("EDUCATION","My education and what I learned")
+    printCommand("EXPERIENCE","Work experience and skills acquired")
+    // printCommand("PROJECTS","Details about my personal projects")
+    printCommand("SOCIAL","My social contact")
+
     endingText();
 }
 
