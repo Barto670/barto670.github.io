@@ -10,8 +10,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     //     console.log("not")
     // }
 
-    // setInterval(checkTime(), 1000);
+    
     checkTime();
+
+    setInterval(checkTime, 1000);
 
     terminalInfo();
 
@@ -88,7 +90,7 @@ function focusOnInput(){
 
 
 function checkTime(){
-    document.getElementById('time').innerHTML = new Date().getHours().toString() +":"+new Date().getMinutes().toString().padStart(2, '0');
+    document.getElementById('time').innerHTML = new Date().getHours().toString().padStart(2, '0') +":"+new Date().getMinutes().toString().padStart(2, '0');
     document.getElementById('date').innerHTML = new Date().toLocaleDateString()
 }
 
@@ -126,7 +128,7 @@ function commandList(){
     printCommand("ABOUTME","Short description about me")
     printCommand("EDUCATION","My education and what I learned")
     printCommand("EXPERIENCE","Work experience and skills aquired")
-    // printCommand("PROJECTS","Details about my personal projects")
+    printCommand("PROJECTS","Details about my personal projects")
     printCommand("SOCIAL","My social contact")
     printCommand("CLEAR","Clear the terminal")
     printCommand("HELP","List of all the available commands")
