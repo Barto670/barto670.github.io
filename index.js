@@ -1,6 +1,5 @@
 // Copyright 2023, Bartek Skorecki, All rights reserved.
 
-
 colourArray = ['#30924d','#3399b8','#b82798','#b82229','#1e3ada','#d56c3a']
 
 skills = [
@@ -34,7 +33,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        '100+ Users'
+                        '150+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
