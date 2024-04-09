@@ -28,7 +28,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        '150+ Users'
+                        '200+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
