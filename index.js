@@ -11,7 +11,7 @@ skills = [
                 { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F20',      imageLink:'./images/skills/angular.png'},
                 { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA320',      imageLink:'./images/skills/java.png'},
                 { name:'SQL',            dateStarted: '2022-01-01',      color:'#00BCF220',      imageLink:'./images/skills/sql.png'},
-                { name:'C++',            dateStarted: '2022-01-01',      color:'#00599C20',      imageLink:'./images/skills/c++.png'},
+                // { name:'C++',            dateStarted: '2022-01-01',      color:'#00599C20',      imageLink:'./images/skills/c++.png'},
 ]
 
 projects = [
@@ -669,6 +669,10 @@ function openProjectPopup(id){
     divInsidePopup.classList.add("popUpInsideDiv");
     divInsidePopup.id = "popUpInsideDiv";
 
+
+    let bodyDiv = document.getElementById('body'); 
+    bodyDiv.classList.add("bodyStatic");
+
     divInsidePopup.innerHTML = 
     `
         <div class="alignCenter" style="height: 90px; width: 100%; background-color: #2B2D31; border-top-left-radius: 25px; border-top-right-radius: 25px;">
@@ -797,13 +801,13 @@ function openProjectPopup(id){
     let open = false;
 
     document.body.addEventListener('click', function( event ){
-        if( containingElement.contains( event.target ) ){
-               
-        } else {
+        if( !containingElement.contains( event.target ) ){
             if(open){
+                
                 document.getElementById('projectPopup').style.display = 'none';
                 document.getElementById("popUpInsideDiv").remove();
                 open = false;
+                bodyDiv.classList.remove("bodyStatic");
             }
         }
     });
