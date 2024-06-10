@@ -35,6 +35,8 @@
       --content: "320px";
       --iconSize : 76px;
       --smallText: 0.44em;
+      --mediumText: 0.56em;
+      --bigText: 0.7em;
       --profileImageSize: 180px;
       --contentSize: 300px;
     }
@@ -47,6 +49,8 @@
         --content: "380px";
         --iconSize : 78px;
         --smallText: 0.48em;
+        --mediumText: 0.56em;
+        --bigText: 0.72em;
         --profileImageSize: 250px;
         --contentSize: 360px;
     }
@@ -58,7 +62,9 @@
     :root {
         --content: "480px";
         --iconSize : 82px;
-        --smallText: 0.6em;
+        --smallText: 0.54em;
+        --mediumText: 0.6em;
+        --bigText: 0.72em;
         --profileImageSize: 250px;
         --contentSize: 460px;
     }
@@ -70,7 +76,9 @@
     :root {
         --content: "600px";
         --iconSize : 84px;
-        --smallText: 0.62em;
+        --smallText: 0.60em;
+        --mediumText: 0.66em;
+        --bigText: 0.76em;
         --profileImageSize: 250px;
         --contentSize: 550px;
     }
@@ -83,7 +91,9 @@
     :root {
         --content: "768px";
         --iconSize : 86px;
-        --smallText: 0.64em;
+        --smallText: 0.62em;
+        --mediumText: 0.68em;
+        --bigText: 0.78em;
         --profileImageSize: 250px;
         --contentSize: 680px;
     }
@@ -97,8 +107,10 @@
         --content: "992px";
         --iconSize : 92px;
         --smallText: 0.66em;
+        --mediumText: 0.7em;
+        --bigText: 0.8em;
         --profileImageSize: 250px;
-        --contentSize: 400px;
+        --contentSize: 700px;
     }
   }
   
@@ -109,6 +121,8 @@
         --content: "1200px";
         --iconSize : 100px;
         --smallText: 0.68em;
+        --mediumText: 0.7em;
+        --bigText: 0.85em;
         --profileImageSize: 260px;
         --contentSize: 720px;
     }
@@ -121,6 +135,8 @@
         --content: "1600px";
         --iconSize : 100px;
         --smallText: 0.70em;
+        --mediumText: 0.7em;
+        --bigText: 0.9em;
         --profileImageSize: 280px;
         --contentSize: 880px;
     }
@@ -134,6 +150,8 @@
         --content: "2200px";
         --iconSize : 108px;
         --smallText: 0.80em;
+        --mediumText: 0.9em;
+        --bigText: 1em;
         --profileImageSize: 370px;
         --contentSize: 1000px;
     }
@@ -487,8 +505,8 @@ body{
     animation-duration: 2.5s;
     .skill{
       background-color: #d9d9d918;
-      border-radius: 25px;
-      height: 50px;
+      border-radius: 100px;
+      height: calc(var(--contentSize) / 15); 
       color: #FFFFFF;
       text-align: left;
       font-size: 26px;
@@ -498,21 +516,21 @@ body{
       position: relative;
       transition: 0.1s;
       .skillImageDiv{
-        height: 50px; 
-        width: 50px; 
-        border-bottom-left-radius: 25px; 
-        border-top-left-radius: 25px; 
+        height: calc(var(--contentSize) / 15); 
+        width: calc(var(--contentSize) / 15);  
+        border-bottom-left-radius: 50px; 
+        border-top-left-radius: 50px; 
         margin-right: 20px;
         transition: 0.1s;
         .skillImage{
-          height: 22px; 
+          height: calc(var(--contentSize) / 28); 
           width: auto; 
           margin-left: 3px;
         }
       }
       .skillTextBox{
         position:absolute; 
-        margin-left: 45px; 
+        margin-left: calc(var(--contentSize) / 18);  
         flex-wrap: wrap;
         .skillTextDiv{
           width: 50%; 
@@ -521,9 +539,9 @@ body{
           margin: 0px;
           padding: 0px;
           .skillText{
-            font-size: 25px; 
+            font-size: var(--mediumText); 
             text-align: start; 
-            margin-left: 15px; 
+            margin-left: calc(var(--contentSize) / 30);  
             margin-right: 25px;
             font-weight: 100;
             font-family: Itim;
@@ -531,12 +549,13 @@ body{
             animation-duration: 1s;
           }
           .skillText2{
-            font-size: 25px; 
-            margin-right: 60px;
+            font-size: var(--mediumText); 
+            margin-right: calc(var(--contentSize) / 14);  
             font-weight: 100;
             font-family: Itim;
             animation-name: skillLoadingTextRight;
             animation-duration: 2.3s;
+            text-wrap: nowrap;
           }
         }
       }
@@ -578,7 +597,7 @@ body{
         text-align: center; 
         width: 100%; 
         margin-left: 3px; 
-        border-radius: 50px; 
+        border-radius: 100px; 
         padding-bottom: 5px
       }
     
@@ -627,12 +646,12 @@ body{
 
   .boxTitle{
     color: #f8f8f8;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 500;
     text-align: left; 
     margin-left: 20px;
     margin-top: 8px;
-    margin-bottom: 50px;
+    margin-bottom: calc(var(--contentSize) / 28);  
     text-align: left;
   }
 

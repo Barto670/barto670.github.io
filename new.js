@@ -388,7 +388,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 function displaySkills(){
     let min = calculateYears(new Date(skills[0].dateStarted))
     let max = calculateYears(new Date(skills[0].dateStarted))
-    let boxWidth = 90;
+    let boxWidth = 92;
     // var root = document.documentElement;
     // var style = getComputedStyle(root);
     // console.log(style)
