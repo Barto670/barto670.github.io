@@ -28,7 +28,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        '350+ Users'
+                        '200+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
@@ -352,8 +352,12 @@ function runIcon(iconCount){
 function displaySkills(){
     let min = calculateYears(new Date(skills[0].dateStarted))
     let max = calculateYears(new Date(skills[0].dateStarted))
-    let boxWidth = 550;
-    let maxSkillWidth = boxWidth/2;
+    let boxWidth = 100;
+    // var root = document.documentElement;
+    // var style = getComputedStyle(root);
+    // console.log(style)
+    // var boxWidth = style.getPropertyValue('--contentSize');
+    // let maxSkillWidth = boxWidth/2;
 
 
     for (let i = 0; i < skills.length; i++) {
@@ -366,11 +370,12 @@ function displaySkills(){
     }
 
     let amountOfYearsToDivide = (max - min) + 1;
-    let skillYearInterval = maxSkillWidth/amountOfYearsToDivide;
+    let skillYearInterval = (boxWidth/2)/amountOfYearsToDivide;
 
 
     for (let i = 0; i < skills.length; i++) {
         console.log(skills[i])
+        
 
         let div = document.getElementById('skillsDiv'); 
 
@@ -379,6 +384,8 @@ function displaySkills(){
         let years = calculateYears(new Date(skills[i].dateStarted))
 
         let widthOfStatus = boxWidth - (skillYearInterval*(max-years));
+
+        console.log(widthOfStatus)
 
         let yearsText;
 
@@ -390,9 +397,9 @@ function displaySkills(){
 
         div1.innerHTML = `
                             <div class="skillBox">
-                                <div class="skill alignTopBottom" style="width: `+widthOfStatus+`px;");>
-                                    <div class="alignTopBottom skillTextBox" style="width: `+(widthOfStatus-45)+`px;">
-                                        <div class="skillTextDiv" style="justify-content: start;">
+                                <div class="skill alignTopBottom" style="width: `+widthOfStatus+`%;");>
+                                    <div class="alignTopBottom skillTextBox" style="width: `+100 +`%;">
+                                        <div class="skillTextDiv" style="justify-content: start; ">
                                             <h1 class="skillText">`+skills[i].name+`</h1>
                                         </div>
                                         <div class="skillTextDiv" style="justify-content: end;">

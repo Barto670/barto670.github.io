@@ -311,49 +311,89 @@ photos = [
 
 
 
+
+
+
 window.addEventListener("DOMContentLoaded", (event) => {
 
     displaySkills();
-    initialiseProjects();
-    initialisePhotos();
-    initialiseEducation();
+    // initialiseProjects();
+    // initialisePhotos();
+    // initialiseEducation();
+
+
+    const text = document.querySelector(".text");
+    text.innerHTML = text.innerText
+        .split("")
+        .map(
+            (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+        )
+        .join("");
+
+    const text2 = document.querySelector(".text2");
+    text2.innerHTML = text2.innerText
+        .split("")
+        .map(
+            (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+        )
+        .join("");
+
+    const text3 = document.querySelector(".text3");
+    text3.innerHTML = text3.innerText
+        .split("")
+        .map(
+            (char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+        )
+        .join("");
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+            // else{
+            //     entry.target.classList.remove('show');
+            // }
+        });
+    });
     
-    websiteIcon.href = "./images/tab_icon/frame_"+16+"_delay-0.02s.jpg";
-    // runIcon(0);
+    
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+    const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+            // else{
+            //     entry.target.classList.remove('show');
+            // }
+        });
+    });
+    
+    
+    const hiddenElements2 = document.querySelectorAll('.hidden2');
+    hiddenElements2.forEach((el) => observer2.observe(el));
 
 });
-
-function iconCountSwitch(key){
-
-    websiteIcon.href = "./images/tab_icon/frame_"+key+"_delay-0.02s.jpg";
-
-    switch (key) {
-        case 40: return 0;
-        default: return key+1;
-    }
-    
-}
-
-function runIcon(iconCount){
-    let timer;
-
-    switch (iconCount) {
-        case 16: timer = 1000; break;
-        default: timer = 42; break;
-    }
-
-    setTimeout(function () {
-        runIcon(iconCountSwitch(iconCount));
-    }, timer);
-}
 
 
 
 function displaySkills(){
     let min = calculateYears(new Date(skills[0].dateStarted))
     let max = calculateYears(new Date(skills[0].dateStarted))
-    let boxWidth = 550;
-    let maxSkillWidth = boxWidth/2;
+    let boxWidth = 90;
+    // var root = document.documentElement;
+    // var style = getComputedStyle(root);
+    // console.log(style)
+    // var boxWidth = style.getPropertyValue('--contentSize');
+    // let maxSkillWidth = boxWidth/2;
 
 
     for (let i = 0; i < skills.length; i++) {
@@ -366,11 +406,12 @@ function displaySkills(){
     }
 
     let amountOfYearsToDivide = (max - min) + 1;
-    let skillYearInterval = maxSkillWidth/amountOfYearsToDivide;
+    let skillYearInterval = (boxWidth/2)/amountOfYearsToDivide;
 
 
     for (let i = 0; i < skills.length; i++) {
         console.log(skills[i])
+        
 
         let div = document.getElementById('skillsDiv'); 
 
@@ -379,6 +420,8 @@ function displaySkills(){
         let years = calculateYears(new Date(skills[i].dateStarted))
 
         let widthOfStatus = boxWidth - (skillYearInterval*(max-years));
+
+        console.log(widthOfStatus)
 
         let yearsText;
 
@@ -390,9 +433,9 @@ function displaySkills(){
 
         div1.innerHTML = `
                             <div class="skillBox">
-                                <div class="skill alignTopBottom" style="width: `+widthOfStatus+`px;");>
-                                    <div class="alignTopBottom skillTextBox" style="width: `+(widthOfStatus-45)+`px;">
-                                        <div class="skillTextDiv" style="justify-content: start;">
+                                <div class="skill alignTopBottom" style="width: `+widthOfStatus+`%;");>
+                                    <div class="alignTopBottom skillTextBox" style="width: `+100 +`%;">
+                                        <div class="skillTextDiv" style="justify-content: start; ">
                                             <h1 class="skillText">`+skills[i].name+`</h1>
                                         </div>
                                         <div class="skillTextDiv" style="justify-content: end;">

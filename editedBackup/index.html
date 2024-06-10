@@ -1,0 +1,268 @@
+<!-- Copyright 2023, Bartek Skorecki, All rights reserved. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link id="websiteIcon" rel="icon" type="image/x-icon" href="images/tab_icon/frame_16_delay-0.02s.jpg">
+    <script src="index.js"></script>
+</head>
+
+
+
+<body id="body" class="noMP">
+
+    <!-- Popup -->
+    <div id="projectPopup" class="alignCenter" style="height: 100%; width: 100%; position: fixed; z-index: 20; background-color: rgba(70, 70, 70, 0.151); backdrop-filter: blur(10px); display: none;">
+
+    </div>
+
+    <!-- Navbar -->
+    <div class="noMP navbarBox">
+        <div class="alignCenter dotBox">
+            <!-- <div class="navbarCircle"></div>
+            <div class="navbarCircle"></div>
+            <div class="navbarCircle"></div>
+            <div class="navbarCircle"></div>
+            <div class="navbarCircle"></div> -->
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Middle -->
+    <div class="noMP alignCenter portfolioContentBox" style="padding-top: 0px;">
+
+        <div class="noMP portfolioBox"> 
+            <div class="flex-container">
+                <div class="flex-item alignCenter">
+                    <div>
+                        <div class="noMP boxSize" style="height: fit-content; border-radius: 25px;  flex-wrap: wrap; display: flex; width: 100%; align-items: center; justify-content: center;">
+                            <div class="box firstBox" style="height: 300px ; width: 280px ;border-radius: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+
+                                <div class="animatedBackground"></div>
+
+                                <div class="alignCenter" style="position: absolute; flex-wrap: wrap; height: 300px; width:inherit; border-radius: 25px;">
+                                    <div class="alignCenter profileImageDiv">
+                                        <div class="alignCenter profileImageBackground">
+                                            <img class="profileImage" src="./images/profile.jpg" alt="Bartek Skorecki">
+                                        </div>
+                                    </div>
+                
+                                    <div class="alignCenter linkIconDiv">
+                                        <a target="_blank" href="https://github.com/Barto670"><img class="linkIcon" src="./images/github.png" alt="Github.com"></a>
+                                        <a href="mailto: bartodev670@gmail.com"><img class="linkIcon" src="./images/email.png"  alt="Email"></a>
+                                        <a target="_blank" href="https://www.flickr.com/photos/198328132@N07/"><img class="linkIcon" src="./images/flickr.png" alt="Flickr"></a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="box" class="alignCenter" style="height: 300px; width: 345px ;padding: 15px; margin-left: 25px; border-radius: 25px; margin-bottom: 25px;">
+                                <div class="alignCenter profileDescriptionDiv">
+                                    <p class="boxMainFont"> I am a <b style="color: #00ffffdd; font-weight: 100;">software developer</b> with a keen interest in pushing the boundaries of innovation through software development in various <b style="color: #00ffffdd;; font-weight: 100;">programming languages</b>.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="box noMP boxSize" style="  margin-bottom:25px; height: 604px; border-radius: 25px; padding: 15px; width: var(--boxSize); ">
+                            <h1 class="boxTitle">Skills</h1>
+                            <div id="skillsDiv" style="overflow-y: auto; height: 485px; margin-top: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-item alignCenter">
+                    <div>
+                        <div class="box noMP boxSize" style="height: 450px; margin-bottom:28px; border-radius: 25px; padding: 15px;">
+                            <h1 class="boxTitle" style="margin-bottom: 30px;" >Education</h1>
+
+                            <div id="education1" style="display: block;">
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/graduate.png" alt="">
+                                    </div>
+                                    <h5 class="text" >Master of Engineering (MEng)</h5>
+                                </div>
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/id.png" alt="">
+                                    </div>
+                                    <h5 class="text" >Computer and Communications Systems</h5>
+                                </div>
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/location.png" alt="">
+                                    </div>
+                                    <h5 class="text" >University of Limerick</h5>
+                                </div>
+    
+                                <div class="skills" style="margin-top: 30px;">
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> HTML</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> CSS</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> JavaScript</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Security</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> JSON</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> SSL</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Android</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> DSP</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Telecoms</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Firewalls</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> IoT</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Encryption</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Databases</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Router Configuration</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="education2" style="display: none;">
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/graduate.png" alt="">
+                                    </div>
+                                    <h5 class="text" >Bachelor of Science (BS)</h5>
+                                </div>
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/id.png" alt="">
+                                    </div>
+                                    <h5 class="text" >Computer Systems</h5>
+                                </div>
+                                <div class="alignTopBottom textBox">
+                                    <div class="iconBox">
+                                        <img class="icon" src="./images/icons/location.png" alt="">
+                                    </div>
+                                    <h5 class="text" >University of Limerick</h5>
+                                </div>
+    
+                                <div class="skills" style="margin-top: 30px;">
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Java</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Python</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Angular</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Go</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Lua</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> HTML</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> CSS</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> TypeScript</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> AI</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Security</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Databases</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> C</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Spring Boot</div>
+                                        <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> C++</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="educationPaginator" class="alignCenter" style="height: 40px; width: 100%;"> 
+                                <div id="educationPaginator1" status="1" class="alignCenter paginatorCircleDiv educationPaginator" ><div class="paginatorCircle"></div></div>
+                                <div id="educationPaginator2" status="0" class="alignCenter paginatorCircleDiv educationPaginator" ><div class="paginatorCircle"></div></div>
+                            </div>
+                            
+
+                        </div>
+                        <div class="box noMP boxSize" style="margin-top:25px ; margin-bottom:28px; height: 455px; max-height: fit-content; border-radius: 25px; padding: 15px;">
+                            <h1 class="boxTitle" style="margin-bottom: 30px;" >Experience</h1>
+                            <div class="alignTopBottom textBox">
+                                <div class="iconBox">
+                                    <img class="icon" src="./images/icons/company.png" alt="">
+                                </div>
+                                <h5 class="text">WrxFlo</h5>
+                            </div>
+                            <div class="alignTopBottom textBox">
+                                <div class="iconBox">
+                                    <img class="icon" src="./images/icons/id.png" alt="">
+                                </div>
+                                <h5 class="text">Fullstack Software Developer</h5>
+                            </div>
+                            <div class="alignTopBottom textBox">
+                                <div class="iconBox">
+                                    <img class="icon" src="./images/icons/location.png" alt="">
+                                </div>
+                                <h5 class="text" >Nexus Innovation Centre Tierney Building, Castletroy, Co. Limerick, Ireland</h5>
+                            </div>
+                            <div class="skills" style="margin-top: 30px;">
+                                <div class="row">
+                                    <div id="html" class="skill itim"> <img src="./images/icons/circle.png" alt=""> HTML</div>
+                                    <div id="css" class="skill itim"> <img src="./images/icons/circle.png" alt=""> CSS</div>
+                                    <div id="typescript" class="skill itim"> <img src="./images/icons/circle.png" alt=""> TypeScript</div>
+                                    <div id="javascript" class="skill itim"> <img src="./images/icons/circle.png" alt=""> JavaScript</div>
+                                    <div id="json" class="skill itim"> <img src="./images/icons/circle.png" alt=""> JSON</div>
+                                </div>
+                                <div class="row">
+                                    <div id="java" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Java</div>
+                                    <div id="python" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Python</div>
+                                    <div id="angular" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Angular</div>
+                                    <div id="nodejs" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Node.js</div>
+                                    <div id="bootstrap" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Bootstrap</div>
+                                </div>
+                                <div class="row">
+                                    <div id="iot" class="skill itim"> <img src="./images/icons/circle.png" alt=""> IoT</div>
+                                    <div id="restful" class="skill itim"> <img src="./images/icons/circle.png" alt=""> RESTful API</div>
+                                    <div id="databases" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Databases</div>
+                                    <div id="responsive" class="skill itim"> <img src="./images/icons/circle.png" alt=""> Responsive Design</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-item alignCenter">
+                    <div>
+                        <div class="box noMP boxSize" style="max-height: fit-content; border-radius: 25px; padding: 15px; margin-bottom:25px;">
+                            <h1 class="boxTitle">Projects</h1>
+                            <div id="projectList"> </div>
+                            <div id="projectPaginator" class="alignCenter" style="height: 40px; width: 100%;"> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-item alignCenter">
+                    <div>
+                        <div class="box noMP boxSize" style="max-height: fit-content; border-radius: 25px; padding: 15px; margin-bottom:25px;">
+                            <h1 class="boxTitle">Photography</h1>
+                                <div id="photoList" class="alignCenter" style="flex-wrap: wrap"></div>
+                                <div id="photoPaginatorList" class="alignCenter" style="height: 40px; width: 100%; margin-top: 10px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="noMP footerBox alignCenter">
+        <div style="margin-top: 50px;">
+            <a target="_blank" href="https://github.com/Barto670"><img class="footerIcon" src="./images/greyG.png"></a>
+            <a href="mailto: bartodev670@gmail.com"><img class="footerIcon" src="./images/greyE.png"></a>
+            <a target="_blank" href="https://www.flickr.com/photos/198328132@N07/"><img class="footerIcon" src="./images/greyF.png"></a>
+        </div>
+        <div class="alignCenter footerText">@ 2024 Bartek Skorecki</div>
+    </div>
+
+</body>
