@@ -52,7 +52,7 @@
         --content: "380px";
         --iconSize : 78px;
         --Stext: 0.48em;
-        --Mtext: 0.56em;
+        --Mtext: 0.62em;
         --Ltext: 1.6em;
         --XLtext: 0.9em;
         --TitleText: 2.8em;
@@ -69,7 +69,7 @@
         --content: "480px";
         --iconSize : 82px;
         --Stext: 0.54em;
-        --Mtext: 0.6em;
+        --Mtext: 0.66em;
         --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 2.9em;
@@ -548,7 +548,7 @@ body{
     .skill{
       background-color: #d9d9d918;
       border-radius: 100px;
-      height: calc(var(--contentSize) / 18); 
+      height: calc(var(--contentSize) / 16); 
       color: #FFFFFF;
       text-align: left;
       font-size: 26px;
@@ -558,8 +558,8 @@ body{
       position: relative;
       transition: 0.1s;
       .skillImageDiv{
-        height: calc(var(--contentSize) / 18); 
-        width: calc(var(--contentSize) / 18);  
+        height: calc(var(--contentSize) / 16); 
+        width: calc(var(--contentSize) / 16);  
         border-bottom-left-radius: 50px; 
         border-top-left-radius: 50px; 
         margin-right: 20px;
@@ -572,7 +572,7 @@ body{
       }
       .skillTextBox{
         position:absolute; 
-        margin-left: calc(var(--contentSize) / 18);  
+        margin-left: calc(var(--contentSize) / 16);  
         flex-wrap: wrap;
         .skillTextDiv{
           width: 50%; 
