@@ -70,7 +70,7 @@
         --iconSize : 82px;
         --Stext: 0.54em;
         --Mtext: 0.6em;
-        --Ltext: 2em;
+        --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 2.9em;
         --profileImageSize: 250px;
@@ -121,7 +121,7 @@
         --iconSize : 92px;
         --Stext: 0.66em;
         --Mtext: 0.7em;
-        --Ltext: 2em;
+        --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 2.8em;
         --profileImageSize: 250px;
@@ -138,7 +138,7 @@
         --iconSize : 100px;
         --Stext: 0.68em;
         --Mtext: 0.7em;
-        --Ltext: 2em;
+        --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 3.4em;
         --profileImageSize: 260px;
@@ -155,7 +155,7 @@
         --iconSize : 100px;
         --Stext: 0.70em;
         --Mtext: 0.85em;
-        --Ltext: 2em;
+        --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 4em;
         --profileImageSize: 280px;
@@ -548,18 +548,18 @@ body{
     .skill{
       background-color: #d9d9d918;
       border-radius: 100px;
-      height: calc(var(--contentSize) / 15); 
+      height: calc(var(--contentSize) / 18); 
       color: #FFFFFF;
       text-align: left;
       font-size: 26px;
       flex-wrap: wrap; 
-      margin-top: 5px; 
-      margin-bottom: 5px; 
+      margin-top: calc(var(--contentSize) / 100); 
+      margin-bottom: calc(var(--contentSize) / 100); 
       position: relative;
       transition: 0.1s;
       .skillImageDiv{
-        height: calc(var(--contentSize) / 15); 
-        width: calc(var(--contentSize) / 15);  
+        height: calc(var(--contentSize) / 18); 
+        width: calc(var(--contentSize) / 18);  
         border-bottom-left-radius: 50px; 
         border-top-left-radius: 50px; 
         margin-right: 20px;
@@ -729,12 +729,13 @@ body{
 
   .menuItemLink{
     font-size: 2rem;
-    transition: opacity 0.3s, font-size 0.5s;
+    transition: opacity 0.3s, scale 0.5s, margin-left 0.3s;
     color: white;
-    margin-bottom: 6px;
-    margin-top: 6px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    height: 3.8rem;
     text-decoration: none;
-    opacity: 0.55;
+    opacity: 0.50;
   }
 
 
@@ -745,8 +746,10 @@ body{
 
 
   .menuItemLinkSelected{
-    font-size: 2.1rem;
+    /* scale: 1.02; */
+    font-weight: 500;
     opacity: 1;
+    margin-left: 2px;
   }
 
 
