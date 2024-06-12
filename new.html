@@ -96,21 +96,22 @@
 
 
     <div class="sideBar" style="top: 0; left: 0; background-color: #00000000; width: 340px; height: 100vh; position: fixed; padding-top: 35vh ; z-index: 1000;">
-        <div style="width: 100%; height: 100%; margin-left: 25%; display: flex; flex-direction: column;">
-            <a href="#aboutmeSection" class="menuItemLink" style="color: white;">About Me</a>
-            <a href="#skillsSection" class="menuItemLink" >Skills</a>
-            <a href="#experienceSection" class="menuItemLink" >Experience</a>
-            <a href="#educationSection" class="menuItemLink" >Education</a>
-            <a href="#projectsSection" class="menuItemLink" >Projects</a>
-            <a href="#photographySection" class="menuItemLink" >Photopraphy</a>
-        </div>
-        
+        <nav>
+            <div class="nav-test2" style="width: 100%; height: 100%; margin-left: 30%; display: flex; flex-direction: column;">
+                <a href="#aboutmeSection" class="menuItemLink" id="aboutmeSectionButton" >About Me</a>
+                <a href="#skillsSection" class="menuItemLink" id="skillsSectionButton">Skills</a>
+                <a href="#experienceSection" class="menuItemLink" id="experienceSectionButton">Experience</a>
+                <a href="#educationSection" class="menuItemLink" id="educationSectionButton">Education</a>
+                <a href="#projectsSection" class="menuItemLink" id="projectsSectionButton">Projects</a>
+                <a href="#photographySection" class="menuItemLink" id="photographySectionButton">Photopraphy</a>
+            </div>
+        </nav>
     </div>
 
 
 
 
-    <section id="aboutmeSection" class="hidden" style="padding-bottom: 150px; padding-top: 100px; overflow: hidden;">
+    <section id="aboutmeSection" class="hidden" style="padding-bottom: 40px; padding-top: 40px;">
         <h1 class="boxTitle">About Me</h1>
 
         <div class="profileImgDiv alignCenter">
@@ -166,27 +167,29 @@
     </section>
 
 
-    <section id="skillsSection" style="overflow: hidden;">
+    <section id="skillsSection">
         <h1 class="boxTitle">Skills</h1>
 
-        <div class="noMP boxSize">
-            <div id="skillsDiv" style="overflow-y: auto; height: fit-content; margin-top: 10px;"></div>
+        <div class="noMP boxSize" >
+            <div id="skillsDiv" style="overflow-x: hidden; height: fit-content;"></div>
         </div>
     </section>
 
 
-    <section id="experienceSection" style="overflow: hidden;">
+    <section id="experienceSection">
         <h1 class="boxTitle">Experience</h1>
 
 
     </section>
 
 
-    <section id="educationSection" style="overflow: hidden;">
-        <h1 class="boxTitle">Education</h1>
-        <h4 style="color: #90ee90; font-weight: 500;">■ Master's Degree</h4>
+    <section id="educationSection">
+        <!-- <h1 class="boxTitle">Education</h1> -->
+        <h3 style="color: #90ee90; font-weight: 100;">Master's Degree</h3>
+
+        <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; margin-top: 30px; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
         
-        <div class="boxSize noMP" style="margin-top: 15px;">
+        <div class="boxSize noMP" style="margin-top: 20px;">
             
 
             <div style="display:flex;  width: var(--contentSize) ; height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center; gap: 20px;">
@@ -216,7 +219,10 @@
                     <div style="width: 100%; display: flex; justify-content: center; width: var(--contentSize2) ; ">
                         <div class='container' style="width: 100%; overflow: hidden; height: 100px; margin-right: 40px;">
                             <div class='overflow-hid-div skills'>
-                                <div class='inner row'>
+                                <div style="background: linear-gradient(90deg, #1c1e22 0%, #1c1e2200 100%); height: 100%; width: 40px; z-index: 1200; position: absolute;"></div>
+                                <div style="background: linear-gradient(90deg, #1c1e2200 0%, #1c1e22 100%); height: 100%; width: 40px; z-index: 1200; position: absolute; right: 0;"></div>
+
+                                <div class='inner row scrollSkills1'>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> HTML</div>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> CSS</div>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> JavaScript</div>
@@ -260,6 +266,8 @@
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Databases</div>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Router Configuration</div>
                                 </div>
+
+                                
                             </div>
                         </div>
                     </div>
@@ -267,8 +275,8 @@
 
                 </div>
                 <div class="hidden2 listOfText" style="min-width: 260px; width: 400px; max-width: 500px; color: white; flex-wrap: wrap; align-items:  start; display: flex; justify-content: right;">
-                    <h4 class="hidden2" style="margin-bottom: 8px;">Ireland's finalist at <b style="color: #90ee90;">NASA's 2021</b> global hackaton.</h4>
-                    <h4 class="hidden2" style="margin-bottom: 8px;">Made an <b style="color: #90ee90;">android application</b> to help students around the UL campus.</h4>
+                    <h4 class="hidden2" style="margin-bottom: 8px;">Individual <b style="color: #90ee90;">android application</b> final project to help students around the UL campus.</h4>
+                    <h4 class="hidden2" style="margin-bottom: 8px;">App using google <b style="color: #90ee90;">geolocation services</b> & authentication <b style="color: #90ee90;">APIs</b> to transform your phone into a pocket guide.</h4>
                 </div>
             </div>
 
@@ -276,8 +284,11 @@
 
         </div>
 
-        <h4 style="margin-top: 50px; text-align: left; color: #90ee90; font-weight: 500;">■ Bachelor's Degree</h4>
-        <div class="boxSize noMP" style="margin-top: 15px;">
+        <h3 style="margin-top: 80px; text-align: left; color: #90ee90; font-weight: 100;">Bachelor's Degree</h3>
+
+        <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; margin-top: 30px; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
+
+        <div class="boxSize noMP" style="margin-top: 20px;">
 
 
             <div style="display:flex;  width: var(--contentSize) ; height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center; gap: 20px;">
@@ -287,7 +298,7 @@
                             <div class="iconBox">
                                 <img class="educationIcon" src="./images/icons/graduate.png" alt="">
                             </div>
-                            <h5 >Bachelor of Science (BS)</h5>
+                            <h5 >Bachelor of Science (BSc)</h5>
                         </div>
                         <div class="alignTopBottom">
                             <div class="iconBox">
@@ -307,7 +318,9 @@
                     <div style="width: 100%; display: flex; justify-content: center; width: var(--contentSize2) ; ">
                         <div class='container' style="width: 100%; overflow: hidden; height: 100px; margin-right: 40px;">
                             <div class='overflow-hid-div skills'>
-                                <div class='inner row'>
+                                <div style="background: linear-gradient(90deg, #1c1e22 0%, #1c1e2200 100%); height: 100%; width: 40px; z-index: 1200; position: absolute;"></div>
+                                <div style="background: linear-gradient(90deg, #1c1e2200 0%, #1c1e22 100%); height: 100%; width: 40px; z-index: 1200; position: absolute; right: 0;"></div>
+                                <div class='inner row scrollSkills2'>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Java</div>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Python</div>
                                     <div class="skill itim"> <img src="./images/icons/circle.png" alt=""> Angular</div>
@@ -358,6 +371,7 @@
 
                 </div>
                 <div class="hidden2 listOfText" style="min-width: 260px; width: 400px; max-width: 500px; color: white; flex-wrap: wrap; align-items:  start; display: flex;">
+                    <h4 class="hidden2" style="margin-bottom: 8px;">Ireland's finalist at <b style="color: #90ee90;">NASA's 2021</b> global hackaton.</h4>
                     <h4 class="hidden2" style="margin-bottom: 8px;">Silver award for <b style="color: #90ee90;">CINCO Adventure Game 2018.</b></h4>
                     <h4 class="hidden2" style="margin-bottom: 8px;"> Commitee member & co-fouder of <b style="color: #90ee90;">UL Esports</b> in 2018-2020.</h4>
                 </div>
@@ -380,6 +394,11 @@
     <section id="photographySection">
         <h1 class="boxTitle">Photopraphy</h1>
 
+        <div class="photoDiv">
+            <img class="photoImage" src="./images/photography/photo1.jpg" alt="">
+            <img class="photoImage" src="./images/photography/photo2.jpg" alt="">
+            <img class="photoImage" src="./images/photography/photo3.jpg" alt="">
+        </div>
 
     </section>
 
