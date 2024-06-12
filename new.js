@@ -311,7 +311,7 @@ photos = [
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    displaySkills();
+    
 
     console.log(event);
 
@@ -340,13 +340,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
         .join("");
 
 
+    let skillsDisplayed = false;
+
     const observer = new IntersectionObserver((entries) => {
         // console.log(entries)
         entries.forEach((entry) => {
             // console.log(entry);
-            // console.log(entry.target.id);
+            console.log(entry.target.id);
             if (entry.isIntersecting){
                 entry.target.classList.add('show');
+                
             }
             
             // else{
@@ -378,6 +381,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
     hiddenElements2.forEach((el) => observer2.observe(el));
 
 
+
+
+    const observer3 = new IntersectionObserver((entries) => {
+        console.log(entries)
+        entries.forEach((entry) => {
+            if(entry.target.id === "skillsDiv" && !skillsDisplayed && entry.isIntersecting){
+                skillsDisplayed = true;
+                displaySkills();
+            }
+        });
+    });
+    
+    
+    const hiddenElements3 = document.querySelectorAll('.skillsDiv');
+    hiddenElements3.forEach((el) => observer3.observe(el));
+
+
     lastItemButtonID = "";
 
 
@@ -403,6 +423,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
             let targetButton = self[0].id + "Button"
 
+
               if(lastItemButtonID != targetButton){
                 if(lastItemButtonID != ""){
                     document.getElementById(lastItemButtonID).classList.remove('menuItemLinkSelected');
@@ -424,105 +445,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-
-
-
-
-
-
-
-
-    let options = {
-        root: document.querySelector("section"),
-        rootMargin: "0px",
-        threshold: 0.5,
-      };
-
-    const observer3 = new IntersectionObserver((entries) => {
-
-        let found = false;
-
-        entries.forEach((entry) => {
-            // console.log(entry);
-            // console.log(entry.target);
-            // if(!found){
-            //     if(entry.target.id == "aboutmeSection" && entry.isIntersecting){
-            //         document.getElementById("aboutmeSectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("aboutmeSectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-    
-            //     if(entry.target.id == "skillsSection" && entry.isIntersecting){
-            //         document.getElementById("skillsSectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("skillsSectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-
-
-            //     if(entry.target.id == "experienceSection" && entry.isIntersecting){
-            //         document.getElementById("experienceSectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("experienceSectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-
-            //     if(entry.target.id == "educationSection" && entry.isIntersecting){
-            //         document.getElementById("educationSectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("educationSectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-
-            //     if(entry.target.id == "projectsSection" && entry.isIntersecting){
-            //         document.getElementById("projectsSectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("projectsSectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-
-            //     if(entry.target.id == "photographySection" && entry.isIntersecting){
-            //         document.getElementById("photographySectionButton").classList.add('menuItemLinkSelected');
-            //         found = true;
-            //     }
-            //     else{
-            //         document.getElementById("photographySectionButton").classList.remove('menuItemLinkSelected');
-            //     }
-            // }
-            
-             // && entry.rootBounds.bottom - entry.rootBounds.top <= entry.intersectionRect.bottom && entry.rootBounds.bottom - entry.rootBounds.top > entry.intersectionRect.top
-
-                // if(entry.isIntersecting){
-                //     console.log(entry.target.id)
-                //     console.log("Intersecting")
-                // }
-                // else{
-                //     console.log(entry.target.id)
-                //     console.log("Not Intersecting")
-                // }
-        });
-    });
-
-
-
-      
-    
-    
-    const hiddenElements3 = document.querySelectorAll('section');
-    hiddenElements3.forEach((el) => observer3.observe(el));
-
-
-    function checkVisible(elm) {
-        var rect = elm.getBoundingClientRect();
-        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-    }
 
 
 
