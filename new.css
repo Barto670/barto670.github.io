@@ -154,7 +154,7 @@
         --content: "1600px";
         --iconSize : 100px;
         --Stext: 0.70em;
-        --Mtext: 0.7em;
+        --Mtext: 0.85em;
         --Ltext: 2em;
         --XLtext: 0.9em;
         --TitleText: 4em;
@@ -172,7 +172,7 @@
         --content: "2200px";
         --iconSize : 108px;
         --Stext: 0.80em;
-        --Mtext: 0.9em;
+        --Mtext: 1em;
         --Ltext: 2em;
         --XLtext: 3em;
         --TitleText: 5em;
@@ -585,16 +585,16 @@ body{
             text-align: start; 
             margin-left: calc(var(--contentSize) / 30);  
             margin-right: 25px;
-            font-weight: 100;
-            font-family: Itim;
+            font-weight: 500;
+            /* font-family: Itim; */
             animation-name: skillLoadingTextLeft;
             animation-duration: 1s;
           }
           .skillText2{
             font-size: var(--Mtext); 
-            margin-right: calc(var(--contentSize) / 14);  
-            font-weight: 100;
-            font-family: Itim;
+            margin-right: calc(var(--contentSize) / 12);  
+            font-weight: 500;
+            /* font-family: Itim; */
             animation-name: skillLoadingTextRight;
             animation-duration: 2.3s;
             text-wrap: nowrap;
