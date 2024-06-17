@@ -1004,7 +1004,20 @@ body{
 
 
 .projectDivFullInner:hover{
-  /* background-color: rgba(90, 90, 90, 0.068); */
   box-shadow: #4b4e532a 0px 0px 16px 8px;
+  cursor: pointer;
+}
+
+
+.linkDiv a{
+  background-color: #2b2d31;
+  padding:10px;
+  border-radius: 15px;
+  transition: 0.1s;
+}
+
+.linkDiv a:hover{
+  scale: 1.1;
+  background-color: rgb(55, 58, 65);
   cursor: pointer;
 }

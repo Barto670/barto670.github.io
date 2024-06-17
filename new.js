@@ -652,6 +652,8 @@ function initialiseProjects(){
             
         });
 
+
+
         div.appendChild(div1);
     }
 
@@ -679,8 +681,8 @@ function initialiseProjects(){
                     <img src="./images/projects/`+projects[id].smallImagesrc+`" alt="" style="height: 100%; width: auto; border-top-left-radius: 25px;">
                 </div>
                 <h4 id="projectPopupName" class="noMP alignCenter" style="text-align: center; color: rgba(255, 255, 255, 0.637); font-weight: 100; height: 100%; width: calc(100% - 180px);">`+projects[id].name+`</h4>
-                <div style="height: 100%; width:90px">
-    
+                <div class="linkDiv alignCenter" style="height: 100%; width:90px;" style="display:`+projects[id].redirectionURLStyle+`">
+                    <a style="display:`+projects[id].redirectionURLStyle+`;" href="`+projects[id].redirectionURL+`"><img src="./images/link.png" style="height:26px; width:26px"; display:`+projects[id].redirectionURLStyle+`></a>
                 </div>
             </div>
     
