@@ -30,40 +30,45 @@
 
 @media (min-width: 320px) {
     .example { max-width: 300px; }
+    .projectIconDivs{ display: none;}
     .sideBar { display: none;}
     :root {
       --content: "320px";
       --iconSize : 76px;
       --Stext: 0.44em;
       --Mtext: 0.56em;
-      --Ltext: 1.2em;
+      --Ltext: 1.8em;
       --XLtext: 0.9em;
       --TitleText: 2.4em;
       --profileImageSize: 180px;
       --contentSize: 300px;
       --contentSize2: 300px;
+      --topBarWidth: 300px;
     }
   }
   
   @media (min-width: 380px) {
     .example { max-width: 360px; }
+    .projectIconDivs{ display: none;}
     .sideBar { display: none;}
     :root {
         --content: "380px";
         --iconSize : 78px;
         --Stext: 0.48em;
         --Mtext: 0.62em;
-        --Ltext: 1.6em;
+        --Ltext: 1.8em;
         --XLtext: 0.9em;
         --TitleText: 2.8em;
         --profileImageSize: 250px;
         --contentSize: 360px;
         --contentSize2: 360px;
+        --topBarWidth: 360px;
     }
   }
   
   @media (min-width: 480px) {
     .example { max-width: 460px; }
+    .projectIconDivs{ display: none;}
     .sideBar { display: none;}
     :root {
         --content: "480px";
@@ -75,7 +80,8 @@
         --TitleText: 2.9em;
         --profileImageSize: 250px;
         --contentSize: 460px;
-        --contentSize2: 300px;
+        --contentSize2: 360px;
+        --topBarWidth: 360px;
     }
   }
   
@@ -115,6 +121,7 @@
 
   @media (min-width: 992px) {
     .example { max-width: 800px; }
+    .projectIconDivs{ display: flex;}
     .sideBar { display: none;}
     :root {
         --content: "992px";
@@ -127,11 +134,13 @@
         --profileImageSize: 250px;
         --contentSize: 700px;
         --contentSize2: 300px;
+        --topBarWidth: 700px;
     }
   }
   
   @media (min-width: 1200px) {
     .example { max-width: 1100px; }
+    .projectIconDivs{ display: flex;}
     .sideBar { display: block; position: fixed;}
     :root {
         --content: "1200px";
@@ -144,11 +153,13 @@
         --profileImageSize: 260px;
         --contentSize: 720px;
         --contentSize2: 320px;
+        --topBarWidth: 720px;
     }
   }
   
   @media (min-width: 1600px) {
     .example { max-width: 1500px; }
+    .projectIconDivs{ display: flex;}
     .sideBar { display: block; position: fixed;}
     :root {
         --content: "1600px";
@@ -161,24 +172,27 @@
         --profileImageSize: 280px;
         --contentSize: 880px;
         --contentSize2: 340px;
+        --topBarWidth: 880px;
     }
 }
 
 
 @media (min-width: 2200px) {
     .example { max-width: 2000px; }
+    .projectIconDivs{ display: flex;}
     .sideBar { display: block; position: fixed;}
     :root {
         --content: "2200px";
         --iconSize : 108px;
         --Stext: 0.80em;
         --Mtext: 1em;
-        --Ltext: 2em;
+        --Ltext: 1.8em;
         --XLtext: 3em;
         --TitleText: 5em;
         --profileImageSize: 370px;
         --contentSize: 1000px;
         --contentSize2: 400px;
+        --topBarWidth: 1000px;
     }
 }
 
@@ -344,11 +358,15 @@ body{
   }
 
   h6{
-    font-size: 1.6rem;
+    font-size: 1.45rem;
   }
 
   p{
     font-size: 1.5rem;
+  }
+
+  ul{
+    font-size: 1.3rem;
   }
 
 
@@ -733,9 +751,14 @@ body{
     color: white;
     padding-bottom: 12px;
     padding-top: 12px;
-    height: 3.8rem;
+    /* height: 3.8rem; */
     text-decoration: none;
     opacity: 0.50;
+    margin-left: 6px;
+    position: relative;
+    align-items: center;
+    justify-content: left;
+    display: flex;
   }
 
 
@@ -749,8 +772,21 @@ body{
     /* scale: 1.02; */
     font-weight: 500;
     opacity: 1;
-    margin-left: 2px;
+    margin-left: 0px;
+    /* margin-left: 20px; */
   }
+
+  /* .menuItemLinkSelected::before{
+    content: "";
+    background-color: white;
+    border-radius: 20px;
+    width: 6px;
+    height: 12px;
+    position: absolute;
+    left: -20px;
+    align-items: center;
+    justify-content: center;
+  } */
 
 
 
@@ -890,3 +926,85 @@ body{
     opacity: 0.5;
     transform: rotate3d(1, 1, 1, -6deg);
   }
+
+
+
+
+
+
+
+
+
+
+.tagPopup{
+  width: fit-content; 
+  height: 100%; 
+  padding-left:20px; 
+  padding-right: 20px; 
+  border-top-left-radius: 15px; 
+  border-top-right-radius: 15px; 
+  color: white; 
+  font-size: 14px; 
+  align-items: center; 
+  justify-content: center; 
+  display: flex; 
+  margin-left: 8px; 
+  margin-right: 8px; 
+  font-weight: 100;
+  border-radius: 25px;
+  margin-top: 24px;
+  font-weight: 500;
+  padding-bottom: 2px;
+}
+
+
+.popUpInsideDiv{
+  min-width: 30%; 
+  max-width: var(--contentSize); 
+  height: 90%; 
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.popupDescriptionEntry{
+  color:#959697; 
+  margin-top: 10px; 
+  line-height: 23px;
+}
+
+
+.popupExplanationEntry{
+  color:#959697; 
+  margin-top: 10px; 
+  line-height: 23px;
+}
+
+
+.popupFunctionalityEntry{
+  color:#959697; 
+  margin-bottom: 8px; 
+  line-height: 23px;
+}
+
+.popupAdditionalEntry{
+  color:#959697; 
+  margin-bottom: 5px;
+}
+
+
+.bodyStatic{
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+
+.projectDivFullInner{
+  transition: 0.1s;
+}
+
+
+.projectDivFullInner:hover{
+  /* background-color: rgba(90, 90, 90, 0.068); */
+  box-shadow: #4b4e532a 0px 0px 16px 8px;
+  cursor: pointer;
+}

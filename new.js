@@ -18,7 +18,7 @@ projects = [
                 {   
                     name:'CS2 Stash Enhancer',              
                     statusColor:'green' ,       
-                    bigImagesrc:'cs2stashenhancerlong.jpg',       
+                    bigImagesrc:'cs2stashenhancerBig.jpg',       
                     smallImagesrc: 'cs2stashenhancersmall.png' ,
                     imageArray:['cs2stashenhancerlong.jpg'],
                     status:'Online' ,     
@@ -64,51 +64,6 @@ projects = [
                         "Coded with HTML, JavaScript, CSS",
                         "Made in Manifest V3",
                         "No Steam sign-in required"
-                    ]
-                },
-                { 
-                    name:'Online Shop Website',             
-                    statusColor:'orange' ,      
-                    bigImagesrc:'dashShopBig.jpg',               
-                    smallImagesrc: 'dashShopSmall.png' ,              
-                    status:'Prototype' ,  
-                    tags:
-                    [
-                        'HTML',
-                        'CSS',
-                        'JavaScript',
-                        'Responsive Design',
-                        'UI/UX'
-                    ],              
-                    redirectionURLStyle:'none',   
-                    redirectionURL:'',                                                                                                         
-                    expandURL:'' ,     
-                    imageArray:['dashShopLong.jpg'],
-                    description:
-                    [
-                        "An exemplary website showcased within the portfolio which demonstrates the functionality of an online shop from both the company's and customer's perspectives. It features a comprehensive dashboard allowing owners to track paid orders, site visits, searches, total sales earnings, and manage staff reminders. Customers and owners both have access to a storefront showcasing all available products and their prices. "
-                    ],
-                    explanation:
-                    [
-                        "The website is coded using HTML and CSS, implementing modern stylistic techniques and animations to create a visually appealing and aesthetic online shop. It maintains a simplistic design while incorporating advanced features to enhance user experience. The use of subtle animations adds a touch of interactivity and elegance to the browsing experience. Overall, the website seamlessly combines minimalist aesthetics with advanced functionalities, resulting in a pleasant and visually striking online shopping platform."
-                    ],
-                    functionalityBold:
-                    [
-                        "Dashboard View: ",
-                        "Shop View: ",
-                        "User Page: ",
-                        "Settings Page: "
-                    ],
-                    functionalityText:
-                    [
-                        "A dashboard for website owners to monitor paid orders, site visits, searches, total sales earnings, recent orders, and set staff reminders.",
-                        "A storefront accessible to both customers and owners, displaying all available products for purchase.",
-                        "An owner-exclusive page showcasing user accounts and their respective orders.",
-                        "Customization options for currencies, languages, and other website settings available to both users and owners.",
-                    ],
-                    additional:[
-                        "Coded in HTML, JavaScript, CSS",
-                        "Using Boxicons stylesheet for various icons"
                     ]
                 },
                 { 
@@ -213,6 +168,51 @@ projects = [
                     ]
                 },
                 { 
+                    name:'Online Shop Website',             
+                    statusColor:'orange' ,      
+                    bigImagesrc:'dashShopBig.jpg',               
+                    smallImagesrc: 'dashShopSmall.png' ,              
+                    status:'Prototype' ,  
+                    tags:
+                    [
+                        'HTML',
+                        'CSS',
+                        'JavaScript',
+                        'Responsive Design',
+                        'UI/UX'
+                    ],              
+                    redirectionURLStyle:'none',   
+                    redirectionURL:'',                                                                                                         
+                    expandURL:'' ,     
+                    imageArray:['dashShopLong.jpg'],
+                    description:
+                    [
+                        "An exemplary website showcased within the portfolio which demonstrates the functionality of an online shop from both the company's and customer's perspectives. It features a comprehensive dashboard allowing owners to track paid orders, site visits, searches, total sales earnings, and manage staff reminders. Customers and owners both have access to a storefront showcasing all available products and their prices. "
+                    ],
+                    explanation:
+                    [
+                        "The website is coded using HTML and CSS, implementing modern stylistic techniques and animations to create a visually appealing and aesthetic online shop. It maintains a simplistic design while incorporating advanced features to enhance user experience. The use of subtle animations adds a touch of interactivity and elegance to the browsing experience. Overall, the website seamlessly combines minimalist aesthetics with advanced functionalities, resulting in a pleasant and visually striking online shopping platform."
+                    ],
+                    functionalityBold:
+                    [
+                        "Dashboard View: ",
+                        "Shop View: ",
+                        "User Page: ",
+                        "Settings Page: "
+                    ],
+                    functionalityText:
+                    [
+                        "A dashboard for website owners to monitor paid orders, site visits, searches, total sales earnings, recent orders, and set staff reminders.",
+                        "A storefront accessible to both customers and owners, displaying all available products for purchase.",
+                        "An owner-exclusive page showcasing user accounts and their respective orders.",
+                        "Customization options for currencies, languages, and other website settings available to both users and owners.",
+                    ],
+                    additional:[
+                        "Coded in HTML, JavaScript, CSS",
+                        "Using Boxicons stylesheet for various icons"
+                    ]
+                },
+                { 
                     name:'DoneDeal Discord Bot',            
                     statusColor:'orange' ,      
                     bigImagesrc:'donedealBig.jpg',               
@@ -223,7 +223,7 @@ projects = [
                         'Discord',
                         'JavaScript',
                         'Web Scraping',
-                        'Noje.js'
+                        'Node.js'
                     ],               
                     redirectionURLStyle:'none',   
                     redirectionURL:'',                                                                                                         
@@ -465,6 +465,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
       });
 
+
+
+      initialiseProjects();
+
 });
 
 
@@ -544,3 +548,273 @@ function calculateYears(dateToCalculate) {
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
+
+
+
+
+
+
+function initialiseProjects(){
+        //Create popup element
+
+        // Projects
+    for (let i = 0; i < projects.length; i++) {
+        let div = document.getElementById('projectList'); 
+
+        let status
+        if(i == 0 || i == 1){
+            status = 1;
+        }else{
+            status = 0;
+        }
+
+        div1 = document.createElement('div');
+
+
+        div1.innerHTML = `
+
+
+            <div class="boxSize noMP alignCenter projectIconDiv projectDivFull" style="max-width: var(--contentSize);  flex-direction: row; display: flex; flex-wrap: wrap;">
+                <div class="alignCenter projectDivFullInner" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; width: calc(var(--contentSize2) * 2)" >
+
+                    <div style="background-color: #3b3b3b50; width: var(--topBarWidth); border-radius: 10px; display: flex; height: 70px;">
+                        <div class="alignCenter projectIconDivs" style="height: 100%; width: auto;">
+                            <img class="projectIconDivs" src="./images/projects/`+projects[i].smallImagesrc+`" style="height: 100%; width: auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" alt="">
+                        </div>
+                        <h4 style="align-items: center; justify-content: center; width: 100%; display: flex; font-weight: 500;">`+projects[i].name+`</h4>
+                        <div class="projectIconDivs" style="width: 70px;">
+    
+                        </div>
+                    </div>
+                    
+    
+
+                    <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;">
+    
+
+                        <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                            <img id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" style="height: 100%; width: 100%; border-radius: 10px;">
+                        </div>
+                       
+    
+
+                        <div class="alignCenter" style="width: calc(var(--contentSize2) - 3px); background-color: #3b3b3b50; height: var(--contentSize2); border-radius: 10px; padding: 5%; position: relative;">
+                            <div style="position: absolute; width: 100%; top: 0;  display: flex; justify-content: right; margin-right: 30px;">
+    
+                                <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px ">
+                                    <div class="alignCenter" style="height: 100%;">
+                                        <div style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
+                                    </div>
+                                    
+                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 6px; margin-bottom: 5px; color: `+projects[i].statusColor+`; font-weight: bold;">`+projects[i].status+`</p>
+                                </div>
+    
+    
+                            </div>
+                            <h6 style="color:#606060; height: calc(var(--contentSize2) - 35%); overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
+    
+                            <div style="position: absolute; width: 100%; bottom: 0;  display: flex; justify-content: right; gap: 20px; justify-content: center;">
+    
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                    
+                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[0]+`</p>
+                                </div>
+    
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                    
+                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[1]+`</p>
+                                </div>
+    
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                    
+                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[2]+`</p>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                   
+                </div>
+    
+            </div>
+
+
+        `;
+
+        div1.addEventListener("click", function(event) {
+
+            // if( !document.getElementsByClassName('projectIconDiv')[i].contains( event.target)){
+                openProjectPopup(i);
+            // }
+            
+        });
+
+        div.appendChild(div1);
+    }
+
+
+    function openProjectPopup(id){
+
+        console.log("sads" + id)
+        //Create popup element
+    
+        let popupDiv = document.getElementById('projectPopup'); 
+    
+        const divInsidePopup = document.createElement('div');
+    
+        divInsidePopup.classList.add("popUpInsideDiv");
+        divInsidePopup.id = "popUpInsideDiv";
+    
+    
+        let bodyDiv = document.getElementById('body'); 
+        bodyDiv.classList.add("bodyStatic");
+    
+        divInsidePopup.innerHTML = 
+        `
+            <div class="alignCenter" style="height: 90px; max-width: var(--contentSize); background-color: #2B2D31; border-top-left-radius: 25px; border-top-right-radius: 25px;">
+                <div class="alignCenter" style="height: 100%; width:90px">
+                    <img src="./images/projects/`+projects[id].smallImagesrc+`" alt="" style="height: 100%; width: auto; border-top-left-radius: 25px;">
+                </div>
+                <h4 id="projectPopupName" class="noMP alignCenter" style="text-align: center; color: rgba(255, 255, 255, 0.637); font-weight: 100; height: 100%; width: calc(100% - 180px);">`+projects[id].name+`</h4>
+                <div style="height: 100%; width:90px">
+    
+                </div>
+            </div>
+    
+    
+            <div style="overflow-y: auto; overflow-x:hidden; max-width: var(--contentSize); height: 85%; background-color: #1c1e22;">
+    
+                <div style="height: 24px; width: 100%; display: flex; justify-content: end; position: sticky; top : 0px; z-index: 20;">
+                    <div style="width: fit-content; background-color: #2B2D31; margin-right: 5%; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; color: rgba(255, 255, 255, 0.637); display: flex; align-items: center; justify-content: center; font-size: 14px; padding-left:12px; padding-right:12px">
+                        <div style="width: 10px; height: 10px; background-color: `+projects[id].statusColor+`; border-radius: 15px; margin-right: 8px;"></div>
+                        `+projects[id].status+`
+                    </div>
+                </div>
+                
+                <div class="alignCenter" style="min-width: 100px; max-width: var(--contentSize); height: fit-content;background-color: #1c1e22; padding-top: 35px;padding-bottom: 35px;;">
+                    <div style="height: var(--contentSize2); max-width: var(--contentSize); display: flex; border-radius: 15px; position: relative;">
+                        <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
+                        <img id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px;">
+                        <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
+                    </div>
+                </div>
+    
+                <div id="popupTagDiv" class="alignCenter" style="height: 24px; width: 100%; background-color: #1c1e22;  border-bottom: 2px solid #81818140;"></div>
+    
+                <div style="height: fit-content; width: 100%; background-color: #2B2D31; display: flex; justify-content: center;">
+                    <div style="width: 80%; height: 100%; padding-top: 65px; ">
+                        <div id="popupDescriptionDiv" style="height: fit-content; width: 100%; margin-bottom: 40px;">
+                            <h4 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Description</h4>
+                        </div>
+                        <div id="popupExplanationDiv" style="height: fit-content; width: 100%; margin-bottom: 40px;">
+                            <h4 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Explanation</h4>
+                        </div>
+                        <div style="height: fit-content; width: 100%; margin-bottom: 40px;">
+                            <h4 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Functionality</h4>
+                            <ul id="popupFunctionalityDiv" style="margin-top: 10px;"></ul>
+                        </div>
+                        <div style="height: fit-content; width: 100%; margin-bottom: 40px;">
+                            <h4 style="color: #F6F6F6; border-bottom: 1px solid rgba(128, 128, 128, 0.432); padding-bottom: 5px;">Additional</h4>
+                            <ul id="popupAdditionalDiv" style="margin-top: 10px;"></ul>
+                        </div>
+                    </div>
+                </div>
+    
+                
+    
+            </div>
+    
+            <div style="width: 100%; height: 60px; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; background-color: #2B2D31;">
+    
+            </div>
+    
+        `
+    
+        popupDiv.appendChild(divInsidePopup);
+    
+    
+    
+    
+        //Adding Tags to the popup
+        let tagDiv = document.getElementById('popupTagDiv');
+        for (let i = 0; i < projects[id].tags.length; i++) {
+            let tag = document.createElement('div');
+            tag.classList.add("tagPopup");
+            tag.style.background = colourArray[i]
+            tag.innerHTML = projects[id].tags[i]
+            tagDiv.appendChild(tag);
+        }
+    
+        //Adding Description
+    
+        let descriptionDiv = document.getElementById('popupDescriptionDiv');
+        for (let i = 0; i < projects[id].description.length; i++) {
+            let descriptionEntry = document.createElement('p');
+            descriptionEntry.classList.add("popupDescriptionEntry");
+            descriptionEntry.innerHTML = projects[id].description[i]
+            descriptionDiv.appendChild(descriptionEntry);
+        }
+    
+        //Adding Explanation
+    
+        let explanationDiv = document.getElementById('popupExplanationDiv');
+        for (let i = 0; i < projects[id].explanation.length; i++) {
+            let explanationEntry = document.createElement('p');
+            explanationEntry.classList.add("popupExplanationEntry");
+            explanationEntry.innerHTML = projects[id].explanation[i]
+            explanationDiv.appendChild(explanationEntry);
+        }
+    
+        //Adding Functionality
+    
+        let functionalityDiv = document.getElementById('popupFunctionalityDiv');
+        for (let i = 0; i < projects[id].functionalityText.length; i++) {
+            let functionalityEntry = document.createElement('li');
+            functionalityEntry.classList.add("popupExplanationEntry");
+            functionalityEntry.innerHTML = 
+            `
+            <b>`+projects[id].functionalityBold[i]+`</b>`+projects[id].functionalityText[i]+`
+            `
+            functionalityDiv.appendChild(functionalityEntry);
+        }
+    
+        //Adding Additional
+    
+        let additionalDiv = document.getElementById('popupAdditionalDiv');
+        for (let i = 0; i < projects[id].additional.length; i++) {
+            let additionalEntry = document.createElement('li');
+            additionalEntry.classList.add("popupAdditionalEntry");
+            additionalEntry.innerHTML = projects[id].additional[i]
+            additionalDiv.appendChild(additionalEntry);
+        }
+        
+    
+        document.getElementById('projectPopup').style.display = 'flex';
+    
+    
+        let containingElement = document.querySelector('#popUpInsideDiv');
+        
+        let open = false;
+    
+        document.body.addEventListener('click', function( event ){
+            if( !containingElement.contains( event.target ) ){
+                if(open){
+                    
+                    document.getElementById('projectPopup').style.display = 'none';
+                    document.getElementById("popUpInsideDiv").remove();
+                    open = false;
+                    bodyDiv.classList.remove("bodyStatic");
+                }
+            }
+        });
+    
+        setTimeout(() => {  open = true; }, 100);
+        
+    
+    }
+}
+
+

@@ -223,7 +223,7 @@ projects = [
                         'Discord',
                         'JavaScript',
                         'Web Scraping',
-                        'Noje.js'
+                        'Node.js'
                     ],               
                     redirectionURLStyle:'none',   
                     redirectionURL:'',                                                                                                         
