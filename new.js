@@ -71,7 +71,7 @@ projects = [
                     statusColor:'orange' ,      
                     bigImagesrc:'studentguideBig.jpg',           
                     smallImagesrc: 'studentguideSmall.png' ,          
-                    status:'Prototype' ,  
+                    status:'Project' ,  
                     tags:[
                         'Android',
                         'Application',
@@ -126,7 +126,7 @@ projects = [
                     statusColor:'orange' ,      
                     bigImagesrc:'gliAcademyBig.jpeg',            
                     smallImagesrc: 'gliAcademySmall.png' ,            
-                    status:'Prototype' ,  
+                    status:'Project' ,  
                     tags:[
                         'HTML',
                         'Angular',
@@ -217,7 +217,7 @@ projects = [
                     statusColor:'orange' ,      
                     bigImagesrc:'donedealBig.jpg',               
                     smallImagesrc: 'donedealSmall.png' ,              
-                    status:'Prototype' ,  
+                    status:'Project' ,  
                     tags:[
                         'Bot',
                         'Discord',
@@ -260,7 +260,7 @@ projects = [
                     statusColor:'orange' ,      
                     bigImagesrc:'ytdlpBig.jpg',                  
                     smallImagesrc: 'ytdlpSmall.png' ,                 
-                    status:'Prototype' ,  
+                    status:'Project' ,  
                     tags:[
                         'Batchfile',
                         'Extension',
