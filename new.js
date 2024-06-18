@@ -18,7 +18,7 @@ projects = [
                 {   
                     name:'CS2 Stash Enhancer',              
                     statusColor:'green' ,       
-                    bigImagesrc:'cs2stashenhancerBig.jpg',       
+                    bigImagesrc:'cs2stashenhancerbig.jpg',       
                     smallImagesrc: 'cs2stashenhancersmall.png' ,
                     imageArray:['cs2stashenhancerlong.jpg'],
                     status:'Online' ,     
@@ -575,7 +575,7 @@ function initialiseProjects(){
 
 
             <div class="boxSize noMP alignCenter projectIconDiv projectDivFull" style="max-width: var(--contentSize);  flex-direction: row; display: flex; flex-wrap: wrap;">
-                <div class="alignCenter projectDivFullInner" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; width: calc(var(--contentSize2) * 2)" >
+                <div class="alignCenter projectDivFullInner" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; max-width: calc(var(--contentSize2) * 2)" >
 
                     <div style="background-color: #3b3b3b50; width: var(--topBarWidth); border-radius: 10px; display: flex; height: 70px;">
                         <div class="alignCenter projectIconDivs" style="height: 100%; width: auto;">
