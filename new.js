@@ -611,7 +611,7 @@ function initialiseProjects(){
     
     
                             </div>
-                            <h6 style="color:#606060; height: calc(var(--contentSize2) - 35%); overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
+                            <h6 style="color:#606060; height: calc(var(--contentSize2) - 30%); overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
     
                             <div style="position: absolute; width: 100%; bottom: 0;  display: flex; justify-content: right; gap: 20px; justify-content: center;">
     
