@@ -19,6 +19,13 @@
 
 :root {
     --borderRadiusMenu: 20px;
+
+    /* --mainHighlight: #90ee90;
+    --secondaryHighlight: #65a765; */
+
+    --mainHighlight: #ffa82d;
+    --secondaryHighlight: #a1691b;
+
 }
 
 .content::after{
