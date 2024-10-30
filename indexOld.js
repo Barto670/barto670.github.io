@@ -370,7 +370,6 @@ function displaySkills(){
 
 
     for (let i = 0; i < skills.length; i++) {
-        console.log(skills[i])
 
         let div = document.getElementById('skillsDiv'); 
 
@@ -421,7 +420,6 @@ function paginatorPhotoChange(startInt){
     // Photos
 
     photoList = document.getElementsByClassName("photoEntry");
-    console.log(photoList)
 
     for (let i = 0; i < photoList.length; i++) {
         photoList[i].setAttribute("status", "0");
@@ -533,7 +531,6 @@ function paginatorProjectChange(startInt){
     // Photos
 
     projectList = document.getElementsByClassName("projectEntry");
-    console.log(projectList)
 
     for (let i = 0; i < projectList.length; i++) {
         projectList[i].setAttribute("status", "0");

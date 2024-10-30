@@ -313,8 +313,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     
 
-    console.log(event);
-
     const text = document.querySelector(".text");
     text.innerHTML = text.innerText
         .split("")
@@ -345,8 +343,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const observer = new IntersectionObserver((entries) => {
         // console.log(entries)
         entries.forEach((entry) => {
-            // console.log(entry);
-            console.log(entry.target.id);
             if (entry.isIntersecting){
                 entry.target.classList.add('show');
                 
@@ -384,7 +380,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
     const observer3 = new IntersectionObserver((entries) => {
-        console.log(entries)
         entries.forEach((entry) => {
             if(entry.target.id === "skillsDiv" && !skillsDisplayed && entry.isIntersecting){
                 skillsDisplayed = true;
@@ -493,7 +488,6 @@ function displaySkills(){
 
 
     for (let i = 0; i < skills.length; i++) {
-        console.log(skills[i])
         
 
         let div = document.getElementById('skillsDiv'); 
@@ -504,7 +498,6 @@ function displaySkills(){
 
         let widthOfStatus = boxWidth - (skillYearInterval*(max-years));
 
-        console.log(widthOfStatus)
 
         let yearsText;
 
@@ -659,8 +652,6 @@ function initialiseProjects(){
 
 
     function openProjectPopup(id){
-
-        console.log("sads" + id)
         //Create popup element
     
         let popupDiv = document.getElementById('projectPopup'); 
