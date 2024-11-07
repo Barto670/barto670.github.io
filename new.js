@@ -311,7 +311,71 @@ photos = [
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
+    const items = document.querySelectorAll('.responsive-skill-item');
     
+    items.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Mouse X relative to item
+            const y = e.clientY - rect.top;  // Mouse Y relative to item
+            
+            // Calculate rotation (max 10 degrees)
+            const xRotation = ((y - rect.height / 2) / rect.height) * -10;
+            const yRotation = ((x - rect.width / 2) / rect.width) * 10;
+            
+            // Apply transform
+            item.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale3d(1.05, 1.05, 1.05)`;
+        });
+        
+        // Reset transform when mouse leaves
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        });
+    });
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    var navH = $('nav').height(),
+        section = $('section'),
+        documentEl = $(document);
+        lastItemButtonID = "";
+
+    scrollNavLogic(documentEl.scrollTop());
+
+
+
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+    const skillGrids = document.querySelectorAll('.responsive-skills-grid');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Hide all skill grids
+            skillGrids.forEach(grid => grid.classList.remove('active'));
+            // Show the selected grid
+            const selectedGrid = document.querySelector(`[data-category="${button.dataset.filter}"]`);
+            selectedGrid.classList.add('active');
+        });
+    });
+
+
+
+
 
     const text = document.querySelector(".text");
     text.innerHTML = text.innerText
@@ -340,20 +404,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     let skillsDisplayed = false;
 
+
+
+
+
+
+    
+
     const observer = new IntersectionObserver((entries) => {
-        // console.log(entries)
         entries.forEach((entry) => {
-            if (entry.isIntersecting){
+            if (entry.isIntersecting) {
                 entry.target.classList.add('show');
-                
             }
-            
-            // else{
-            //     entry.target.classList.remove('show');
-            // }
         });
     });
-    
     
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
@@ -393,17 +457,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     hiddenElements3.forEach((el) => observer3.observe(el));
 
 
-    lastItemButtonID = "";
+    
 
 
     
 
 
-    var navH = $('nav').height(),
-        section = $('section'),
-        documentEl = $(document);
-
-    scrollNavLogic(documentEl.scrollTop());
+    
 
 
     documentEl.on('scroll', function() {
@@ -568,7 +628,7 @@ function initialiseProjects(){
 
 
             <div class="boxSize noMP alignCenter projectIconDiv projectDivFull" style="max-width: var(--contentSize);  flex-direction: row; display: flex; flex-wrap: wrap;">
-                <div class="alignCenter projectDivFullInner" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; max-width: calc(var(--contentSize2) * 2)" >
+                <div class="alignCenter projectDivFullInner project-container" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; max-width: calc(var(--contentSize2) * 2)" >
 
                     <div class="topProjectBar" style="background-color: #3b3b3b50; width: var(--topBarWidth); display: flex; height: 70px;">
                         <div class="alignCenter projectIconDivs" style="height: 100%; width: auto;">
@@ -582,13 +642,10 @@ function initialiseProjects(){
                     
     
 
-                    <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;" 
-                         class="project-container">
+                    <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;" class="">
     
-                        <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2);"
-                             class="project-image-container">
-                            <img class="noSelect" id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" 
-                                 style="height: 100%; width: 100%; border-radius: 10px; transition: 0.3s ease;">
+                        <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2);"class="project-image-container">
+                            <img class="noSelect" id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" style="height: 100%; width: 100%; border-radius: 10px; transition: 0.3s ease;">
                             <div class="project-overlay">
                                 <div class="project-click-hint">
                                     <i class="fas fa-search-plus"></i>
@@ -603,8 +660,11 @@ function initialiseProjects(){
                             <div style="position: absolute; width: 100%; top: 0;  display: flex; justify-content: right; margin-right: 30px;">
     
                                 <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px ">
-                                    <div class="alignCenter" style="height: 100%;">
-                                        <div class="noSelect" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
+                                    <div class="alignCenter status-container" style="height: 100%; position: relative;">
+                                        <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
+                                        ${projects[i].status === 'Online' ? 
+                                            `<div class="status-spinner" style="border: 2px solid ${projects[i].statusColor}"></div>` 
+                                            : ''}
                                     </div>
                                     
                                     <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 6px; margin-bottom: 5px; color: `+projects[i].statusColor+`; font-weight: bold;">`+projects[i].status+`</p>

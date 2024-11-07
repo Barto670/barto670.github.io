@@ -44,7 +44,6 @@
                 <a href="#experienceSection" class="menuItemLink" id="experienceSectionButton">Experience</a>
                 <a href="#educationSection" class="menuItemLink" id="educationSectionButton">Education</a>
                 <a href="#projectsSection" class="menuItemLink" id="projectsSectionButton">Projects</a>
-                <!-- <a href="#photographySection" class="menuItemLink" id="photographySectionButton">Photopraphy</a> -->
             </div>
         </nav>
     </div>
@@ -87,10 +86,10 @@
               
 
                 <div class="hidden listOfText" style="min-width: 260px; width: 400px; max-width: 450px; color: white; flex-wrap: wrap; align-items:  start; display: flex;">
-                    <h4 class="hidden2" style="margin-bottom: 12px; width: 100%; margin-top: 12px;">My name is <b style="color: var(--mainHighlight);">Bartek</b>.</h4>
+                    <h4 class="hidden2" style="margin-bottom: 12px; width: 100%; margin-top: 12px;">My name is <b style="color: var(--mainHighlight);">Bartek</b></h4>
                     <!-- <h4 class="hidden2" style="margin-bottom: 8px; ">I am a software developer with a keen interest in pushing the boundaries of software innovation.</h4> -->
-                    <h4 class="hidden2" style="margin-bottom: 12px; ">I work as a <b style="color: var(--mainHighlight);">Full Stack Developer,</b> primarily with front-end technologies.</h4>
-                    <h4 class="hidden2" >In my spare time I create various <b style="color: var(--mainHighlight);">software projects</b> including applications, websites, browser extensions and open source tools.</h4>
+                    <h4 class="hidden2" style="margin-bottom: 12px; ">I work as a <b style="color: var(--mainHighlight);">Full Stack Developer,</b> primarily with front-end technologies</h4>
+                    <h4 class="hidden2" >In my spare time I create various <b style="color: var(--mainHighlight);">software projects</b> including applications, websites, browser extensions and open source tools</h4>
                 </div>
             </div>
             
@@ -107,35 +106,133 @@
     </section>
 
 
-    <section id="skillsSection">
+    <!-- <section id="skillsSection">
         <h1 class="boxTitle hidden" >Skills</h1>
 
         <div class="noMP boxSize"  style="min-height: fit-content;">
             <div id="skillsDiv" class="skillsDiv" style="overflow-x: hidden; min-height: fit-content;"></div>
         </div>
-    </section>
+    </section> -->
 
 
-    <!-- <section>
+    <section id="skillsSection">
         <h1 class="boxTitle hidden" >Skills</h1>
 
-        <div class="noMP boxSize"  style="min-height: fit-content;">
-
-
-            <div class="skills-grid">
-                <div class="skill-item" style="background-color: #f1c40f;">JavaScript</div>
-                <div class="skill-item" style="background-color: #e67e22;">HTML</div>
-                <div class="skill-item" style="background-color: #3498db;">CSS</div>
-                <div class="skill-item" style="background-color: #9b59b6;">React</div>
-                <div class="skill-item" style="background-color: #2ecc71;">Node.js</div>
-                <div class="skill-item" style="background-color: #e74c3c;">Python</div>
-                <div class="skill-item" style="background-color: #34495e;">Django</div>
-                <div class="skill-item" style="background-color: #1abc9c;">SQL</div>
+        <div class="responsive-skills-container hidden">
+            <!-- Filter Buttons -->
+            <div class="skills-filter-buttons" style="margin-bottom: 70px;">
+                <button class="filter-btn active" data-filter="tech">
+                    <span class="btn-text">Core Technologies</span>
+                    <div class="btn-bar"></div>
+                </button>
+                <button class="filter-btn" data-filter="experience">
+                    <span class="btn-text">Working Knowledge</span>
+                    <div class="btn-bar"></div>
+                </button>
+                <button class="filter-btn" data-filter="learning">
+                    <span class="btn-text">Learning Path</span>
+                    <div class="btn-bar"></div>
+                </button>
             </div>
 
+
+            <div class="responsive-skills-grid active" data-category="tech">
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <span>HTML</span>
+                    <p>6 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS/SCSS">
+                    <span>CSS/SCSS</span>
+                    <p>6 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                    <p>5 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <span>TypeScript</span>
+                    <p>4 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <span>Python</span>
+                    <p>4 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg" alt="Angular">
+                    <span>Angular</span>
+                    <p>3 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <span>Java</span>
+                    <p>3 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot">
+                    <span>Spring Boot</span>
+                    <p>3 years experience</p>
+                </div>
+            </div>
+
+
+            <div class="responsive-skills-grid" data-category="experience">
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                    <span>Figma</span>
+                    <p>2 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                    <span>SQL</span>
+                    <p>2 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">
+                    <span>AWS</span>
+                    <p>2 years experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                    <span>Azure</span>
+                    <p>2 years experience</p>
+                </div>
+            </div>
+
+
+            <div class="responsive-skills-grid" data-category="learning">
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                    <span>C++</span>
+                    <p>1 year experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio">
+                    <span>Android Studio</span>
+                    <p>1 year experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter">
+                    <span>Flutter</span>
+                    <p>1 year experience</p>
+                </div>
+                <div class="responsive-skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+                    <span>React Native</span>
+                    <p>1 year experience</p>
+                </div>
+            </div>
         </div>
 
-    </section> -->
+        
+
+        
+
+    </section>
 
 
     <section id="experienceSection">
@@ -156,19 +253,19 @@
                             <div class="iconBox">
                                 <img class="educationIcon" src="./images/icons/graduate.png" alt="">
                             </div>
-                            <h5 >WrxFlo</h5>
+                            <h5 style="font-weight: 400;">WrxFlo</h5>
                         </div>
                         <div class="alignTopBottom">
                             <div class="iconBox">
                                 <img class="educationIcon" src="./images/icons/id.png" alt="">
                             </div>
-                            <h5 >Fullstack Software Developer</h5>
+                            <h5 style="font-weight: 300;">Fullstack Software Developer</h5>
                         </div>
                         <div class="alignTopBottom">
                             <div class="iconBox">
                                 <img class="educationIcon" src="./images/icons/location.png" alt="">
                             </div>
-                            <h5 >Castletroy, Co. Limerick, Ireland</h5>
+                            <h5 style="font-weight: 300;">Castletroy, Co. Limerick, Ireland</h5>
                         </div>
                     </div>
                     
@@ -247,10 +344,12 @@
 
     <section id="educationSection">
 
-        <div >
-            <h3 style="color: white; font-weight: 500; text-align: center;">Master's Degree</h3>
+        <h1 class="boxTitle">Education</h1>
 
-            <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; margin-top: 30px; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
+        <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
+
+
+        <div >
             
             <div class="boxSize noMP" style="margin-top: 20px;">
                 
@@ -262,24 +361,24 @@
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/graduate.png" alt="">
                                 </div>
-                                <h5 >Master of Engineering (MEng)</h5>
+                                <h5 style="font-weight: 400;">Master of Engineering (MEng)</h5>
                             </div>
                             <div class="alignTopBottom">
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/id.png" alt="">
                                 </div>
-                                <h5 >Computer and Communications Systems</h5>
+                                <h5 style="font-weight: 300;">Computer and Communications Systems</h5>
                             </div>
                             <div class="alignTopBottom">
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/location.png" alt="">
                                 </div>
-                                <h5 >University of Limerick</h5>
+                                <h5 style="font-weight: 300;">University of Limerick</h5>
                             </div>
                         </div>
                         
     
-                        <div style="width: 100%; display: flex; justify-content: center; width: 100%; ">
+                        <div style="width: 100%; display: flex; justify-content: center; width: 100% ; ">
                             <div class='container' style="width: 100%; overflow: hidden; height: 100px; margin-right: 40px;">
                                 <div class='overflow-hid-div skills'>
                                     <div style="background: linear-gradient(90deg, #1c1e22 0%, #1c1e2200 100%); height: 100%; width: 40px; z-index: 1200; position: absolute;"></div>
@@ -351,9 +450,7 @@
 
 
         <div style="margin-top: 40px;">
-            <h3 style="text-align: left; color: white; font-weight: 500; text-align: center;">Bachelor's Degree</h3>
 
-            <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; margin-top: 30px; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
     
             <div class="boxSize noMP" style="margin-top: 20px;">
     
@@ -365,19 +462,19 @@
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/graduate.png" alt="">
                                 </div>
-                                <h5 >Bachelor of Science (BSc)</h5>
+                                <h5 style="font-weight: 400;">Bachelor of Science (BSc)</h5>
                             </div>
                             <div class="alignTopBottom">
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/id.png" alt="">
                                 </div>
-                                <h5 >Computer Systems</h5>
+                                <h5 style="font-weight: 300;">Computer Systems</h5>
                             </div>
                             <div class="alignTopBottom">
                                 <div class="iconBox">
                                     <img class="educationIcon" src="./images/icons/location.png" alt="">
                                 </div>
-                                <h5 >University of Limerick</h5>
+                                <h5 style="font-weight: 300;">University of Limerick</h5>
                             </div>
                         </div>
                         
