@@ -93,40 +93,6 @@
     }
   }
   
-  /* @media (min-width: 600px) {
-    .example { max-width: 550px; }
-    .sideBar { display: none;}
-    :root {
-        --content: "600px";
-        --iconSize : 84px;
-        --Stext: 0.60em;
-        --Mtext: 0.66em;
-        --Ltext: 0.76em;
-        --XLtext: 0.9em;
-        --TitleText: 1em;
-        --profileImageSize: 250px;
-        --contentSize: 550px;
-    }
-  }
-
-
-  @media (min-width: 768px) {
-    .example { max-width: 720px; }
-    .sideBar { display: none;}
-    :root {
-        --content: "768px";
-        --iconSize : 86px;
-        --Stext: 0.62em;
-        --Mtext: 0.68em;
-        --Ltext: 0.78em;
-        --XLtext: 0.9em;
-        --TitleText: 1em;
-        --profileImageSize: 250px;
-        --contentSize: 680px;
-    }
-  } */
-
-
   @media (min-width: 992px) {
     .example { max-width: 800px; }
     .projectIconDivs{ display: flex;}
@@ -204,11 +170,6 @@
     }
 }
 
-
-
-/* html {
-  scroll-behavior: smooth;
-} */
 
 
 /* Scrollbar */
@@ -314,16 +275,7 @@ body{
     text-shadow: 0px 2px 15px rgba(255, 255, 255, 0.1);
 }
 
-.boxTitle.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.5s ease;
-}
 
-.boxTitle.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
   
@@ -334,14 +286,6 @@ body{
     align-content: center;
     min-height: 100vh;
     overflow: hidden;
-    /* .nameText{
-        transition-delay: 500ms;
-    }
-    .descriptionText{
-        transition-delay: 700ms;
-    } */
-
-
 
     .linkIconDiv{
         .animateEntryA:nth-child(1){
@@ -377,21 +321,6 @@ body{
     
   }
 
-  /* section{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 60vh;
-  } */
-
-
-  /* @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  } */
 
   h1{
     font-size: 4.5rem;
@@ -516,18 +445,17 @@ body{
     justify-content: center;
 }
 
-.text {
+.text, .text2, .text3 {
     position: absolute;
     width: inherit;
     height: inherit;
     font-family: consolas;
-    /* font-size: 12px; */
     animation: textRotation 8s linear infinite;
     color: rgba(255, 255, 255, 0.0);
     transition: 0.2s;
 }
 
-.text span {
+.text span, .text2 span, .text3 span {
     position: absolute;
     left: 50%;
     font-size: var(--Stext);
@@ -535,42 +463,6 @@ body{
 }
 
 
-.text2 {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    font-family: consolas;
-    /* font-size: 12px; */
-    animation: textRotation 8s linear infinite;
-    color: rgba(255, 255, 255, 0.0);
-    transition: 0.2s;
-}
-
-.text2 span {
-    position: absolute;
-    left: 50%;
-    font-size: var(--Stext);
-    transform-origin: 0 calc(var(--iconSize) / 2);
-}
-
-
-.text3 {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    font-family: consolas;
-    /* font-size: 12px; */
-    animation: textRotation 8s linear infinite;
-    color: rgba(255, 255, 255, 0.0);
-    transition: 0.2s;
-}
-
-.text3 span {
-    position: absolute;
-    left: 50%;
-    font-size: var(--Stext);
-    transform-origin: 0 calc(var(--iconSize) / 2);
-}
 
 
 @keyframes textRotation {
@@ -611,92 +503,6 @@ body{
 
 
 
-
-  /* Skills */
-.skillBox{
-    display: flex; 
-    flex-wrap: wrap; 
-    padding-top: 10px; 
-    margin-left: 20px; 
-    width: var(--contentSize);
-    animation-name: skillLoading;
-    animation-duration: 2.5s;
-    .skill{
-      background-color: #d9d9d918;
-      border-radius: 100px;
-      height: calc(var(--contentSize) / 16); 
-      color: #FFFFFF;
-      text-align: left;
-      font-size: 26px;
-      flex-wrap: wrap; 
-      margin-top: calc(var(--contentSize) / 100); 
-      margin-bottom: calc(var(--contentSize) / 100); 
-      position: relative;
-      transition: 0.1s;
-      .skillImageDiv{
-        height: calc(var(--contentSize) / 16); 
-        width: calc(var(--contentSize) / 16);  
-        border-bottom-left-radius: 50px; 
-        border-top-left-radius: 50px; 
-        margin-right: 20px;
-        transition: 0.1s;
-        .skillImage{
-          height: calc(var(--contentSize) / 28); 
-          width: auto; 
-          margin-left: 3px;
-        }
-      }
-      .skillTextBox{
-        position:absolute; 
-        margin-left: calc(var(--contentSize) / 16);  
-        flex-wrap: wrap;
-        .skillTextDiv{
-          width: 50%; 
-          height: 100%; 
-          display: flex;
-          margin: 0px;
-          padding: 0px;
-          .skillText{
-            font-size: var(--Mtext); 
-            text-align: start; 
-            margin-left: calc(var(--contentSize) / 30);  
-            margin-right: 25px;
-            font-weight: 500;
-            /* font-family: Itim; */
-            animation-name: skillLoadingTextLeft;
-            animation-duration: 1s;
-          }
-          .skillText2{
-            font-size: var(--Mtext); 
-            margin-right: calc(var(--contentSize) / 12);  
-            font-weight: 500;
-            /* font-family: Itim; */
-            animation-name: skillLoadingTextRight;
-            animation-duration: 2.3s;
-            text-wrap: nowrap;
-          }
-        }
-      }
-    }
-  }
-
-  @keyframes skillLoading {
-    0% {width: 100px;}
-    40% {width: calc(var(--contentSize)/4)}
-    100% {width: var(--contentSize);}
-  }
-  
-  @keyframes skillLoadingTextLeft {
-    0% {color: #00000000;}
-    70% {color: #00000000;}
-    100% {color: #fff;}
-  }
-  
-  @keyframes skillLoadingTextRight {
-    0% {color: #00000000;}
-    85% {color: #00000000;}
-    100% {color: #fff;}
-  }
 
 
   .menuItem{
@@ -834,17 +640,6 @@ body{
     /* margin-left: 20px; */
   }
 
-  /* .menuItemLinkSelected::before{
-    content: "";
-    background-color: white;
-    border-radius: 20px;
-    width: 6px;
-    height: 12px;
-    position: absolute;
-    left: -20px;
-    align-items: center;
-    justify-content: center;
-  } */
 
 
 
@@ -1057,8 +852,7 @@ body{
 
 
 .projectDivFullInner{
-  /* box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2), 
-              0 0px 0px rgba(0, 0, 0, 0.1); */
+
   transition: 0.3s ease;
   overflow: hidden;
   .project-image-container{
@@ -1182,7 +976,7 @@ body{
 .responsive-skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 35px;
   width: 100%;
   max-width: var(--contentSize);
   margin: 0 auto;
@@ -1232,7 +1026,6 @@ body{
   width: auto;
   height: 60px;
   transform-style: preserve-3d;
-  transform: translateZ(30px);
   position: absolute;
   top: -20px;
   left: 50%;
@@ -1267,9 +1060,6 @@ body{
   width: 90%;    /* Prevent text from touching edges */
   margin: 0;
 }
-
-
-
 
 
 
@@ -1341,7 +1131,6 @@ body{
 .filter-btn.active {
   color: var(--mainHighlight);
 }
-
 
 
 

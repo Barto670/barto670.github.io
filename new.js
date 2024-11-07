@@ -2,17 +2,16 @@
 
 colourArray = ['#30924d','#3399b8','#b82798','#b82229','#1e3ada','#d56c3a']
 
-skills = [
-                { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572220' ,     imageLink:'./images/skills/html.png'},
-                { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F820',      imageLink:'./images/skills/css.png'},
-                { name:'JavaScript',     dateStarted: '2019-01-01',      color:'#D3B62A20',      imageLink:'./images/skills/js.png'},
-                { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F820',      imageLink:'./images/skills/ts.png'},
-                { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F20',      imageLink:'./images/skills/python.png'},
-                { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F20',      imageLink:'./images/skills/angular.png'},
-                { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA320',      imageLink:'./images/skills/java.png'},
-                { name:'SQL',            dateStarted: '2022-01-01',      color:'#00BCF220',      imageLink:'./images/skills/sql.png'},
-                // { name:'C++',            dateStarted: '2022-01-01',      color:'#00599C20',      imageLink:'./images/skills/c++.png'},
-]
+// skills = [
+//                 { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572220' ,     imageLink:'./images/skills/html.png'},
+//                 { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F820',      imageLink:'./images/skills/css.png'},
+//                 { name:'JavaScript',     dateStarted: '2019-01-01',      color:'#D3B62A20',      imageLink:'./images/skills/js.png'},
+//                 { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F820',      imageLink:'./images/skills/ts.png'},
+//                 { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F20',      imageLink:'./images/skills/python.png'},
+//                 { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F20',      imageLink:'./images/skills/angular.png'},
+//                 { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA320',      imageLink:'./images/skills/java.png'},
+//                 { name:'SQL',            dateStarted: '2022-01-01',      color:'#00BCF220',      imageLink:'./images/skills/sql.png'},
+// ]
 
 projects = [
                 {   
@@ -28,7 +27,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        '350+ Users'
+                        '650+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
@@ -442,24 +441,6 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 
 
 
-
-    const observer3 = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if(entry.target.id === "skillsDiv" && !skillsDisplayed && entry.isIntersecting){
-                skillsDisplayed = true;
-                displaySkills();
-            }
-        });
-    });
-    
-    
-    const hiddenElements3 = document.querySelectorAll('.skillsDiv');
-    hiddenElements3.forEach((el) => observer3.observe(el));
-
-
-    
-
-
     
 
 
@@ -528,72 +509,6 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 
 
 
-function displaySkills(){
-    let min = calculateYears(new Date(skills[0].dateStarted))
-    let max = calculateYears(new Date(skills[0].dateStarted))
-    let boxWidth = 93;
-
-
-    for (let i = 0; i < skills.length; i++) {
-        if(calculateYears(new Date(skills[i].dateStarted)) > max){
-            max = calculateYears(new Date(skills[i].dateStarted));
-        }
-        if(calculateYears(new Date(skills[i].dateStarted)) < min){
-            min = calculateYears(new Date(skills[i].dateStarted));
-        }
-    }
-
-    let amountOfYearsToDivide = (max - min) + 1;
-    let skillYearInterval = (boxWidth/2)/amountOfYearsToDivide;
-
-
-    for (let i = 0; i < skills.length; i++) {
-        
-
-        let div = document.getElementById('skillsDiv'); 
-
-        div1 = document.createElement('div');
-
-        let years = calculateYears(new Date(skills[i].dateStarted))
-
-        let widthOfStatus = boxWidth - (skillYearInterval*(max-years));
-
-
-        let yearsText;
-
-        if(years == 1){
-            yearsText = "year"
-        }else{
-            yearsText = "years" 
-        }
-
-        div1.innerHTML = `
-                            <div class="skillBox">
-                                <div class="skill alignTopBottom" style="width: `+widthOfStatus+`%;");>
-                                    <div class="alignTopBottom skillTextBox" style="width: `+100 +`%;">
-                                        <div class="skillTextDiv" style="justify-content: start; ">
-                                            <h1 class="skillText">`+skills[i].name+`</h1>
-                                        </div>
-                                        <div class="skillTextDiv" style="justify-content: end;">
-                                            <h1 class="skillText2">`+ years  +' ' +yearsText+`</h1>
-                                        </div>
-                                    </div>
-                                    <div class="alignCenter skillImageDiv" style="background-color: `+skills[i].color+`;">
-                                        <img class="skillImage" src="`+skills[i].imageLink+`" alt="`+skills[i].name+`">
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        `
-
-
-        div.appendChild(div1);
-    }
-
-
-}
-
-
 
 
 function calculateYears(dateToCalculate) {
@@ -601,7 +516,6 @@ function calculateYears(dateToCalculate) {
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
-
 
 
 
@@ -632,7 +546,7 @@ function initialiseProjects(){
 
                     <div class="topProjectBar" style="background-color: #3b3b3b50; width: var(--topBarWidth); display: flex; height: 70px;">
                         <div class="alignCenter projectIconDivs" style="height: 100%; width: auto;">
-                            <img class="smallImageProject projectIconDivs noSelect" src="./images/projects/`+projects[i].smallImagesrc+`" style="height: 100%; width: auto;" alt="">
+                            <img loading="lazy" class="smallImageProject projectIconDivs noSelect" src="./images/projects/`+projects[i].smallImagesrc+`" style="height: 100%; width: auto;" alt="">
                         </div>
                         <h4 class="noSelect" style="align-items: center; justify-content: center; width: 100%; display: flex; font-weight: 500;">`+projects[i].name+`</h4>
                         <div class="projectIconDivs" style="width: 70px;">
@@ -645,7 +559,7 @@ function initialiseProjects(){
                     <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;" class="">
     
                         <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2);"class="project-image-container">
-                            <img class="noSelect" id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" style="height: 100%; width: 100%; border-radius: 10px; transition: 0.3s ease;">
+                            <img loading="lazy" class="noSelect" id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" style="height: 100%; width: 100%; border-radius: 10px; transition: 0.3s ease;">
                             <div class="project-overlay">
                                 <div class="project-click-hint">
                                     <i class="fas fa-search-plus"></i>
@@ -748,7 +662,7 @@ function initialiseProjects(){
         `
             <div class="alignCenter" style="height: 90px; max-width: var(--contentSize); background-color: #2B2D31; border-top-left-radius: 25px; border-top-right-radius: 25px;">
                 <div class="alignCenter" style="height: 100%; width:90px">
-                    <img src="./images/projects/`+projects[id].smallImagesrc+`" alt="" style="height: 100%; width: auto; border-top-left-radius: 25px;">
+                    <img loading="lazy" src="./images/projects/`+projects[id].smallImagesrc+`" alt="" style="height: 100%; width: auto; border-top-left-radius: 25px;">
                 </div>
                 <h4 id="projectPopupName" class="noMP alignCenter" style="text-align: center; color: rgba(255, 255, 255, 0.637); font-weight: 100; height: 100%; width: calc(100% - 180px);">`+projects[id].name+`</h4>
                 <div class="linkDiv alignCenter" style="height: 100%; width:90px;" style="display:`+projects[id].redirectionURLStyle+`">
@@ -769,7 +683,7 @@ function initialiseProjects(){
                 <div class="alignCenter" style="min-width: 100px; max-width: var(--contentSize); height: fit-content;background-color: #1c1e22; padding-top: 35px;padding-bottom: 35px;;">
                     <div style="height: var(--contentSize2); max-width: var(--contentSize); display: flex; border-radius: 15px; position: relative;">
                         <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
-                        <img id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px;">
+                        <img loading="lazy" id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px;">
                         <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
                     </div>
                 </div>
@@ -890,3 +804,22 @@ function initialiseProjects(){
 }
 
 
+
+// Add throttle function
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Use throttling for scroll events
+documentEl.on('scroll', throttle(function() {
+    scrollNavLogic(documentEl.scrollTop())
+}, 100)); // Adjust timing as needed
