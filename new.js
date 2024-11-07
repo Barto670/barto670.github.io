@@ -570,11 +570,11 @@ function initialiseProjects(){
             <div class="boxSize noMP alignCenter projectIconDiv projectDivFull" style="max-width: var(--contentSize);  flex-direction: row; display: flex; flex-wrap: wrap;">
                 <div class="alignCenter projectDivFullInner" style="display: flex; flex-wrap: wrap; background-color: #3b3b3b00; border-radius: 10px; max-width: calc(var(--contentSize2) * 2)" >
 
-                    <div style="background-color: #3b3b3b50; width: var(--topBarWidth); border-radius: 10px; display: flex; height: 70px;">
+                    <div class="topProjectBar" style="background-color: #3b3b3b50; width: var(--topBarWidth); display: flex; height: 70px;">
                         <div class="alignCenter projectIconDivs" style="height: 100%; width: auto;">
-                            <img class="projectIconDivs" src="./images/projects/`+projects[i].smallImagesrc+`" style="height: 100%; width: auto; border-top-left-radius: 10px; border-bottom-left-radius: 10px;" alt="">
+                            <img class="smallImageProject projectIconDivs noSelect" src="./images/projects/`+projects[i].smallImagesrc+`" style="height: 100%; width: auto;" alt="">
                         </div>
-                        <h4 style="align-items: center; justify-content: center; width: 100%; display: flex; font-weight: 500;">`+projects[i].name+`</h4>
+                        <h4 class="noSelect" style="align-items: center; justify-content: center; width: 100%; display: flex; font-weight: 500;">`+projects[i].name+`</h4>
                         <div class="projectIconDivs" style="width: 70px;">
     
                         </div>
@@ -582,45 +582,64 @@ function initialiseProjects(){
                     
     
 
-                    <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; flex-direction: row; width: auto; justify-content: center; margin-top: 6px; gap: 6px;" 
+                         class="project-container">
     
-
-                        <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-                            <img id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" style="height: 100%; width: 100%; border-radius: 10px;">
+                        <div style="width: calc(var(--contentSize2) - 3px); height: var(--contentSize2);"
+                             class="project-image-container">
+                            <img class="noSelect" id="projectPopupBigImage" src="./images/projects/`+projects[i].bigImagesrc+`" alt="" 
+                                 style="height: 100%; width: 100%; border-radius: 10px; transition: 0.3s ease;">
+                            <div class="project-overlay">
+                                <div class="project-click-hint">
+                                    <i class="fas fa-search-plus"></i>
+                                    <span>Click to view details</span>
+                                </div>
+                            </div>
                         </div>
                        
     
 
-                        <div class="alignCenter" style="width: calc(var(--contentSize2) - 3px); background-color: #3b3b3b50; height: var(--contentSize2); border-radius: 10px; padding: 5%; position: relative;">
+                        <div class="alignCenter textBoxDiv" style="width: calc(var(--contentSize2) - 3px); background-color: #3b3b3b50; height: var(--contentSize2); padding: 5%; position: relative;">
                             <div style="position: absolute; width: 100%; top: 0;  display: flex; justify-content: right; margin-right: 30px;">
     
                                 <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px ">
                                     <div class="alignCenter" style="height: 100%;">
-                                        <div style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
+                                        <div class="noSelect" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
                                     </div>
                                     
-                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 6px; margin-bottom: 5px; color: `+projects[i].statusColor+`; font-weight: bold;">`+projects[i].status+`</p>
+                                    <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 6px; margin-bottom: 5px; color: `+projects[i].statusColor+`; font-weight: bold;">`+projects[i].status+`</p>
                                 </div>
     
     
                             </div>
-                            <h6 style="color:#606060; height: calc(var(--contentSize2) - 30%); overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
+
+                            <div style="position: relative; height: calc(var(--contentSize2) - 31.5%);">
+                                <h6 class="noSelect" style="color:#606060; height: 100%; overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
+                                <div style="position: absolute; bottom: 0; width: 100%; height: 90px; background: linear-gradient(to bottom, transparent, #26282a);"></div>
+                            </div>
+
+
+                            
+
+
+                            
+
     
                             <div style="position: absolute; width: 100%; bottom: 0;  display: flex; justify-content: right; gap: 20px; justify-content: center;">
     
                                 <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
                                     
-                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[0]+`</p>
+                                    <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[0]+`</p>
                                 </div>
     
                                 <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
                                     
-                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[1]+`</p>
+                                    <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[1]+`</p>
                                 </div>
     
                                 <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
                                     
-                                    <p class="noMP" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[2]+`</p>
+                                    <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[2]+`</p>
                                 </div>
     
     
@@ -637,7 +656,7 @@ function initialiseProjects(){
 
         `;
 
-        div1.addEventListener("click", function(event) {
+        div1.getElementsByClassName('projectDivFullInner')[0].addEventListener("click", function(event) {
 
             // if( !document.getElementsByClassName('projectIconDiv')[i].contains( event.target)){
                 openProjectPopup(i);
