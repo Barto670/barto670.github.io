@@ -294,19 +294,6 @@ projects = [
                     ]
                 },
 ]
- 
-photos = [
-    { name:'EVENING DROPLETS',          imagesrc:'./images/photography/photo1.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53274008392',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/meike60mm.png',           camera:'Fujifilm XT-5',     lens:'Meike 60mm f2.8 RF Macro',        aperature : 'f/2.8',    focalLenght:'60.0 mm',    iso:'125' },
-    { name:'ORANGE GLOW',               imagesrc:'./images/photography/photo2.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53006264691',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/4.0',    focalLenght:'55.0 mm',    iso:'250' },
-    { name:'FALLING PETALS',            imagesrc:'./images/photography/photo3.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53002530227',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/meike60mm.png',           camera:'Fujifilm XT-5',     lens:'Meike 60mm f2.8 RF Macro',        aperature : 'f/2.8',    focalLenght:'60.0 mm',    iso:'125' },
-    { name:'BLACK WATCH',               imagesrc:'./images/photography/photo4.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53005434241',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/meike60mm.png',           camera:'Fujifilm XT-5',     lens:'Meike 60mm f2.8 RF Macro',        aperature : 'f/2.8',    focalLenght:'60.0 mm',    iso:'125' },
-    { name:'SUNSHINE',                  imagesrc:'./images/photography/photo5.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/52976707847',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/3.6',    focalLenght:'36.0 mm',    iso:'125' },
-    { name:'WATER DROPLET',             imagesrc:'./images/photography/photo6.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/53074266972',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/meike60mm.png',           camera:'Fujifilm XT-5',     lens:'Meike 60mm f2.8 RF Macro',        aperature : 'f/2.8',    focalLenght:'60.0 mm',    iso:'125' },
-    { name:'BIRR SPRUCE',               imagesrc:'./images/photography/photo8.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/52930552225',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/4.0',    focalLenght:'55.0 mm',    iso:'125' },
-    { name:'LAKE BRIDGET REFLECTION',   imagesrc:'./images/photography/photo9.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/52921253750',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/5.6',    focalLenght:'55.0 mm',    iso:'125' },
-    { name:'LAKE BRIDGET SUNSET',       imagesrc:'./images/photography/photo10.jpg',       redirectionURL: 'https://www.flickr.com/photos/198328132@N07/52920889496',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/5.6',    focalLenght:'55.0 mm',    iso:'125' },
-    { name:'BIRR AQUILEGIA',            imagesrc:'./images/photography/photo7.jpg',        redirectionURL: 'https://www.flickr.com/photos/198328132@N07/52930237606',   cameraImage: './images/icons/xt-5.png',  lensImage:'./images/icons/fujixf18-55.png',         camera:'Fujifilm XT-5',     lens:'Fujifilm XF18-55mm F2.8-4 R LM',  aperature : 'f/5.6',    focalLenght:'55.0 mm',    iso:'125' },
-]
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
@@ -345,16 +332,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
     var navH = $('nav').height(),
-        section = $('section'),
-        documentEl = $(document);
-        lastItemButtonID = "";
+    section = $('section'),
+    documentEl = $(document);
+    lastItemButtonID = "";
 
     scrollNavLogic(documentEl.scrollTop());
 
 
 
+    // Use throttling for scroll events
+    documentEl.on('scroll', throttle(function() {
+        scrollNavLogic(documentEl.scrollTop())
+    }, 100)); // Adjust timing as needed
 
-const filterButtons = document.querySelectorAll('.filter-btn');
+
+
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const skillGrids = document.querySelectorAll('.responsive-skills-grid');
 
     filterButtons.forEach(button => {
@@ -575,10 +569,11 @@ function initialiseProjects(){
     
                                 <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px ">
                                     <div class="alignCenter status-container" style="height: 100%; position: relative;">
-                                        <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;"></div>
-                                        ${projects[i].status === 'Online' ? 
-                                            `<div class="status-spinner" style="border: 2px solid ${projects[i].statusColor}"></div>` 
-                                            : ''}
+                                        <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;">
+                                            ${projects[i].status === 'Online' ? 
+                                                `<div class="status-glow" style="background-color: ${projects[i].statusColor}"></div>` 
+                                                : ''}
+                                        </div>
                                     </div>
                                     
                                     <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 6px; margin-bottom: 5px; color: `+projects[i].statusColor+`; font-weight: bold;">`+projects[i].status+`</p>
@@ -676,12 +671,13 @@ function initialiseProjects(){
                 <div style="height: 24px; width: 100%; display: flex; justify-content: end; position: sticky; top : 0px; z-index: 20;">
                     <div style="width: fit-content; background-color: #2B2D31; margin-right: 5%; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; color: rgba(255, 255, 255, 0.637); display: flex; align-items: center; justify-content: center; font-size: 14px; padding-left:12px; padding-right:12px">
                         <div class="alignCenter status-container" style="height: 100%; position: relative; padding-right: 10px; user-select: none;">
-                            <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[id].statusColor+`; border-radius: 10px;"></div>
-                            ${projects[id].status === 'Online' ? 
-                                `<div class="status-spinner" style="padding-right: 10px;border: 2px solid ${projects[id].statusColor}"></div>` 
-                                : ''}
+                            <div class="status-dot" style="height: 8px; width: 8px; background-color: ${projects[id].statusColor}; border-radius: 10px;">
+                                ${projects[id].status === 'Online' ? 
+                                    `<div class="status-glow" style="background-color: ${projects[id].statusColor}"></div>` 
+                                    : ''}
+                            </div>
                         </div>
-                        `+projects[id].status+`
+                        <span style="margin-bottom: 3px;">${projects[id].status}</span>
                     </div>
                 </div>
                 
@@ -823,8 +819,3 @@ function throttle(func, limit) {
         }
     }
 }
-
-// Use throttling for scroll events
-documentEl.on('scroll', throttle(function() {
-    scrollNavLogic(documentEl.scrollTop())
-}, 100)); // Adjust timing as needed

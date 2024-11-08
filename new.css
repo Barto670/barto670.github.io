@@ -1144,25 +1144,28 @@ body{
 }
 
 .status-dot {
-  position: absolute;
-  z-index: 2;
+  position: relative;
 }
 
-.status-spinner {
+.status-glow {
   position: absolute;
-  width: 18px;  
-  height: 18px; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  border-top-color: transparent !important;
-  border-left-color: transparent !important;
-  animation: statusSpin 1s linear infinite;
+  animation: pulse 2s infinite;
 }
 
-@keyframes statusSpin {
+@keyframes pulse {
   0% {
-      transform: rotate(0deg);
+      box-shadow: 0 0 0 0 rgba(79, 233, 33, 0.4);
+  }
+  70% {
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
   }
   100% {
-      transform: rotate(360deg);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
