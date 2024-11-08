@@ -1137,7 +1137,7 @@ body{
 
 .status-container {
   position: relative;
-  width: 20px;
+  width: 18px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1150,8 +1150,8 @@ body{
 
 .status-spinner {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;  
+  height: 18px; 
   border-radius: 50%;
   border-top-color: transparent !important;
   border-left-color: transparent !important;

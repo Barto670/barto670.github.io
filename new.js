@@ -675,7 +675,12 @@ function initialiseProjects(){
     
                 <div style="height: 24px; width: 100%; display: flex; justify-content: end; position: sticky; top : 0px; z-index: 20;">
                     <div style="width: fit-content; background-color: #2B2D31; margin-right: 5%; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; color: rgba(255, 255, 255, 0.637); display: flex; align-items: center; justify-content: center; font-size: 14px; padding-left:12px; padding-right:12px">
-                        <div style="width: 10px; height: 10px; background-color: `+projects[id].statusColor+`; border-radius: 15px; margin-right: 8px;"></div>
+                        <div class="alignCenter status-container" style="height: 100%; position: relative; padding-right: 10px; user-select: none;">
+                            <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[id].statusColor+`; border-radius: 10px;"></div>
+                            ${projects[id].status === 'Online' ? 
+                                `<div class="status-spinner" style="padding-right: 10px;border: 2px solid ${projects[id].statusColor}"></div>` 
+                                : ''}
+                        </div>
                         `+projects[id].status+`
                     </div>
                 </div>
