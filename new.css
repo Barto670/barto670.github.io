@@ -1097,7 +1097,7 @@ body{
   flex-wrap: wrap;
 }
 
-.filter-btn {
+.filter-btn, .filter-btn2 {
   position: relative;
   padding: 8px 16px;
   background: transparent;
@@ -1110,7 +1110,7 @@ body{
   font-weight: 600;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .filter-btn2:hover {
   color: var(--mainHighlight);
 }
 
@@ -1129,7 +1129,12 @@ body{
   width: 100%;
 }
 
-.filter-btn.active {
+.filter-btn2:hover .btn-bar,
+.filter-btn2.active .btn-bar {
+  width: 100%;
+}
+
+.filter-btn.active, .filter-btn2.active {
   color: var(--mainHighlight);
 }
 
@@ -1169,4 +1174,17 @@ body{
   100% {
       box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
+}
+
+
+
+
+
+
+.education-block {
+  display: none;
+}
+
+.education-block.active {
+  display: block;
 }

@@ -337,14 +337,27 @@
     </section>
 
 
+
     <section id="educationSection">
 
         <h1 class="boxTitle">Education</h1>
 
-        <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div>
+        <!-- <div style="width: var(--contentSize); height: 2px ; background-color: #b1b1b121; padding-left: 100px; padding-right: 100px; border-radius: 2px;"></div> -->
 
 
-        <div >
+        <div class="skills-filter-buttons">
+            <button class="filter-btn2 active" data-filter="masters">
+                <span class="btn-text">Master's Degree</span>
+                <div class="btn-bar"></div>
+            </button>
+            <button class="filter-btn2" data-filter="bachelors">
+                <span class="btn-text">Bachelor's Degree</span>
+                <div class="btn-bar"></div>
+            </button>
+        </div>
+
+
+        <div class="education-block" data-category="masters" style="display: block;">
             
             <div class="boxSize noMP" style="margin-top: 20px;">
                 
@@ -352,19 +365,19 @@
                 <div style="display:flex;  width: var(--contentSize) ; height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center; gap: 20px;">
                     <div class="hidden alignTop" style="min-width: 300px; width: 400px; max-width: 800px; justify-content: left;">
                         <div style="margin-right: 20px;">
-                            <div class="alignTopBottom ">
+                            <div class="alignTopBottom " style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/graduate.png" alt="">
                                 </div>
                                 <h5 style="font-weight: 400;">Master of Engineering (MEng)</h5>
                             </div>
-                            <div class="alignTopBottom">
+                            <div class="alignTopBottom" style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/id.png" alt="">
                                 </div>
                                 <h5 style="font-weight: 300;">Computer and Communications Systems</h5>
                             </div>
-                            <div class="alignTopBottom">
+                            <div class="alignTopBottom" style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/location.png" alt="">
                                 </div>
@@ -444,7 +457,7 @@
         
 
 
-        <div style="margin-top: 40px;">
+        <div class="education-block" data-category="bachelors" style="display: none;">
 
     
             <div class="boxSize noMP" style="margin-top: 20px;">
@@ -453,19 +466,19 @@
                 <div style="display:flex;  width: var(--contentSize) ; height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center; gap: 20px;">
                     <div class="hidden alignTop" style="min-width: 300px; width: 400px; max-width: 800px;">
                         <div style="margin-right: 20px;">
-                            <div class="alignTopBottom ">
+                            <div class="alignTopBottom " style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/graduate.png" alt="">
                                 </div>
                                 <h5 style="font-weight: 400;">Bachelor of Science (BSc)</h5>
                             </div>
-                            <div class="alignTopBottom">
+                            <div class="alignTopBottom" style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/id.png" alt="">
                                 </div>
                                 <h5 style="font-weight: 300;">Computer Systems</h5>
                             </div>
-                            <div class="alignTopBottom">
+                            <div class="alignTopBottom" style="height: 70px;">
                                 <div class="iconBox">
                                     <img loading="lazy" class="educationIcon" src="./images/icons/location.png" alt="">
                                 </div>

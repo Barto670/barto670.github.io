@@ -323,7 +323,45 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
+    const educationSection = document.getElementById('educationSection');
+    const educationButtons = educationSection.querySelectorAll('.filter-btn2');
+    const educationBlocks = educationSection.querySelectorAll('.education-block');
 
+    educationButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active class from all buttons
+            educationButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            // Get the category from the clicked button
+            const category = button.getAttribute('data-filter');
+            
+            // Hide all blocks first
+            educationBlocks.forEach(block => {
+                block.style.display = 'none';
+            });
+
+            // Show the selected block
+            const selectedBlock = educationSection.querySelector(`.education-block[data-category="${category}"]`);
+            if (selectedBlock) {
+                selectedBlock.style.display = 'block';
+            }
+
+            // Debug logs
+            console.log('Selected category:', category);
+            console.log('Found block:', selectedBlock);
+        });
+    });
+
+    // Show Masters section by default
+    const mastersBlock = educationSection.querySelector('.education-block[data-category="masters"]');
+    if (mastersBlock) {
+        mastersBlock.style.display = 'block';
+    }
 
     
 
