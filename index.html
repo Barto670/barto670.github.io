@@ -54,9 +54,15 @@
         <div class="profileImgDiv alignCenter">
             <div style="display:flex; max-width: var(--contentSize); height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center;">
                 <div class="alignCenter" style="display: flex; flex-wrap: wrap; width: calc(var(--profileImageSize) + 150px); height: fit-content; flex-direction: column;">
+                    <div style="position: relative;" class="hidden">
+                        <div class="location-indicator" style="position: absolute; top: 20px; left: 10px; display: flex; align-items: center; gap: 10px; color: white; background: rgba(0, 0, 0, 0.60); padding: 8px 16px; border-radius: 10px; backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1; transition: all 0.3s ease;">
+                            <i class='bx bx-map' style="color: var(--mainHighlight); font-size: 1.2em;"></i>
+                            <span style="font-weight: 500;">Ireland</span>
+                        </div>
 
-                    <img loading="lazy" class="profileImage hidden noSelect" src="./images/image2.webp" style="border-top-left-radius: 8px; border-bottom-right-radius: 8px; border-top-right-radius: 3px; border-bottom-left-radius: 3px; border: 10px solid var(--mainHighlight); box-shadow: 10px 10px 0px var(--secondaryHighlight) ; margin-bottom: 32px; margin-top: 10px;" alt="">
-                   
+                        <img loading="lazy" class="profileImage noSelect" src="./images/image2.webp" style=" border-radius: 16px; border: 4px solid var(--mainHighlight); box-shadow: 9px 9px 0px var(--secondaryHighlight), 0 10px 20px rgba(0, 0, 0, 0.2); margin-bottom: 20px; margin-top: 10px; transition: all 0.3s ease;" alt="Profile Image">
+                    </div>
+                    
                     <div class="alignCenter linkIconDiv" style="margin-bottom: 15px;">
                         <a class="hidden animateEntryA circle animateHover noSelect" target="_blank" href="https://github.com/Barto670"><img class="linkIcon" src="./images/github.png" alt="Github.com">
                             <div class="text noSelect" id="text">
@@ -83,11 +89,33 @@
                 </div>
               
 
-                <div class="hidden listOfText" style="min-width: 260px; width: 400px; max-width: 450px; color: white; flex-wrap: wrap; align-items:  start; display: flex;">
-                    <h4 class="hidden2" style="margin-bottom: 12px; width: 100%; margin-top: 12px;">My name is <b style="color: var(--mainHighlight);">Bartek</b></h4>
-                    <!-- <h4 class="hidden2" style="margin-bottom: 8px; ">I am a software developer with a keen interest in pushing the boundaries of software innovation.</h4> -->
-                    <h4 class="hidden2" style="margin-bottom: 12px; ">I work as a <b style="color: var(--mainHighlight);">Full Stack Developer,</b> primarily with front-end technologies</h4>
-                    <h4 class="hidden2" >In my spare time I create various <b style="color: var(--mainHighlight);">software projects</b> including applications, websites, browser extensions and open source tools</h4>
+                <div class="hidden listOfText" style="min-width: 260px; width: 400px; max-width: 450px; color: white; flex-wrap: wrap; align-items: start; display: flex;">
+                    <div class="about-me-content" style="width: 100%;">
+                        <h4 class="hidden2" style="margin-bottom: 24px;">
+                            
+                            <div style="display: flex; flex-direction: column;">
+                                <b style="color: var(--mainHighlight); font-size: 1.6em;">Bartek Skorecki</b>
+                                <span style="font-weight: 300; font-size: 0.8em;">Full Stack Developer</span>
+                            </div>
+                        </h4>
+                        
+                        <h6 class="hidden2" style="margin-bottom: 8px; line-height: 1.2; font-weight: 300;">
+                            I enjoy creating solutions to complex problems and continuously expanding my technical expertise.
+                        </h6>
+                        <h6 class="hidden2" style="margin-bottom: 8px; line-height: 1.2; font-weight: 300;">
+                            In my spare time I like to work on personal projects.
+                        </h6>
+                        
+                        
+                        <div class="hidden2" style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 30px;">
+                            <div class="tech-tag"><i class='bx bx-code-alt'></i> <span style="position: relative; top: -1px;">Web Dev</span></div>
+                            <div class="tech-tag"><i class='bx bx-cloud'></i> <span style="position: relative; top: -1px;">SaaS</span></div>
+                            <div class="tech-tag"><i class='bx bx-git-repo-forked'></i> <span style="position: relative; top: -1px;">Open Source</span></div>
+                            <div class="tech-tag"><i class='bx bx-extension'></i> <span style="position: relative; top: -1px;">Extensions</span></div>
+                            <div class="tech-tag"><i class='bx bx-code-curly'></i> <span style="position: relative; top: -1px;">Frontend/Backend</span></div>
+                            <div class="tech-tag"><i class='bx bx-palette'></i> <span style="position: relative; top: -1px;">UI/UX</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -493,20 +521,6 @@
                                     <div style="background: linear-gradient(90deg, #1c1e22 0%, #1c1e2200 100%); height: 100%; width: 40px; z-index: 1200; position: absolute;"></div>
                                     <div style="background: linear-gradient(90deg, #1c1e2200 0%, #1c1e22 100%); height: 100%; width: 40px; z-index: 1200; position: absolute; right: 0;"></div>
                                     <div class='inner row scrollSkills2'>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Java</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Python</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Angular</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Go</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Lua</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> HTML</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> CSS</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> TypeScript</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> AI</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Security</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Databases</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> C</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Spring Boot</div>
-                                        <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> C++</div>
                                         <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Java</div>
                                         <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Python</div>
                                         <div class="skill itim"> <img loading="lazy" src="./images/icons/circle.png" alt=""> Angular</div>
