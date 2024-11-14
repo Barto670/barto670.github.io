@@ -2,17 +2,6 @@
 
 colourArray = ['#30924d','#3399b8','#b82798','#b82229','#1e3ada','#d56c3a']
 
-// skills = [
-//                 { name:'HTML',           dateStarted: '2018-01-01' ,     color:'#FF572220' ,     imageLink:'./images/skills/html.png'},
-//                 { name:'CSS/SCSS',       dateStarted: '2018-01-01',      color:'#2299F820',      imageLink:'./images/skills/css.png'},
-//                 { name:'JavaScript',     dateStarted: '2019-01-01',      color:'#D3B62A20',      imageLink:'./images/skills/js.png'},
-//                 { name:'TypeScript',     dateStarted: '2020-01-01',      color:'#2299F820',      imageLink:'./images/skills/ts.png'},
-//                 { name:'Python',         dateStarted: '2020-01-01',      color:'#356F9F20',      imageLink:'./images/skills/python.png'},
-//                 { name:'Angular',        dateStarted: '2021-01-01',      color:'#C3002F20',      imageLink:'./images/skills/angular.png'},
-//                 { name:'Java',           dateStarted: '2021-01-01',      color:'#778EA320',      imageLink:'./images/skills/java.png'},
-//                 { name:'SQL',            dateStarted: '2022-01-01',      color:'#00BCF220',      imageLink:'./images/skills/sql.png'},
-// ]
-
 projects = [
                 {   
                     name:'CS2 Stash Enhancer',              
@@ -297,6 +286,28 @@ projects = [
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
+
+    // Event for checking what section is currently active in the navigation bar
+
+    var navH = $('nav').height(),
+    section = $('section'),
+    documentEl = $(document);
+    lastItemButtonID = "";
+
+    scrollNavLogic(documentEl.scrollTop());
+
+    // Use throttling for scroll events
+    documentEl.on('scroll', throttle(function() {
+        scrollNavLogic(documentEl.scrollTop())
+    }, 100)); // Adjust timing as needed
+
+
+
+
+
+
+    // 3D effect for skills hover
+
     const items = document.querySelectorAll('.responsive-skill-item');
     
     items.forEach(item => {
@@ -322,6 +333,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
+
+
+    // Education section buttons + content
 
     const educationSection = document.getElementById('educationSection');
     const educationButtons = educationSection.querySelectorAll('.filter-btn2');
@@ -369,22 +383,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    var navH = $('nav').height(),
-    section = $('section'),
-    documentEl = $(document);
-    lastItemButtonID = "";
-
-    scrollNavLogic(documentEl.scrollTop());
+    
 
 
 
-    // Use throttling for scroll events
-    documentEl.on('scroll', throttle(function() {
-        scrollNavLogic(documentEl.scrollTop())
-    }, 100)); // Adjust timing as needed
 
-
-
+    // Skills section buttons + content
 
     const filterButtons = document.querySelectorAll('.filter-btn');
     const skillGrids = document.querySelectorAll('.responsive-skills-grid');
@@ -407,7 +411,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-
+    // Spinning circle around social media
     const text = document.querySelector(".text");
     text.innerHTML = text.innerText
         .split("")
@@ -433,7 +437,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
         .join("");
 
 
-    let skillsDisplayed = false;
 
 
 
@@ -442,6 +445,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     
 
+    // Intersection observer for animations coming in to view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -454,16 +458,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     hiddenElements.forEach((el) => observer.observe(el));
 
 
-
+    // Intersection observer for animations coming in to view from the other side
     const observer2 = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             // console.log(entry);
             if (entry.isIntersecting){
                 entry.target.classList.add('show');
             }
-            // else{
-            //     entry.target.classList.remove('show');
-            // }
         });
     });
     
@@ -478,7 +479,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     
 
-
+    // Scrolling logic for animation when navbar is clicked
     documentEl.on('scroll', function() {
         scrollNavLogic(documentEl.scrollTop())
     });
@@ -722,7 +723,7 @@ function initialiseProjects(){
                 <div class="alignCenter" style="min-width: 100px; max-width: var(--contentSize); height: fit-content;background-color: #1c1e22; padding-top: 35px;padding-bottom: 35px;;">
                     <div style="height: var(--contentSize2); max-width: var(--contentSize); display: flex; border-radius: 15px; position: relative;">
                         <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
-                        <img loading="lazy" id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px;">
+                        <img loading="lazy" id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px; object-fit: contain;">
                         <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
                     </div>
                 </div>
