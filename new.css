@@ -300,21 +300,15 @@ body{
         }
     }
 
-    .listOfText{
-        h4:nth-child(1){
+    .about-me-content{
+        h6:nth-child(2){
             transition-delay: 100ms;
         }
-        h4:nth-child(2){
+        h6:nth-child(3){
             transition-delay: 200ms;
         }
-        h4:nth-child(3){
+        div{
             transition-delay: 300ms;
-        }
-        h4:nth-child(4){
-            transition-delay: 400ms;
-        }
-        h4{
-          user-select: none;
         }
     }
 
