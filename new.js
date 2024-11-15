@@ -8,7 +8,7 @@ projects = [
                     statusColor:'green' ,       
                     bigImagesrc:'cs2stashenhancerbig.jpg',       
                     smallImagesrc: 'cs2stashenhancersmall.png' ,
-                    imageArray:['cs2stashenhancerlong.jpg'],
+                    imageArray:['cs2stashenhancerlong.webp','cs2stashenhancerlong2.webp','cs2stashenhancerlong3.webp'],
                     status:'Online' ,     
                     tags:
                     [
@@ -71,7 +71,7 @@ projects = [
                     redirectionURLStyle:'none',   
                     redirectionURL:'',                                                                                                         
                     expandURL:'' ,     
-                    imageArray:['studentguideLong.jpg'],
+                    imageArray:['studentguideLong.webp','studentguideLong2.webp','studentguideLong3.webp'],
                     description:
                     [
                         "Android mobile application designed as a comprehensive tool for students to navigate and acquaint themselves with the University of Limerick campus. Tailored with simplicity in mind, this user-friendly app is specifically aimed at first-year students and Erasmus participants, offering an intuitive interface for easy exploration. Whether it's locating buildings, finding facilities, or accessing campus resources, 'UL Student Guide' serves as an indispensable companion, empowering students to navigate campus life effortlessly."
@@ -126,7 +126,7 @@ projects = [
                     redirectionURLStyle:'none',   
                     redirectionURL:'',                                                                                                         
                     expandURL:'' ,     
-                    imageArray:['gliAcademyLong.jpg'],
+                    imageArray:['gliAcademyLong.webp','gliAcademyLong2.webp','gliAcademyLong3.webp','gliAcademyLong4.webp'],
                     description:
                     [
                         "Developed as the culmination of my Bachelor's degree, this project aims to provide users with an interactive platform facilitating exploration and comprehension of the significance and practical applications of various concepts related to Globalization, Localization, and Internationalization, hence the name GLIacademy."
@@ -680,6 +680,8 @@ function initialiseProjects(){
 
     function openProjectPopup(id){
         //Create popup element
+
+        let currentImage = 0;
     
         let popupDiv = document.getElementById('projectPopup'); 
     
@@ -698,7 +700,7 @@ function initialiseProjects(){
                 <div class="alignCenter" style="height: 100%; width:90px">
                     <img loading="lazy" src="./images/projects/`+projects[id].smallImagesrc+`" alt="" style="height: 100%; width: auto; border-top-left-radius: 25px;">
                 </div>
-                <h4 id="projectPopupName" class="noMP alignCenter" style="text-align: center; color: rgba(255, 255, 255, 0.637); font-weight: 100; height: 100%; width: calc(100% - 180px);">`+projects[id].name+`</h4>
+                <h4 id="projectPopupName" class="noMP alignCenter" style="text-align: center; color: rgba(255, 255, 255, 0.637); font-weight: 500; height: 100%; width: calc(100% - 180px);">`+projects[id].name+`</h4>
                 <div class="linkDiv alignCenter" style="height: 100%; width:90px;" style="display:`+projects[id].redirectionURLStyle+`">
                     <a style="display:`+projects[id].redirectionURLStyle+`;" href="`+projects[id].redirectionURL+`"><img src="./images/link.png" style="height:26px; width:26px"; display:`+projects[id].redirectionURLStyle+`></a>
                 </div>
@@ -721,11 +723,29 @@ function initialiseProjects(){
                 </div>
                 
                 <div class="alignCenter" style="min-width: 100px; max-width: var(--contentSize); height: fit-content;background-color: #1c1e22; padding-top: 35px;padding-bottom: 35px;;">
-                    <div style="height: var(--contentSize2); max-width: var(--contentSize); display: flex; border-radius: 15px; position: relative;">
-                        <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; opacity:0"></div>
-                        <img loading="lazy" id="projectPopupBigImage" src="./images/projects/`+projects[id].imageArray[0]+`" alt="" style="height: auto; max-width: var(--contentSize); border-radius: 30px; object-fit: contain;">
-                        <div style="height: 300px; width: 80px; background-color: #1E202445; position: absolute; margin-left: 465px ; opacity:0"></div>
+                    
+                    <div class="image-container" style="height: var(--contentSize2); max-width: var(--contentSize); display: flex; position: relative; overflow: hidden; border-radius: 30px;">
+                        ${projects[id].imageArray.length > 1 ? `
+                            <div class="carousel-arrow left-arrow d-none d-lg-flex" style="height: 100%; width: 80px; background-color: #1E202445; position: absolute; left: 0; align-items: center; justify-content: center; cursor: pointer; opacity: 0.7; transition: opacity 0.3s; z-index: 10; border-top-left-radius: 30px; border-bottom-left-radius: 30px;">
+                                <i class="fas fa-chevron-left" style="color: #eee; font-size: 24px;"></i>
+                            </div>
+                            <div class="carousel-arrow right-arrow d-none d-lg-flex" style="height: 100%; width: 80px; background-color: #1E202445; position: absolute; right: 0; align-items: center; justify-content: center; cursor: pointer; opacity: 0.7; transition: opacity 0.3s; z-index: 10; border-top-right-radius: 30px; border-bottom-right-radius: 30px;">
+                                <i class="fas fa-chevron-right" style="color: #eee; font-size: 24px;"></i>
+                            </div>
+                            
+                            <div class="carousel-indicators" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+                                ${projects[id].imageArray.map((_, index) => `
+                                    <div class="carousel-dot" style="width: 8px; height: 8px; border-radius: 50%; background-color: ${index === currentImage ? '#fff' : '#ffffff80'}; transition: background-color 0.3s; cursor: pointer;"></div>
+                                `).join('')}
+                            </div>
+                            
+                            <div class="swipe-hint" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #00000080; padding: 10px 20px; border-radius: 20px; color: white; opacity: 0; transition: opacity 0.3s;">
+                                <i class="fas fa-hand-point-up" style="margin-right: 10px;"></i> Swipe to navigate
+                            </div>
+                        ` : ''}
+                        <img loading="lazy" id="projectPopupBigImage" src="./images/projects/${projects[id].imageArray[currentImage]}" alt="" style="height: auto; max-width: var(--contentSize); object-fit: contain;">
                     </div>
+                    
                 </div>
     
                 <div id="popupTagDiv" class="alignCenter" style="height: 24px; width: 100%; background-color: #1c1e22;  border-bottom: 2px solid #81818140;"></div>
@@ -836,6 +856,160 @@ function initialiseProjects(){
                 }
             }
         });
+
+
+        if (projects[id].imageArray.length > 1) {
+            const leftArrow = divInsidePopup.querySelector('.left-arrow');
+            const rightArrow = divInsidePopup.querySelector('.right-arrow');
+            const image = divInsidePopup.querySelector('#projectPopupBigImage');
+            const container = image.parentElement;
+            
+            let isAnimating = false;
+
+            const updateIndicators = () => {
+                const dots = divInsidePopup.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                    dot.style.backgroundColor = index === currentImage ? '#fff' : '#ffffff80';
+                });
+            };
+
+            const changeImage = (direction) => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                let nextImage;
+                if (typeof direction === 'number') {
+                    // If direction is a number, it's a direct image index
+                    nextImage = direction;
+                } else {
+                    // Calculate next image based on direction
+                    nextImage = direction === 'left' 
+                        ? (currentImage - 1 + projects[id].imageArray.length) % projects[id].imageArray.length
+                        : (currentImage + 1) % projects[id].imageArray.length;
+                }
+
+                const transitionDirection = typeof direction === 'number'
+                    ? (nextImage > currentImage ? 'right' : 'left')
+                    : direction;
+
+                // Create and style the new image
+                const newImage = document.createElement('img');
+                newImage.id = 'tempImage';
+                newImage.style.position = 'absolute';
+                newImage.style.top = '0';
+                newImage.style.left = '0';
+                newImage.style.height = '100%';
+                newImage.style.width = '100%';
+                newImage.style.maxWidth = 'var(--contentSize)';
+                newImage.style.objectFit = 'contain';
+                newImage.style.transform = transitionDirection === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
+                newImage.style.transition = 'transform 0.4s ease';
+                
+                // Update current image index
+                currentImage = nextImage;
+                
+                // Update indicators immediately
+                updateIndicators();
+                
+                // Set the new image source and wait for it to load
+                newImage.src = `./images/projects/${projects[id].imageArray[currentImage]}`;
+                
+                newImage.onload = () => {
+                    container.appendChild(newImage);
+                    container.offsetHeight; // Force browser reflow
+                    
+                    image.style.transition = 'transform 0.4s ease';
+                    newImage.style.transform = 'translateX(0)';
+                    image.style.transform = transitionDirection === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+                    
+                    setTimeout(() => {
+                        image.style.transition = 'none';
+                        image.style.transform = '';
+                        image.src = newImage.src;
+                        newImage.remove();
+                        isAnimating = false;
+                    }, 400);
+                };
+            };
+
+            // Add hover effects for arrows
+            [leftArrow, rightArrow].forEach(arrow => {
+                arrow.addEventListener('mouseenter', () => {
+                    arrow.style.opacity = '1';
+                    arrow.style.backgroundColor = '#1E2024aa';
+                });
+                arrow.addEventListener('mouseleave', () => {
+                    arrow.style.opacity = '0.7';
+                    arrow.style.backgroundColor = '#1E202445';
+                });
+            });
+
+            // Add click handlers
+            leftArrow.addEventListener('click', () => changeImage('left'));
+            rightArrow.addEventListener('click', () => changeImage('right'));
+
+            // Show swipe hint briefly on mobile only if not shown before
+            const swipeHint = divInsidePopup.querySelector('.swipe-hint');
+            if (swipeHint && !localStorage.getItem('swipeHintShown')) {
+                setTimeout(() => {
+                    swipeHint.style.opacity = '1';
+                    setTimeout(() => {
+                        swipeHint.style.opacity = '0';
+                        localStorage.setItem('swipeHintShown', 'true');
+                    }, 2000);
+                }, 500);
+            }
+
+            // Touch handling for mobile swipe
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, false);
+            
+            container.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, false);
+            
+            function handleSwipe() {
+                const swipeThreshold = 50; // minimum distance for a swipe
+                const diff = touchEndX - touchStartX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        // Swiped right
+                        changeImage('left');
+                    } else {
+                        // Swiped left
+                        changeImage('right');
+                    }
+                }
+            }
+
+            // Add click handlers to dots
+            const dots = divInsidePopup.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (!isAnimating && index !== currentImage) {
+                        changeImage(index); // Pass the index directly
+                    }
+                });
+
+                // Add hover effect
+                dot.addEventListener('mouseenter', () => {
+                    if (index !== currentImage) {
+                        dot.style.backgroundColor = '#ffffffbb';
+                    }
+                });
+                dot.addEventListener('mouseleave', () => {
+                    if (index !== currentImage) {
+                        dot.style.backgroundColor = '#ffffff80';
+                    }
+                });
+            });
+        }
     
         setTimeout(() => {  open = true; }, 100);
         

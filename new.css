@@ -1209,3 +1209,56 @@ body{
 
 
 
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+}
+
+.carousel-image {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.carousel-arrow {
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  opacity: 1;
+}
+
+
+
+#projectPopupBigImage {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+@media (min-width: 320px) {
+  .carousel-arrow{
+    display: none;
+  }
+  .swipe-hint{
+    display: flex;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .carousel-arrow{
+    display: flex;
+  }
+  .swipe-hint{
+    display: none;
+  }
+}
