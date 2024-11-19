@@ -55,9 +55,11 @@
             <div style="display:flex; max-width: var(--contentSize); height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center;">
                 <div class="alignCenter" style="display: flex; flex-wrap: wrap; width: calc(var(--profileImageSize) + 150px); height: fit-content; flex-direction: column;">
                     <div style="position: relative;" class="hidden">
-                        <div class="location-indicator" style="position: absolute; top: 20px; left: 10px; display: flex; align-items: center; gap: 10px; color: white; background: rgba(24, 24, 24, 0.6); padding: 8px 16px; border-radius: 10px; backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1; transition: all 0.3s ease;">
+                        <div class="location-indicator" style="position: absolute; top: 20px; left: 10px; display: flex; align-items: center; gap: 10px; color: white; background: rgba(24, 24, 24, 0.6); padding: 8px 16px; border-radius: 10px; backdrop-filter: blur(2px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1; transition: all 0.3s ease;">
                             <i class='bx bx-map' style="color: var(--mainHighlight); font-size: 1.2em;"></i>
-                            <span style="font-weight: 500;">Limerick, Ireland</span>
+                            <div style="margin-bottom: 2px;">
+                                <span style="font-weight: 500; align-content: center;">Limerick, Ireland</span>
+                            </div>
                         </div>
 
                         <img loading="lazy" class="profileImage noSelect" src="./images/image2.webp" style=" border-radius: 16px; border: 4px solid var(--mainHighlight); box-shadow: 9px 9px 0px var(--secondaryHighlight), 0 10px 20px rgba(0, 0, 0, 0.2); margin-bottom: 20px; margin-top: 10px; transition: all 0.3s ease;" alt="Profile Image">
