@@ -54,15 +54,17 @@
         <div class="profileImgDiv alignCenter">
             <div style="display:flex; max-width: var(--contentSize); height: fit-content; flex-wrap: wrap; flex-direction: row; align-items: start; justify-content: center;">
                 <div class="alignCenter" style="display: flex; flex-wrap: wrap; width: calc(var(--profileImageSize) + 150px); height: fit-content; flex-direction: column;">
-                    <div style="position: relative;" class="hidden">
-                        <div class="location-indicator" style="position: absolute; top: 20px; left: 10px; display: flex; align-items: center; gap: 10px; color: white; background: rgba(24, 24, 24, 0.6); padding: 8px 16px; border-radius: 10px; backdrop-filter: blur(2px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 1; transition: all 0.3s ease;">
-                            <i class='bx bx-map' style="color: var(--mainHighlight); font-size: 1.2em;"></i>
+                    <div style="position: relative;" class="hidden imageContainerDiv">
+                        <img loading="lazy" class="profileImage noSelect" src="./images/image2.webp" alt="Profile Image">
+                        
+                        <div class="location-indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24" style="color: var(--mainHighlight);">
+                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/>
+                            </svg>
                             <div style="margin-bottom: 2px;">
                                 <span style="font-weight: 500; align-content: center;">Limerick, Ireland</span>
                             </div>
                         </div>
-
-                        <img loading="lazy" class="profileImage noSelect" src="./images/image2.webp" style=" border-radius: 16px; border: 4px solid var(--mainHighlight); box-shadow: 9px 9px 0px var(--secondaryHighlight), 0 10px 20px rgba(0, 0, 0, 0.2); margin-bottom: 20px; margin-top: 10px; transition: all 0.3s ease;" alt="Profile Image">
                     </div>
                     
                     <div class="alignCenter linkIconDiv" style="margin-bottom: 15px;">
