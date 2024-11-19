@@ -337,6 +337,7 @@ body::after {
     opacity: 0.9;
     user-select: none;
     letter-spacing: 1px;
+    font-weight: 400;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.95) 0%,
@@ -1419,4 +1420,10 @@ body::after {
     justify-content: center;
   }
   
+}
+
+
+.btn-text {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
