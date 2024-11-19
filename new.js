@@ -571,6 +571,7 @@ function initialiseProjects(){
         div1 = document.createElement('div');
 
 
+        // <div style="position: absolute; bottom: 0; width: 100%; height: 200px; background: linear-gradient(to bottom, rgba(59, 59, 59, 0), #3b3b3b50);"></div>
         div1.innerHTML = `
 
 
@@ -606,7 +607,7 @@ function initialiseProjects(){
                         <div class="alignCenter textBoxDiv" style="width: calc(var(--contentSize2) - 3px); background-color: #3b3b3b50; height: var(--contentSize2); padding: 5%; position: relative;">
                             <div style="position: absolute; width: 100%; top: 0;  display: flex; justify-content: right; margin-right: 30px;">
     
-                                <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px ">
+                                <div style="width: fit-content; height: 24px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; background-color: #141516b3; backdrop-filter: blur(2px); display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=');">
                                     <div class="alignCenter status-container" style="height: 100%; position: relative;">
                                         <div class="status-dot" style="height: 10px; width: 10px; background-color: `+projects[i].statusColor+`; border-radius: 10px;">
                                             ${projects[i].status === 'Online' ? 
@@ -623,7 +624,7 @@ function initialiseProjects(){
 
                             <div style="position: relative; height: calc(var(--contentSize2) - 31.5%);">
                                 <h6 class="noSelect" style="color:#606060; height: 100%; overflow: hidden; text-overflow: ellipsis; white-space: break-spaces; text-align: center;">`+projects[i].description+`</h6>
-                                <div style="position: absolute; bottom: 0; width: 100%; height: 90px; background: linear-gradient(to bottom, transparent, #26282a);"></div>
+                                
                             </div>
 
 
@@ -635,17 +636,17 @@ function initialiseProjects(){
     
                             <div style="position: absolute; width: 100%; bottom: 0;  display: flex; justify-content: right; gap: 20px; justify-content: center;">
     
-                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #141516b3; backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=');">
                                     
                                     <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[0]+`</p>
                                 </div>
     
-                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #141516b3; backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=');">
                                     
                                     <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[1]+`</p>
                                 </div>
     
-                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #1c1e22; display: flex; justify-content: center; align-items: center; padding-left: 8px; padding-right: 8px; padding-top: 2px;">
+                                <div style="width: fit-content; height: 24px; border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: #141516b3; backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; padding-left:12px; padding-right:12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjYSkiIG9wYWNpdHk9IjAuMDUiLz48L3N2Zz4=');">
                                     
                                     <p class="noMP noSelect" style="font-size: 1.12rem; margin-left: 3px; margin-right: 3px; margin-bottom: 2px; color: #8a8a8a; font-weight: 500;">`+projects[i].tags[2]+`</p>
                                 </div>
@@ -680,7 +681,7 @@ function initialiseProjects(){
 
     function openProjectPopup(id){
         //Create popup element
-
+        document.body.classList.add('popup-open');
         let currentImage = 0;
     
         let popupDiv = document.getElementById('projectPopup'); 
@@ -848,7 +849,7 @@ function initialiseProjects(){
         document.body.addEventListener('click', function( event ){
             if( !containingElement.contains( event.target ) ){
                 if(open){
-                    
+                    document.body.classList.remove('popup-open');
                     document.getElementById('projectPopup').style.display = 'none';
                     document.getElementById("popUpInsideDiv").remove();
                     open = false;
