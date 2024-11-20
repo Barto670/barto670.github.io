@@ -1070,12 +1070,14 @@ body::after {
 
 .responsive-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
   gap: 35px;
-  padding: 0 20px;
+  max-width: var(--contentSize);
+  margin: 0 auto;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .responsive-skills-grid {
       grid-template-columns: repeat(2, 1fr);
   }
@@ -1160,18 +1162,6 @@ body::after {
 
 
 
-
-/* Add this new media query for smaller screens */
-@media (max-width: 480px) {
-  .responsive-skills-grid {
-      gap: 15px;  /* Reduced gap for smaller screens */
-  }
-}
-
-
-
-
-
 .responsive-skills-grid {
   display: none;
 }
@@ -1193,7 +1183,7 @@ body::after {
 .skills-filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 2px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -1446,10 +1436,3 @@ body::after {
   margin-left: 8px;
 }
 
-
-
-nameB:hover {
-  color: var(--mainHighlight);
-  -webkit-text-stroke: 2px transparent;
-  transition: 0.3s;
-}
