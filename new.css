@@ -262,12 +262,12 @@ body::before {
   height: 200%;
   background: radial-gradient(
       circle at center,
-      #1d1e20 0%,    /* center */
+      #1f2022 0%,    /* center */
       #141516 40%,   /* Lighter transition */
       #151618 70%,   /* Darker base color */
       #111214 90%    /* Darker edges */
   );
-  filter: blur(0.1px);
+  filter: blur(0.2px);
   animation: subtleFloat 20s ease-in-out infinite;
   z-index: -3;
   transition: opacity 0.3s ease;
