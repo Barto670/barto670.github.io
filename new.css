@@ -174,26 +174,32 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
     z-index: 1000;
     border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-track { /* Track */
-    background: #1d1d1d;
-  }
-  ::-webkit-scrollbar-thumb { /* Handle */
-    background: #33363a;
+}
+
+::-webkit-scrollbar-track { /* Track */
+  background: #1919199c  /* Fully transparent using rgba */
+}
+
+::-webkit-scrollbar-thumb { /* Handle */
+    background: #292a2c;  /* Light grey with low opacity */
     border-radius: 6px;
-  }
-  ::-webkit-scrollbar-thumb:hover { /* Handle on hover */
-    background: #555;
-  }
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+    background: #343638;  /* Slightly brighter on hover */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
   
   /* General */
   *{
     box-sizing: border-box;
     font-family: DarkerGrotesque;
+    image-rendering: optimizeSpeed; /* Optimize rendering */
   }
 
   .noSelect{
@@ -262,7 +268,7 @@ body::before {
       #111214 90%    /* Darker edges */
   );
   filter: blur(0.1px);
-  animation: subtleFloat 20s ease-in-out infinite;
+  
   z-index: -3;
   transition: opacity 0.3s ease;
 }
@@ -278,6 +284,8 @@ body::after {
     content: '';
     position: fixed;
     inset: 0;
+    width: 100vw;
+    height: 100vh;
     background: 
         linear-gradient(
             to bottom,
@@ -290,7 +298,13 @@ body::after {
     z-index: -2;
     pointer-events: none;
     filter: blur(0.05px);
+    image-rendering: optimizeSpeed; /* Optimize rendering */
+    transform: translateZ(0); /* Force GPU acceleration */
+    backface-visibility: hidden; /* Optimize performance */
+    perspective: 1000px; /* Optimize performance */
 }
+
+
 
 /* Refined grid overlay */
 .background-grid {
@@ -670,7 +684,7 @@ body::after {
     }
       
     .footerIcon:hover{
-        background-color: #1C1E22;
+        background-color: #222222;
         cursor: pointer;
         scale: 1.15;
     }
@@ -1377,7 +1391,7 @@ body::after {
 .imageContainerDiv:hover {
   .profileImage {
     transform: scale(1.05);
-    box-shadow: 0px 0px 0px var(--secondaryHighlight), 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px #44444400, 0 0px 0px rgba(0, 0, 0, 0.15);
   }
   
   .location-indicator {
