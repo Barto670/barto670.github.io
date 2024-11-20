@@ -440,15 +440,14 @@ body::after {
 
   .hidden{
     opacity: 0;
-    transition: all 0.9s;
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
     filter: blur(2px);
     transform: translateX(-100%);
   }
 
   .hidden2{
     opacity: 0;
-    /* transition: transform 1s ease, opacity 1.3s ease, scale 1.3s ease; */
-    transition: all 0.9s;
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
     filter: blur(2px);
     transform: translateX(100%);
     word-spacing: 3px;
@@ -471,7 +470,7 @@ body::after {
         height: inherit;
         width: inherit;
         margin: 20%;
-        transition: 0.2s;
+        transition: all 0.2s ease-out;
         img{
             height: inherit;
             width: inherit;
@@ -481,7 +480,7 @@ body::after {
             height: calc( var(--iconSize) /2);
             width: calc( var(--iconSize) /2);
             margin: 20%;
-            transition: 0.15s;
+            transition: transform 0.15s ease-out;
           }
         
 
@@ -675,12 +674,12 @@ body::after {
       cursor:default;
     }
     .footerIcon{
-        height: 46px; 
+        height: 48px; 
         width: auto; 
         margin-left: 10px; 
         margin-right: 10px;
         border-radius: 100px;
-        transition: 0.15s;
+        transition: all 0.15s ease;
     }
       
     .footerIcon:hover{
@@ -694,11 +693,10 @@ body::after {
 
   .menuItemLink{
     font-size: 2rem;
-    transition: opacity 0.3s, scale 0.5s, margin-left 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: white;
     padding-bottom: 12px;
     padding-top: 12px;
-    /* height: 3.8rem; */
     text-decoration: none;
     opacity: 0.50;
     margin-left: 6px;
@@ -716,11 +714,9 @@ body::after {
 
 
   .menuItemLinkSelected{
-    /* scale: 1.02; */
     font-weight: 500;
     opacity: 1;
     margin-left: 0px;
-    /* margin-left: 20px; */
   }
 
 
@@ -950,7 +946,7 @@ body::after {
 
 .projectDivFullInner{
 
-  transition: 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   .project-image-container{
     overflow: hidden;
@@ -959,18 +955,18 @@ body::after {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    transition: 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .topProjectBar{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    transition: 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .smallImageProject{
     border-bottom-left-radius: 10px;
-    transition: 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -1107,7 +1103,7 @@ body::after {
   padding-right: 25px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: 0.25s transform ease-out, box-shadow ease-out .2s;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(0) rotateY(0);
   position: relative;
@@ -1129,7 +1125,7 @@ body::after {
   top: -20px;
   left: 50%;
   transform: translateX(-50%) translateZ(30px);
-  transition: transform 0.2s ease-out;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   user-select: none;
 }
 
@@ -1385,7 +1381,7 @@ body::after {
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 }
 
@@ -1409,24 +1405,22 @@ body::after {
 }
 
 .skill-tag {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
   cursor: default;
   font-weight: 500;
 }
 
 .skill-tag:hover {
-  background: var(--mainHighlight);
+  background: var(--mainHighlight) !important;
   color: #1C1E22;
   transform: translateY(-2px);
 }
-
-
 
 
 
@@ -1450,4 +1444,12 @@ body::after {
   position: relative; 
   top: -1px; 
   margin-left: 8px;
+}
+
+
+
+nameB:hover {
+  color: var(--mainHighlight);
+  -webkit-text-stroke: 2px transparent;
+  transition: 0.3s;
 }
