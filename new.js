@@ -297,8 +297,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     scrollNavLogic(documentEl.scrollTop());
 
     // Use throttling for scroll events
-    documentEl.on('scroll', throttle(function() {
-        scrollNavLogic(documentEl.scrollTop())
+    document.addEventListener('scroll', throttle(function() {
+        scrollNavLogic(window.scrollY); // Changed from jQuery
     }, 100)); // Adjust timing as needed
 
 
