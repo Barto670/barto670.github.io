@@ -262,13 +262,13 @@ body::before {
   height: 200%;
   background: radial-gradient(
       circle at center,
-      #1e1e20 0%,    /* center */
+      #1d1d1f 0%,    /* center */
       #141516 40%,   /* Lighter transition */
       #151618 70%,   /* Darker base color */
       #111214 90%    /* Darker edges */
   );
   filter: blur(0.001px);
-  animation: subtleFloat 20s ease-in-out infinite;
+  animation: subtleFloat 25s ease-in-out infinite;
   z-index: -3;
   transition: opacity 0.3s ease;
 }
@@ -1105,7 +1105,7 @@ body.popup-open::before {
   padding-right: 25px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: 0.15s transform ease-out, box-shadow ease-out .2s;
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateX(0) rotateY(0);
   position: relative;
@@ -1356,9 +1356,9 @@ body.popup-open::before {
   }
 
   .location-indicator {
-    background: rgba(24, 24, 24, 0.5);
-    backdrop-filter: blur(4px);
-    padding: 8px 14px;
+    background: rgba(24, 24, 24, 0.4);
+    backdrop-filter: blur(1px);
+    padding: 7px 12px;
     border-radius: 12px;
     transform: translateY(0%);
     opacity: 1;
