@@ -313,10 +313,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     items.forEach(item => {
         item.addEventListener('mousemove', (e) => {
             const rect = item.getBoundingClientRect();
-            const x = e.clientX - rect.left; // Mouse X relative to item
-            const y = e.clientY - rect.top;  // Mouse Y relative to item
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top; 
             
-            // Calculate rotation (max 10 degrees)
             const xRotation = ((y - rect.height / 2) / rect.height) * -10;
             const yRotation = ((x - rect.width / 2) / rect.width) * 10;
             
@@ -344,22 +343,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     educationButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // Remove active class from all buttons
             educationButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            // Get the category from the clicked button
+            button.classList.add('active')
             const category = button.getAttribute('data-filter');
-            
-            // Hide all blocks first
             educationBlocks.forEach(block => {
                 block.style.display = 'none';
             });
 
-            // Show the selected block
             const selectedBlock = educationSection.querySelector(`.education-block[data-category="${category}"]`);
             if (selectedBlock) {
                 selectedBlock.style.display = 'block';
