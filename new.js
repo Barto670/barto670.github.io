@@ -289,17 +289,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Event for checking what section is currently active in the navigation bar
 
-    var navH = $('nav').height(),
-    section = $('section'),
-    documentEl = $(document);
+    var navH = document.querySelector('nav').offsetHeight;
+    var section = document.querySelectorAll('section');
+    var documentEl = document;
     lastItemButtonID = "";
 
-    scrollNavLogic(documentEl.scrollTop());
+    scrollNavLogic(documentEl.documentElement.scrollTop || window.scrollY);
 
-    // Use throttling for scroll events
-    document.addEventListener('scroll', throttle(function() {
-        scrollNavLogic(window.scrollY); // Changed from jQuery
-    }, 100)); // Adjust timing as needed
+    // Scrolling logic for animation when navbar is clicked
+    documentEl.addEventListener('scroll', function() {
+        scrollNavLogic(documentEl.documentElement.scrollTop || window.scrollY);
+    });
 
 
 
@@ -364,10 +364,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
             if (selectedBlock) {
                 selectedBlock.style.display = 'block';
             }
-
-            // Debug logs
-            console.log('Selected category:', category);
-            console.log('Found block:', selectedBlock);
         });
     });
 
@@ -461,7 +457,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Intersection observer for animations coming in to view from the other side
     const observer2 = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            // console.log(entry);
             if (entry.isIntersecting){
                 entry.target.classList.add('show');
             }
@@ -480,17 +475,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
 
     // Scrolling logic for animation when navbar is clicked
-    documentEl.on('scroll', function() {
-        scrollNavLogic(documentEl.scrollTop())
+    documentEl.addEventListener('scroll', function() {
+        scrollNavLogic(documentEl.documentElement.scrollTop || window.scrollY)
     });
 
     function scrollNavLogic(currentScrollPos) {
           
-          section.each(function(){
-            var self = $(this);
-            if ( self.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offset().top + self.outerHeight() ) ) {
+          section.forEach(function(self) {
+            if ( self.offsetTop < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offsetTop + self.offsetHeight) ) {
 
-            let targetButton = self[0].id + "Button"
+            let targetButton = self.id + "Button"
 
 
               if(lastItemButtonID != targetButton){
@@ -517,18 +511,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    $(document).ready(function(){
-        $("a").on('click', function(event) {
-          if (this.hash !== "") {
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('a').forEach(function(a) {
+          if (a.hash !== "") {
 
-            event.preventDefault();
-            var hash = this.hash;
+            a.addEventListener('click', function(event) {
+              event.preventDefault();
+              var hash = a.hash;
     
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-         
-              window.location.hash = hash;
+              document.documentElement.scrollTop = document.getElementById(hash.substring(1)).offsetTop;
             });
           }
         });
@@ -1019,17 +1010,9 @@ function initialiseProjects(){
 }
 
 
-
-// Add throttle function
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
+window.addEventListener('load', function() {
+  const loader = document.getElementById('loader');
+  loader.classList.add('hide');
+  document.body.classList.add('start-animation');
+  document.body.classList.add('animate-background');
+});

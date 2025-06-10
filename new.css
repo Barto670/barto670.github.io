@@ -2,16 +2,19 @@
 @font-face {
     font-family: Itim;
     src: url(./fonts/Itim-Regular.ttf);
+    font-display: swap;
 }
   
 @font-face {
     font-family: Signika;
     src: url(./fonts/Signika-VariableFont_GRAD\,wght.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: DarkerGrotesque;
     src: url(./fonts/DarkerGrotesque.ttf);
+    font-display: swap;
 }
 
 
@@ -268,9 +271,28 @@ body::before {
       #111214 90%    /* Darker edges */
   );
   filter: blur(0.001px);
-  animation: subtleFloat 25s ease-in-out infinite;
   z-index: -3;
   transition: opacity 0.3s ease;
+}
+
+/* Add animation for background when body has animate-background class */
+body.animate-background::before {
+  animation: subtleFloat 25s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-12%, 12%) scale(1.15);
+  }
+  50% {
+    transform: translate(12%, -12%) scale(1);
+  }
+  75% {
+    transform: translate(-12%, -12%) scale(0.85);
+  }
 }
 
 /* Add this new style */
@@ -323,21 +345,6 @@ body.popup-open::before {
     );
     z-index: -1;
     filter: blur(0.2px);
-}
-
-@keyframes subtleFloat {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-    }
-    25% {
-        transform: translate(-12%, 12%) scale(1.15);
-    }
-    50% {
-        transform: translate(12%, -12%) scale(1);
-    }
-    75% {
-        transform: translate(-12%, -12%) scale(0.85);
-    }
 }
 
 .boxTitle {
@@ -1434,5 +1441,35 @@ body.popup-open::before {
   position: relative; 
   top: -1px; 
   margin-left: 8px;
+}
+
+/* Loader styles */
+#loader {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: #1C1E22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+
+#loader .spinner {
+  border: 6px solid rgba(255,255,255,0.1);
+  border-top: 6px solid var(--mainHighlight, #ffa82d);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loader.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
