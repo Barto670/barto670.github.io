@@ -23,7 +23,7 @@ projects = [
                     expandURL:'' ,     
                     description:
                     [
-                        "The Browser Extension is designed for Counter Strike 2, enhancing the user experience on the csgostash.com website by providing additional features. These features capitalize on the extensive array of cosmetic items available in the game, encompassing diverse patterns, float values, and skin conditions. In Counter Strike 2, each cosmetic skin is associated with a unique inspect code, a customized hexadecimal value with a CRC32-based checksum. This extension facilitates the generation of inspect codes tailored to users' preferences, enabling them to easily locate specific cosmetics within the game."
+                        "The Browser Extension is designed for a video game named Counter Strike 2, enhancing the user experience on the csgostash.com website by providing additional features. These features capitalize on the extensive array of cosmetic items available in the game, encompassing diverse patterns, float values, and skin conditions. In Counter Strike 2, each cosmetic skin is associated with a unique inspect code, a customized hexadecimal value with a CRC32-based checksum. This extension facilitates the generation of inspect codes tailored to users' preferences, enabling them to easily locate specific cosmetics within the game."
                     ],
                     explanation:
                     [
@@ -285,20 +285,36 @@ projects = [
 ]
 
 window.addEventListener("DOMContentLoaded", (event) => {
-
-
     // Event for checking what section is currently active in the navigation bar
-
     var navH = document.querySelector('nav').offsetHeight;
     var section = document.querySelectorAll('section');
     var documentEl = document;
     lastItemButtonID = "";
+
+    // Handle initial hash navigation
+    if (window.location.hash) {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            window.scrollTo(0, targetSection.offsetTop);
+        }
+    }
 
     scrollNavLogic(documentEl.documentElement.scrollTop || window.scrollY);
 
     // Scrolling logic for animation when navbar is clicked
     documentEl.addEventListener('scroll', function() {
         scrollNavLogic(documentEl.documentElement.scrollTop || window.scrollY);
+    });
+
+    // jQuery smooth scrolling
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this.hash);
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 600, 'swing');
+        }
     });
 
 
@@ -470,22 +486,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
     function scrollNavLogic(currentScrollPos) {
-          
-          section.forEach(function(self) {
-            if ( self.offsetTop < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offsetTop + self.offsetHeight) ) {
-
-            let targetButton = self.id + "Button"
-
-
-              if(lastItemButtonID != targetButton){
-                if(lastItemButtonID != ""){
-                    document.getElementById(lastItemButtonID).classList.remove('menuItemLinkSelected');
+        section.forEach(function(self) {
+            if (self.offsetTop < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offsetTop + self.offsetHeight)) {
+                let targetButton = self.id + "Button";
+                if(lastItemButtonID != targetButton) {
+                    if(lastItemButtonID != "") {
+                        document.getElementById(lastItemButtonID).classList.remove('menuItemLinkSelected');
+                    }
+                    document.getElementById(targetButton).classList.add('menuItemLinkSelected');
+                    lastItemButtonID = targetButton;
+                    // Update URL hash without triggering scroll
+                    history.replaceState(null, null, '#' + self.id);
                 }
-                document.getElementById(targetButton).classList.add('menuItemLinkSelected');
-                lastItemButtonID = targetButton;
-              }
-             }   
-          });  
+            }   
+        });  
     }
 
 
