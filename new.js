@@ -6,7 +6,7 @@ projects = [
                 {   
                     name:'Magic Photo',              
                     statusColor:'orange' ,       
-                    bigImagesrc:'magicImageBig.webp',       
+                    bigImagesrc:'magicImageBig.jpg',       
                     smallImagesrc: 'magicImagesmall.png' ,
                     imageArray:['magicImagelong3.webp','magicImagelong2.webp','magicImagelong.webp'],
                     status:'Project' ,     
