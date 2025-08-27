@@ -8,7 +8,7 @@ projects = [
                     statusColor:'orange' ,       
                     bigImagesrc:'magicImageBig.jpg',       
                     smallImagesrc: 'magicImagesmall.png' ,
-                    imageArray:['magicImagelong3.webp','magicImagelong2.webp','magicImagelong.webp'],
+                    imageArray:['magicImageLong3.webp','magicImageLong2.webp','magicImageLong.webp'],
                     status:'Project' ,     
                     tags:
                     [
