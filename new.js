@@ -4,6 +4,58 @@ colourArray = ['#30924d','#3399b8','#b82798','#b82229','#1e3ada','#d56c3a']
 
 projects = [
                 {   
+                    name:'Magic Photo',              
+                    statusColor:'orange' ,       
+                    bigImagesrc:'magicImageBig.webp',       
+                    smallImagesrc: 'magicImagesmall.png' ,
+                    imageArray:['magicImagelong3.webp','magicImagelong2.webp','magicImagelong.webp'],
+                    status:'Project' ,     
+                    tags:
+                    [
+                        'HTML',
+                        'JavaScript',
+                        'CSS',
+                    ],        
+                    redirectionURLStyle:'none',   
+                    redirectionURL:'',       
+                    expandURL:'' ,     
+                    description:
+                    [
+                        "Magic Photo is a browser-based image editing tool that works fully offline, ensuring privacy as images never leave the user’s device. It enhances user creativity with smart backgrounds, watermarking, signatures, film-style grain, and gallery batch export features. The tool focuses on efficiency and quality by providing professional-grade editing modes directly in the browser."
+                    ],
+                    explanation:
+                    [
+                        "Magic Photo is designed for seamless editing workflows. Users can drop images into the editor or browse through their files, where the preview area displays the selected image. The left sidebar enables users to switch between editing modes such as Borders, Watermark, Signature, or Grain. Each mode provides customizable parameters for fine-tuned control.",
+                        "The application also supports multi-image management with a bottom gallery for toggling, selecting, and removing images. Quick Presets streamline setup, while batch export ensures all images can be downloaded with consistent quality. Users have full control over export format (PNG, JPEG, WEBP) and adjustable quality levels, guaranteeing high-quality output."
+                    ],
+                    functionalityBold:
+                    [
+                        "Smart Borders: ",
+                        "Custom Watermarks: ",
+                        "Signature Integration: ",
+                        "Film-Style Grain: ",
+                        "Multi-Image Gallery: ",
+                        "High-Quality Export: ",
+                    ],
+                    functionalityText:
+                    [
+                        "Users can generate borders using smart image analysis (blur, brightness, contrast, saturation) or select solid/gradient backgrounds with full angle control.",
+                        "Add text or image watermarks with flexible options for size, opacity, rotation, color, and placement, including tiled grid layouts.",
+                        "Apply a digital signature as text (with custom fonts and placement) or upload a personal signature image for branding.",
+                        "Enhance visuals with adjustable film-style grain, including strength, size, monochrome effect, and selective application to frame or image.",
+                        "Manage multiple images at once with a bottom gallery for quick switching, toggling, and batch exporting in a single workflow.",
+                        "Export images in PNG, JPEG, or WEBP formats with adjustable quality to balance file size and clarity."
+                    ],
+                    additional:
+                    [
+                        "Runs fully offline in the browser",
+                        "No account or internet required",
+                        "Batch export supported",
+                        "Keyboard shortcut (Ctrl/Cmd+S) for quick export",
+                        "Lightweight and privacy-focused"
+                    ]
+                },
+                {   
                     name:'CS2 Stash Enhancer',              
                     statusColor:'green' ,       
                     bigImagesrc:'cs2stashenhancerbig.jpg',       
@@ -16,7 +68,7 @@ projects = [
                         'HTML',
                         'JavaScript',
                         'CSS',
-                        '650+ Users'
+                        '1000+ Users'
                     ],        
                     redirectionURLStyle:'flex',   
                     redirectionURL:'https://chromewebstore.google.com/detail/cs2-stash-enhancer/foacepfkmbckfdnbgmphekpbamedhmjj?hl=en',       
